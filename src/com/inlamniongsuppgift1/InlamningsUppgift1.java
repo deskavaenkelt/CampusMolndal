@@ -16,17 +16,24 @@ public class InlamningsUppgift1 {
             System.out.print("Hej " + spelarNamn + " du kommer att spela mot Datorn. \nVälj antal kast som ska spelas: ");
             int antalKast = scan.nextInt();
 
-            // (3a) Ange hur många deltagare (G du & dator = 2).
-            int deltagare = 2;                      // Kommer ge spelare 0 & 1.
-            int spelare[] = new int[deltagare];     // Skapar array spelare bestående av "deltagare"-antal spelare.
+            // (3) Spelare skickar antalKast till tarning()
+            int summaSpelare = 0;
+            summaSpelare += tarning(antalKast);
 
-            // (3b) Lagra resultatet i en tvådimensionell array "summa = rader\spelare = koloner".
-            int summa = 0;
-            int table[][] = new int[summa][spelare[deltagare]];
+            // (4) Dator skickar antalKast till tarning()
+            int summaDator = 0;
+            summaDator += tarning(antalKast);
 
+            String textOut = spelarNamn + " fick totalt " + summaSpelare + " poäng. \nDatorn fick totalt " + summaDator + " poäng.";
 
-            // Anropa tärningen, i en loop
-            spelare[deltagare] += tarning(antalKast);
+            // (5) Jämför resultaten och skriv ut vinnaren
+            if(summaSpelare == summaDator){
+                System.out.println(textOut + "\n" + "Det blev lika, ingen vann.");
+            } else if (summaSpelare > summaDator){
+                System.out.println(textOut + "\n" + spelarNamn + " vann.");
+            } else {
+                System.out.println(textOut + "\n" +"Datorn vann.");
+            }
 
             // Programmet avslutas om man svarar "nej" här.
             System.out.println("Vill du spela igen? (j/n) ");
