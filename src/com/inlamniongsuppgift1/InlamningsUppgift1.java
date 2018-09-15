@@ -45,12 +45,11 @@ public class InlamningsUppgift1 {
     public static int tarning(int inAntalKast){
         // int antalKast = inAntalKast;
         int antalSidor = 6;
-        int kastArray[] = new int[inAntalKast];
         int summa = 0;
         for(int i=1 ; i <= inAntalKast ; i++){
-            kastArray[i] = (int) (1+antalSidor*Math.random());
-            System.out.println("Kast "+ i + " gav: " + kastArray[i]);
-            summa += kastArray[i];
+            int kast = (int) (1+antalSidor*Math.random());
+            System.out.println("Kast "+ i + " gav: " + kast);
+            summa += kast;
         }
         return summa;
     }
