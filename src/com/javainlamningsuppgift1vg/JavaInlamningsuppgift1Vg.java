@@ -5,26 +5,39 @@ public class JavaInlamningsuppgift1Vg {
         Scanner scan = new Scanner(System.in);
         char spela = 'j';
 
+        // Hur många spelare?  >>  Lagra i deltagare
         System.out.print("Hur många spelare skall det vara? ");
         int deltagare = scan.nextInt();
+        scan.nextLine();                                            // Denna raden rättar till en bugg när man går från nextInt => nextLine
 
-        // Spelararrayen skapas
-        int spelare[] = new int[deltagare];                         // Används för att numrera spelare
-        String spelarNamn[] = new String[deltagare];                // Används för att döpa spelare
+        // Skapa arrayer med antal spelare, spelarNamn och summaSpelare
+        int spelare[] = new int[deltagare];                 /*används inte ännu*/        // antalSpelare => Identifiera spelarna med siffror
+        String spelarNamn[] = new String[deltagare+1];              // Används för att döpa spelare och innehåller namnen på spelarna
+        String summaSpelare[] = new String[deltagare];      /*används inte ännu*/        // Används för de exporterade summorns som senare ska jämföras
 
-        for(int i = 0 ; i <= deltagare ; i++){                      // Hur löser jag att string börjar på 0 och inte 1?
-            System.out.print("Namn på spelare " + i + ": ");        // Ger dubla utskrifter på första spelaren, varför?
-            spelarNamn[i] = scan .nextLine();
+        // Fråga efter namn på varje spelare.
+        // Loopen för att mata in namn i spelarNamn.
+        for(int i = 0 ; i <= deltagare ; i++){                      // Hur löser jag att string börjar på 0 och inte 1?  Strunta i att använda fält 0 i arrayen
+            System.out.print("Namn på spelare " + i + ": ");        // Ger dubla utskrifter på första spelaren, varför? bug i Java
+            spelarNamn[i] = scan.nextLine();
+            //System.out.println();
         }
 
+
+        // Hur många kast
         System.out.print("Hur många kast skall spelas? ");
         int antalKast = scan.nextInt();
 
         // Skicka spelare j till tärningen och spara summan i spelare[deltagare]
-        for(int j ; j <= deltagare ; j++){
+        /*for(int j ; j <= deltagare ; j++){
 
-        }
+        }*/
 
+        // Anropa highScore
+
+
+        // Fråga om man ska spela igen.
+        spela = spelaIgen()
     }
     // (4) Skapar tärningskasten för spelarna, Printar dem och gör "return" på summan.
     private static int tarning(int inAntalKast, String inSpelarNamn){
@@ -39,6 +52,47 @@ public class JavaInlamningsuppgift1Vg {
         }
         System.out.print("\n");
         return summa;
+    }
+
+    private static int bubblesort(){
+        // Här kommer kod senare
+    }
+
+    // Skapa High Score Lista
+    public static void highScore(String inSpelarNamn, int inSummaSpelare){
+        int row = 6;
+        int colum = 3;
+        int table[][] = new int[row][colum];
+        // Bygg upp layout för tabellen, Namn, Poäng & Position
+        table[0][0] = "Pos"; table[0][1] = "Namn"; table[0][2] = "Poäng";
+        table[1][0] = "1";
+        table[2][0] = "2";
+        table[3][0] = "3";
+        table[4][0] = "4";
+        table[5][0] = "5";
+        //
+
+
+        // Skriv ut highScore
+        String leftAlignFormat = "| %-3d | %-15s | %-5d |%n";
+        System.out.format("+-----+-----------------+-------+%n");
+        System.out.format("| Pos | Namn            | Poäng |%n");
+        System.out.format("+-----+-----------------+-------+%n");
+        for (int i = 0; i <= 5; i++) {
+            for(int j = 0 ; j <= 2 ; j++){
+                System.out.format(leftAlignFormat, table[i][j] + table[i][j] + table[i][j]);
+            }
+        }
+        System.out.format("+-----------------+------+%n");
+    }
+
+    // Spela fler gånger
+    public static char spelaIgen(){
+        Scanner scan = new Scanner(System.in);
+        // Fråga om man vill spela igen
+        System.out.print("Vill ni spela igen? (j/n): ");
+        char spelaIgen = scan.next().charAt(0);
+        return spelaIgen;
     }
 }
 /*

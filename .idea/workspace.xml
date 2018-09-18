@@ -4,6 +4,7 @@
     <list default="true" id="c308475d-536a-41fb-ac95-63dbb5f193b8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/inlamningsuppgift1_vg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/inlamningsuppgift1_vg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/java_inlamningsuppgift1_vg/com/javainlamningsuppgift1vg/JavaInlamningsuppgift1Vg.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/java_inlamningsuppgift1_vg/com/javainlamningsuppgift1vg/JavaInlamningsuppgift1Vg.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/javainlamningsuppgift1vg/JavaInlamningsuppgift1Vg.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/javainlamningsuppgift1vg/JavaInlamningsuppgift1Vg.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -17,31 +18,35 @@
     <session id="158144218">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="4" />
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.open.time.11" value="1" />
+          <entry key="project.open.time.14" value="1" />
+          <entry key="project.open.time.17" value="1" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.4" value="2" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.opened" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="1" />
+          <entry key="java" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="1" />
+          <entry key="JAVA" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="694" />
+          <entry key="java" value="2114" />
           <entry key="txt" value="16" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="694" />
+          <entry key="JAVA" value="2114" />
           <entry key="PLAIN_TEXT" value="16" />
         </counts>
       </usages-collector>
@@ -53,8 +58,14 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/javainlamningsuppgift1vg/JavaInlamningsuppgift1Vg.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+            <state relative-caret-position="472">
+              <caret line="60" column="29" selection-start-line="60" selection-start-column="29" selection-end-line="60" selection-end-column="29" />
+              <folding>
+                <element signature="method#tarning#0;class#JavaInlamningsuppgift1Vg#0" />
+                <element signature="method#bubblesort#0;class#JavaInlamningsuppgift1Vg#0" />
+                <element signature="method#highScore#0;class#JavaInlamningsuppgift1Vg#0" />
+                <element signature="method#spelaIgen#0;class#JavaInlamningsuppgift1Vg#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -74,45 +85,35 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$USER_HOME$/odrive/OneDrive/Campus Mölndal/Java/IdeaProjects/Dag2Övning6/src/com/example/dag2övning6/Dag2Övning6.java" />
         <option value="$PROJECT_DIR$/src/com/javainlamningsuppgift1vg/JavaInlamningsuppgift1Vg.java" />
       </list>
     </option>
   </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="width" value="2006" />
-    <option name="height" value="1276" />
+    <option name="x" value="-7" />
+    <option name="width" value="1382" />
+    <option name="height" value="1045" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="java_inlamningsuppgift1_vg" type="b2602c69:ProjectViewProjectNode" />
-              <item name="java_inlamningsuppgift1_vg" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="java_inlamningsuppgift1_vg" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="AndroidView" />
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537218375503" />
-    <property name="last_opened_file_path" value="D:/OneDrive/Campus Mölndal/Java/IdeaProjects/ExempelArray1" />
-    <property name="settings.editor.selected.configurable" value="preferences.general" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537259087909" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../java_inl-mningsuppgift1_g" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -156,6 +157,10 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1537016533173</updated>
+      <workItem from="1537253651369" duration="1292000" />
+      <workItem from="1537255363233" duration="72000" />
+      <workItem from="1537255468833" duration="3542000" />
+      <workItem from="1537261471973" duration="7919000" />
     </task>
     <task id="LOCAL-00001" summary="En första commit">
       <created>1537017180219</created>
@@ -167,6 +172,9 @@
     <option name="localTasksCounter" value="2" />
     <servers />
   </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="12825000" />
+  </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
       <is-autoscroll-to-source value="true" />
@@ -177,9 +185,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="0" width="2006" height="1276" extended-state="0" />
+    <frame x="-6" y="0" width="1251" height="946" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24511819" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.24779283" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -189,7 +198,7 @@
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32895887" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32883435" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -197,7 +206,8 @@
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.33044422" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32895887" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32883435" />
+      <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -206,7 +216,11 @@
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info anchor="right" id="Maven Projects" order="7" />
+      <window_info anchor="right" id="Database" order="8" />
     </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -242,10 +256,23 @@
     <option name="LAST_COMMIT_MESSAGE" value="En första commit" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$USER_HOME$/odrive/OneDrive/Campus Mölndal/Java/IdeaProjects/Dag2Övning6/src/com/example/dag2övning6/Dag2Övning6.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="727">
+          <caret line="48" column="1" selection-start-line="48" selection-start-column="1" selection-end-line="48" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/javainlamningsuppgift1vg/JavaInlamningsuppgift1Vg.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+        <state relative-caret-position="472">
+          <caret line="60" column="29" selection-start-line="60" selection-start-column="29" selection-end-line="60" selection-end-column="29" />
+          <folding>
+            <element signature="method#tarning#0;class#JavaInlamningsuppgift1Vg#0" />
+            <element signature="method#bubblesort#0;class#JavaInlamningsuppgift1Vg#0" />
+            <element signature="method#highScore#0;class#JavaInlamningsuppgift1Vg#0" />
+            <element signature="method#spelaIgen#0;class#JavaInlamningsuppgift1Vg#0" />
+          </folding>
         </state>
       </provider>
     </entry>
