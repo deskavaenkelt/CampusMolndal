@@ -28,18 +28,24 @@ public class JavaInlamningsuppgift1Vg {
         System.out.print("Hur många kast skall spelas? ");
         int antalKast = scan.nextInt();
 
+        // Nästlad loop anropar tärning
         // Skicka spelare j till tärningen och spara summan i spelare[deltagare]
         /*for(int j ; j <= deltagare ; j++){
 
         }*/
 
         // Anropa highScore
-
+        highScore(spelarNamn, summaSpelare);
 
         // Fråga om man ska spela igen.
         spela = spelaIgen()
     }
-    // (4) Skapar tärningskasten för spelarna, Printar dem och gör "return" på summan.
+
+    /* ########################################################################## */
+    /* ########################## Här börjar metoderna ########################## */
+    /* ########################################################################## */
+
+    // Skapar tärningskasten för spelarna, Printar dem och gör "return" på summan.
     private static int tarning(int inAntalKast, String inSpelarNamn){
         // int antalKast = inAntalKast;
         int antalSidor = 6;
@@ -54,24 +60,55 @@ public class JavaInlamningsuppgift1Vg {
         return summa;
     }
 
+    // Sortera fram högsta resultatet
     private static int bubblesort(){
         // Här kommer kod senare
-    }
+    }       // flytta till highscore
 
-    // Skapa High Score Lista
+    // Skapa High Score Lista, returnerar inget värde. Måste inkludera bubblesort i denna metoden eftersom en metod inte kan returnera mer än ett värde
     public static void highScore(String inSpelarNamn, int inSummaSpelare){
         int row = 6;
         int colum = 3;
-        int table[][] = new int[row][colum];
+        String table[][] = new String[row][colum];
         // Bygg upp layout för tabellen, Namn, Poäng & Position
-        table[0][0] = "Pos"; table[0][1] = "Namn"; table[0][2] = "Poäng";
+        table[0][0] = "Pos";
+        table[0][1] = "Namn";
+        table[0][2] = "Poäng";
         table[1][0] = "1";
         table[2][0] = "2";
         table[3][0] = "3";
         table[4][0] = "4";
         table[5][0] = "5";
-        //
 
+        // Bestäm om poängen är tillräckligt hög för att komma in på listan
+        if(inSummaSpelare >= table[1][2]){
+            table[5][2] = table[4][2];
+            table[4][2] = table[3][2];
+            table[3][2] = table[2][2];
+            table[2][2] = table[1][2];
+            inSpelarNamn = table[1][1];
+            inSummaSpelare = table[1][2];
+        } else if(inSummaSpelare >= table[2][2]) {
+            table[5][2] = table[4][2];
+            table[4][2] = table[3][2];
+            table[3][2] = table[2][2];
+            inSpelarNamn = table[2][1];
+            inSummaSpelare = table[2][2];
+        } else if(inSummaSpelare >= table[3][2]) {
+            table[5][2] = table[4][2];
+            table[4][2] = table[3][2];
+            inSpelarNamn = table[3][1];
+            inSummaSpelare = table[3][2];
+        } else if(inSummaSpelare >= table[4][2]) {
+            table[5][2] = table[4][2];
+            inSpelarNamn = table[4][1];
+            inSummaSpelare = table[4][2];
+        } else if(inSummaSpelare >= table[5][2]) {
+            inSpelarNamn = table[5][1];
+            inSummaSpelare = table[5][2];
+        } else{
+            System.out.print("Du kom inte in på listan");
+        }
 
         // Skriv ut highScore
         String leftAlignFormat = "| %-3d | %-15s | %-5d |%n";
