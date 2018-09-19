@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c308475d-536a-41fb-ac95-63dbb5f193b8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inlamningsuppgift1_vg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/inlamningsuppgift1_vg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/java_inlamningsuppgift1_vg/com/javainlamningsuppgift1vg/JavaInlamningsuppgift1Vg.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/javainlamningsuppgift1vg/JavaInlamningsuppgift1Vg.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/javainlamningsuppgift1vg/JavaInlamningsuppgift1Vg.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -20,11 +20,12 @@
           <entry key="project.closed" value="5" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.11" value="2" />
+          <entry key="project.open.time.13" value="1" />
           <entry key="project.open.time.14" value="1" />
           <entry key="project.open.time.17" value="1" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.4" value="2" />
-          <entry key="project.opened" value="8" />
+          <entry key="project.opened" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -39,13 +40,13 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="3992" />
+          <entry key="java" value="5293" />
           <entry key="txt" value="16" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="3992" />
+          <entry key="JAVA" value="5293" />
           <entry key="PLAIN_TEXT" value="16" />
         </counts>
       </usages-collector>
@@ -57,11 +58,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/javainlamningsuppgift1vg/JavaInlamningsuppgift1Vg.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="33" column="13" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
+            <state relative-caret-position="775">
+              <caret line="126" column="43" selection-start-line="126" selection-start-column="43" selection-end-line="126" selection-end-column="43" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#highScore#0;class#JavaInlamningsuppgift1Vg#0" />
+                <element signature="method#tarning#0;class#JavaInlamningsuppgift1Vg#0" />
                 <element signature="method#spelaIgen#0;class#JavaInlamningsuppgift1Vg#0" />
               </folding>
             </state>
@@ -94,23 +94,57 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="-8" />
-    <option name="width" value="1735" />
-    <option name="height" value="1406" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="676" />
+    <option name="y" value="152" />
+    <option name="width" value="1301" />
+    <option name="height" value="1046" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes />
+    <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="java_inlamningsuppgift1_vg" type="58d84e3e:PackageViewProjectNode" />
+              <item name="java_inlamningsuppgift1_vg" type="616d4139:PackageViewModuleNode" />
+            </path>
+            <path>
+              <item name="java_inlamningsuppgift1_vg" type="58d84e3e:PackageViewProjectNode" />
+              <item name="java_inlamningsuppgift1_vg" type="616d4139:PackageViewModuleNode" />
+              <item name="com.javainlamningsuppgift1vg" type="1f31426a:PackageElementNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="AndroidView" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="java_inlamningsuppgift1_vg" type="b2602c69:ProjectViewProjectNode" />
+              <item name="java_inlamningsuppgift1_vg" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537377076165" />
-    <property name="last_opened_file_path" value="C:/odrive/OneDrive/Campus Mölndal/Java/IdeaProjects/ExempelSortBubble" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537396189795" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../java_inl-mningsuppgift1_g" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RunDashboard">
@@ -160,6 +194,7 @@
       <workItem from="1537255468833" duration="3542000" />
       <workItem from="1537261471973" duration="12622000" />
       <workItem from="1537340833516" duration="14444000" />
+      <workItem from="1537378818232" duration="13911000" />
     </task>
     <task id="LOCAL-00001" summary="En första commit">
       <created>1537017180219</created>
@@ -172,7 +207,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31972000" />
+    <option name="totallyTimeSpent" value="45883000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -184,10 +219,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="0" width="1570" height="1272" extended-state="0" />
+    <frame x="-7" y="-7" width="3130" height="1280" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.24779283" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.24763033" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -197,16 +232,16 @@
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.23488168" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32936078" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.33044422" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32883435" />
-      <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Debug" order="2" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="5" weight="0.32936078" />
+      <window_info anchor="bottom" id="Version Control" order="6" weight="0.33044422" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="9" weight="0.32865906" />
+      <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
+      <window_info active="true" anchor="bottom" id="Run" order="11" visible="true" weight="0.20800696" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -264,15 +299,89 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/javainlamningsuppgift1vg/JavaInlamningsuppgift1Vg.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="33" column="13" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
+        <state relative-caret-position="775">
+          <caret line="126" column="43" selection-start-line="126" selection-start-column="43" selection-end-line="126" selection-end-column="43" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#highScore#0;class#JavaInlamningsuppgift1Vg#0" />
+            <element signature="method#tarning#0;class#JavaInlamningsuppgift1Vg#0" />
             <element signature="method#spelaIgen#0;class#JavaInlamningsuppgift1Vg#0" />
           </folding>
         </state>
       </provider>
     </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>10</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>java_inlamningsuppgift1_vg</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>
