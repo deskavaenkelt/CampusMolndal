@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c308475d-536a-41fb-ac95-63dbb5f193b8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/java_inlamningsuppgift1_vg/com/javainlamningsuppgift1vg/JavaInlamningsuppgift1Vg.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/javainlamningsuppgift1vg/JavaInlamningsuppgift1Vg.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/javainlamningsuppgift1vg/JavaInlamningsuppgift1Vg.java" afterDir="false" />
     </list>
@@ -40,13 +39,13 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="5293" />
+          <entry key="java" value="8625" />
           <entry key="txt" value="16" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="5293" />
+          <entry key="JAVA" value="8625" />
           <entry key="PLAIN_TEXT" value="16" />
         </counts>
       </usages-collector>
@@ -58,8 +57,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/javainlamningsuppgift1vg/JavaInlamningsuppgift1Vg.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="775">
-              <caret line="126" column="43" selection-start-line="126" selection-start-column="43" selection-end-line="126" selection-end-column="43" />
+            <state relative-caret-position="722">
+              <caret line="41" column="72" lean-forward="true" selection-start-line="41" selection-start-column="72" selection-end-line="41" selection-end-column="72" />
               <folding>
                 <element signature="method#tarning#0;class#JavaInlamningsuppgift1Vg#0" />
                 <element signature="method#spelaIgen#0;class#JavaInlamningsuppgift1Vg#0" />
@@ -140,7 +139,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537396189795" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537464292283" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../java_inl-mningsuppgift1_g" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
@@ -194,7 +193,7 @@
       <workItem from="1537255468833" duration="3542000" />
       <workItem from="1537261471973" duration="12622000" />
       <workItem from="1537340833516" duration="14444000" />
-      <workItem from="1537378818232" duration="13911000" />
+      <workItem from="1537378818232" duration="40143000" />
     </task>
     <task id="LOCAL-00001" summary="En första commit">
       <created>1537017180219</created>
@@ -207,7 +206,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45883000" />
+    <option name="totallyTimeSpent" value="72115000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -220,7 +219,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="3130" height="1280" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.24763033" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -231,17 +229,15 @@
       <window_info id="Learn" order="6" />
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Debug" order="2" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="5" weight="0.32936078" />
-      <window_info anchor="bottom" id="Version Control" order="6" weight="0.33044422" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="9" weight="0.32865906" />
-      <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Run" order="11" visible="true" weight="0.20800696" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32928312" />
+      <window_info anchor="bottom" id="Cvs" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="4" weight="0.32936078" />
+      <window_info anchor="bottom" id="Version Control" order="5" weight="0.33044422" />
+      <window_info anchor="bottom" id="Terminal" order="6" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.32806805" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -251,6 +247,8 @@
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info anchor="right" id="Maven Projects" order="7" />
       <window_info anchor="right" id="Database" order="8" />
+      <window_info active="true" anchor="right" id="Run" order="9" visible="true" weight="0.2548828" />
+      <window_info anchor="right" id="Debug" order="10" weight="0.4159292" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -299,8 +297,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/javainlamningsuppgift1vg/JavaInlamningsuppgift1Vg.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="775">
-          <caret line="126" column="43" selection-start-line="126" selection-start-column="43" selection-end-line="126" selection-end-column="43" />
+        <state relative-caret-position="722">
+          <caret line="41" column="72" lean-forward="true" selection-start-line="41" selection-start-column="72" selection-end-line="41" selection-end-column="72" />
           <folding>
             <element signature="method#tarning#0;class#JavaInlamningsuppgift1Vg#0" />
             <element signature="method#spelaIgen#0;class#JavaInlamningsuppgift1Vg#0" />
