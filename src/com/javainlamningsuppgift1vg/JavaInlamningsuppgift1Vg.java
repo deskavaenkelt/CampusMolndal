@@ -8,45 +8,47 @@ public class JavaInlamningsuppgift1Vg {
         System.out.print("Hur många spelare skall det vara (2-5p)? ");
         int deltagare = scan.nextInt();
 
-        if(deltagare > 5 || deltagare < 2){                             // Kontrollera så det inte är fel antal deltagare
+        if(deltagare > 5 || deltagare < 2){                                     // Kontrollera så det inte är fel antal deltagare
             System.out.print("Ni kan bara välja mellan 2-5 spelare? ");
             deltagare = scan.nextInt();
         }
-        int spelarId[] = {1, 2, 3, 4, 5, 6, 7};                         // spelarId används senare för att länka ihop med spelarNamn
-        int summaSpelare[] = new int[7];                                // Används för de exporterade summorns som senare ska jämföras
+        int spelarId[] = {1, 2, 3, 4, 5, 6, 7};                                 // spelarId används senare för att länka ihop med spelarNamn
+        int summaSpelare[] = new int[7];                                        // Används för de exporterade summorns som senare ska jämföras
 
         // Möjlig gör länkning av spelarNamn och spelarId
         String spelarNamn[] = new String[9];
-        scan.nextLine();                                                // Denna raden rättar till en bugg när man går från nextInt => nextLine
+        scan.nextLine();                                                        // Denna raden rättar till en bugg när man går från nextInt => nextLine
         for(int e = 0 ; e <= deltagare-1 ; e++){
             System.out.print("Namn på spelare " + (e+1) + ": ");
             spelarNamn[e] = scan.nextLine();
         }
-        spelarNamn[6] = "none";                                         // Möjlig gör att fylla highScore med "none" för att tydligt visa att den är tom
+        spelarNamn[6] = "null";                                                 // Möjlig gör att fylla highScore med "null" för att tydligt visa att den är tom
 
         System.out.print("Välj antal kast: ");
         int antalKast = scan.nextInt();
 
-        // Bygger upp alla element till highScore
+        // Bygger upp alla element till highScore samt sätter namnen till null
         int forstaPlats[] = new int[2];     forstaPlats[0] = spelarId[6];
         int andraPlats[] = new int[2];      andraPlats[0] = spelarId[6];
         int tredjePlats[] = new int[2];     tredjePlats[0] = spelarId[6];
         int fjardePlats[] = new int[2];     fjardePlats[0] = spelarId[6];
         int femtePlats[] = new int[2];      femtePlats[0] = spelarId[6];
+
+        // Nedan används för att jämföra vinnarens resultat med highscore elementen
         int resultatSummaSpelare = 0;
         int resultatSpelarId = 0;
 
         do{
             // Skicka antalKast, deltagare (för Id) & spelarNamn[j] till tärningen och spara summan i summaSpelare[j]
             for(int j = 0 ; j <= deltagare-1 ; j++){
-                summaSpelare[j] += tarning(antalKast, j, spelarNamn[j]);
+                summaSpelare[j] += tarning(antalKast, spelarNamn[j]);
             }
             // Skriv ut summor för alla spelare i en färdig sträng
             for(int k = 0 ; k <= deltagare-1 ; k++){
                 String textOut = spelarNamn[k] + " fick totalt " + summaSpelare[k] + "/" + (antalKast*6) +" poäng. \n";
                 System.out.print(textOut);
             }
-            System.out.print("\n");                                     // Extra radbrytning
+            System.out.print("\n");                                             // Extra radbrytning
 
             // Sortera fram högsta resultatet och utser vinnaren. Enbart vinnarens resultat skickas till highScore, om två högsta resultat finns vinner ingen.
             if(summaSpelare[0] > summaSpelare[1] && summaSpelare[0] > summaSpelare[2] && summaSpelare[0] > summaSpelare[3] && summaSpelare[0] > summaSpelare[4]){
@@ -144,12 +146,8 @@ public class JavaInlamningsuppgift1Vg {
         System.out.print("\nTack och välkommen tillbaka!\n");
     }
 
-    /* ########################################################################## */
-    /* ########################## Här börjar metoderna ########################## */
-    /* ########################################################################## */
-
-    // Skapar tärningskasten för spelarna, Printar dem och gör "return" på summan.  Färdig sedan G uppgift
-    private static int tarning(int inAntalKast, int inDeltagare, String inSpelarnamn){
+    // Metoden för tärningen, skickar in: antalKast & spelarnamnet, Printar kasten och gör "return" på summan.
+    private static int tarning(int inAntalKast, String inSpelarnamn){
         int antalSidor = 6;
         int summa = 0;
         System.out.println(inSpelarnamn);
@@ -162,13 +160,11 @@ public class JavaInlamningsuppgift1Vg {
         return summa;
     } //Färdig
 
-    // Spela fler gånger
+    // Metod för att spela fler gånger.
     public static char spelaIgen(){
         Scanner scan = new Scanner(System.in);
-        // Fråga om man vill spela igen
         System.out.print("Vill ni spela igen? (j/n): ");
         char spelaIgen = scan.next().charAt(0);
-
         return spelaIgen;
     } //Färdig
 }

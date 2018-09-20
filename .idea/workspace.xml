@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c308475d-536a-41fb-ac95-63dbb5f193b8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/out/production/java_inlamningsuppgift1_vg/com/javainlamningsuppgift1vg/JavaInlamningsuppgift1Vg.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/java_inlamningsuppgift1_vg/com/javainlamningsuppgift1vg/JavaInlamningsuppgift1Vg.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/java_inlamningsuppgift1_vg/com/javainlamningsuppgift1vg/JavaInlamningsuppgift1Vg.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/javainlamningsuppgift1vg/JavaInlamningsuppgift1Vg.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/javainlamningsuppgift1vg/JavaInlamningsuppgift1Vg.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -39,13 +40,13 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="8625" />
+          <entry key="java" value="8955" />
           <entry key="txt" value="16" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="8625" />
+          <entry key="JAVA" value="8955" />
           <entry key="PLAIN_TEXT" value="16" />
         </counts>
       </usages-collector>
@@ -57,8 +58,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/javainlamningsuppgift1vg/JavaInlamningsuppgift1Vg.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="722">
-              <caret line="41" column="72" lean-forward="true" selection-start-line="41" selection-start-column="72" selection-end-line="41" selection-end-column="72" />
+            <state relative-caret-position="940">
+              <caret line="168" column="14" lean-forward="true" selection-start-line="168" selection-start-column="14" selection-end-line="168" selection-end-column="14" />
               <folding>
                 <element signature="method#tarning#0;class#JavaInlamningsuppgift1Vg#0" />
                 <element signature="method#spelaIgen#0;class#JavaInlamningsuppgift1Vg#0" />
@@ -93,11 +94,9 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="676" />
-    <option name="y" value="152" />
-    <option name="width" value="1301" />
-    <option name="height" value="1046" />
+  <component name="ProjectFrameBounds">
+    <option name="width" value="1914" />
+    <option name="height" value="943" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -139,7 +138,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537464292283" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537466898995" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../java_inl-mningsuppgift1_g" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
@@ -193,7 +192,7 @@
       <workItem from="1537255468833" duration="3542000" />
       <workItem from="1537261471973" duration="12622000" />
       <workItem from="1537340833516" duration="14444000" />
-      <workItem from="1537378818232" duration="40143000" />
+      <workItem from="1537378818232" duration="42175000" />
     </task>
     <task id="LOCAL-00001" summary="En första commit">
       <created>1537017180219</created>
@@ -206,7 +205,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72115000" />
+    <option name="totallyTimeSpent" value="74147000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -219,6 +218,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="3130" height="1280" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.24763033" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -297,8 +297,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/javainlamningsuppgift1vg/JavaInlamningsuppgift1Vg.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="722">
-          <caret line="41" column="72" lean-forward="true" selection-start-line="41" selection-start-column="72" selection-end-line="41" selection-end-column="72" />
+        <state relative-caret-position="940">
+          <caret line="168" column="14" lean-forward="true" selection-start-line="168" selection-start-column="14" selection-end-line="168" selection-end-column="14" />
           <folding>
             <element signature="method#tarning#0;class#JavaInlamningsuppgift1Vg#0" />
             <element signature="method#spelaIgen#0;class#JavaInlamningsuppgift1Vg#0" />
