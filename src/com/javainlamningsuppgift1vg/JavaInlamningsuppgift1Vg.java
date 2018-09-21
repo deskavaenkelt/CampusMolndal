@@ -73,6 +73,8 @@ public class JavaInlamningsuppgift1Vg {
                 resultatSummaSpelare = summaSpelare[4];
             } else {
                 System.out.println("2 eller mer likadan högsta resultat, ingen vinner!\n");
+                resultatSpelarId = 6;
+                resultatSummaSpelare = 0;
             }
 
             // Jämför vinnarens resultat med befintlig highScore och sorterar in vinnaren.
