@@ -33,6 +33,15 @@
 <li>Du ska lämna in en enkel beskrivning över vilka delar som är med på hemsidan och syftet med den. Lämnas in skriftligt som t ex word-fil tillsammans med källkoden till hemsidan.</li>
 </ul>
 
+<h3>Krav för VG</h3>
+<p>Utöver grunduppgiften:</p>
+<ul>
+<li>Du ska använda CSS Grid och/eller Flexbox för en tydlig layout.</li>
+<li>Man ska kunna spara något användare skriver in t ex ”betygsättning”, ”önskelistor” i Local storage.</li>
+<li>Du ska använda JSON för att läsa in data (på någon av sidorna).</li>
+</ul>
+<p>Du ska kunna beskriva något av de val du har gjort för att uppfylla kraven på hemsidan och exempel på hur du har lagt upp arbetet. Lämnas in skriftligt som t ex word-fil tillsammans med källkoden till hemsidan.</p>
+
 <h2>Inlämning</h2>
 <p>Inlämningsuppgiften ska lämnas in senast söndag den 7/10 kl.23.59.</p>
 <p>Följande ska vara med:</p>
