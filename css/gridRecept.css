@@ -1,0 +1,20 @@
+.grid-container-recept {
+    display: grid;
+    grid-template-columns: 200px auto;
+    grid-template-rows: auto auto;
+    grid-template-areas:    "a b"
+                            "c c";
+}
+.grid-bild {
+    grid-area: a;
+    grid-template-rows: 50px;
+    background-color: indianred;
+}
+.grid-ingredienser {
+    grid-area: b;
+    background-color: mediumvioletred;
+}
+.grid-howto {
+    grid-area: c;
+    background-color: orangered;
+}

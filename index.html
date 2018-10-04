@@ -2,48 +2,122 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Skivsamling</title>
+    <title>Receptsida</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/gridRecept.css">
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Metallica</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Dropdown
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                </div>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link disabled" href="#">Disabled</a>
-            </li>
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+<div class="grid-container">
+    <article class="grid-header">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="index.html">MammasMat</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="valkommen.html" target="iframe_a">Start<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="bakning.html" target="iframe_a">Bakning</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Dessert
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Kall</a>
+                            <a class="dropdown-item" href="#">Varm</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Fisk</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Kött
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Nöt</a>
+                            <a class="dropdown-item" href="#">Gris</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Fågel</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Sök" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Hitta</button>
+                </form>
+            </div>
+        </nav>
+    </article>
+    <article class="grid-main">
+        <iframe src="valkommen.html" style="border:none;" name="iframe_a" width="100%" height="100%"></iframe>
+    </article>
+    <article class="grid-aside">
+        <h1>Sign in</h1>
+        <form action="/action_page.php">
+            Username:<br>
+            <input type="text" name="userName" value="Mickey">
+            <br>
+            Password:<br>
+            <input type="password" name="Password" value="Mouse">
+            <br><br>
+            <input type="submit" value="Submit">
         </form>
-    </div>
-</nav>
-<!--<img src="bilder/homeHero.jpg">-->
+
+        <p>If you click the "Submit" button, the form-data will be sent to a page called "/action_page.php".</p>
+        <h1>Topp 5</h1>
+        <ol>
+            <li>Receptlänk</li>
+            <li>Receptlänk</li>
+            <li>Receptlänk</li>
+            <li>Receptlänk</li>
+            <li>Receptlänk</li>
+        </ol>
+    </article>
+    <article class="grid-footer">
+        <div class="flex-container-footer">
+            <article class="foot1">
+                <h1>Förslag 1</h1>
+                <p>Lorem ipsum dolor sit amet, officiis consequat vis ea, albucius assueverit ea sed, et choro integre consectetuer pri. Alia verear dissentiunt quo id, qui legere convenire salutandi no. Ad fugit causae audiam vim. Malis omnium imperdiet in mea.
+                    Vix id graecis docendi ponderum, sed ea agam impedit temporibus. Eu maiorum liberavisse duo. Nullam democritum ex has. Sed ea elit singulis efficiantur, sit percipit imperdiet gubergren at, ad reformidans mediocritatem mel.
+                    Natum consul ridens quo ne, nam et latine aliquam. Eum tation reprimique ea, ex his legere sententiae. Est eu sonet detracto salutatus, ius epicuri maiestatis ad. Vel te denique perfecto, mel quas novum iudico in. Erant clita eam eu, eum ad vidit legere splendide. Blandit vulputate dissentiet duo ad, dolores inciderint has et, et dicat accumsan torquatos mel. Option legendos consequuntur eos ad, fabellas conclusionemque per ad.
+                    Eam fastidii intellegam eu. Ex mea decore utroque. Vix et cotidieque accommodare disputationi, novum sanctus patrioque mea ea. Graeci iuvaret cu mei.</p>
+            </article>
+            <article class="foot2">
+                <h1>Förslag 2</h1>
+                <p>Lorem ipsum dolor sit amet, officiis consequat vis ea, albucius assueverit ea sed, et choro integre consectetuer pri. Alia verear dissentiunt quo id, qui legere convenire salutandi no. Ad fugit causae audiam vim. Malis omnium imperdiet in mea.
+                    Vix id graecis docendi ponderum, sed ea agam impedit temporibus. Eu maiorum liberavisse duo. Nullam democritum ex has. Sed ea elit singulis efficiantur, sit percipit imperdiet gubergren at, ad reformidans mediocritatem mel.
+                    Natum consul ridens quo ne, nam et latine aliquam. Eum tation reprimique ea, ex his legere sententiae. Est eu sonet detracto salutatus, ius epicuri maiestatis ad. Vel te denique perfecto, mel quas novum iudico in. Erant clita eam eu, eum ad vidit legere splendide. Blandit vulputate dissentiet duo ad, dolores inciderint has et, et dicat accumsan torquatos mel. Option legendos consequuntur eos ad, fabellas conclusionemque per ad.
+                    Eam fastidii intellegam eu. Ex mea decore utroque. Vix et cotidieque accommodare disputationi, novum sanctus patrioque mea ea. Graeci iuvaret cu mei.</p>
+            </article>
+            <article class="foot3">
+                <h1>Förslag 3</h1>
+                <p>Lorem ipsum dolor sit amet, officiis consequat vis ea, albucius assueverit ea sed, et choro integre consectetuer pri. Alia verear dissentiunt quo id, qui legere convenire salutandi no. Ad fugit causae audiam vim. Malis omnium imperdiet in mea.
+                    Vix id graecis docendi ponderum, sed ea agam impedit temporibus. Eu maiorum liberavisse duo. Nullam democritum ex has. Sed ea elit singulis efficiantur, sit percipit imperdiet gubergren at, ad reformidans mediocritatem mel.
+                    Natum consul ridens quo ne, nam et latine aliquam. Eum tation reprimique ea, ex his legere sententiae. Est eu sonet detracto salutatus, ius epicuri maiestatis ad. Vel te denique perfecto, mel quas novum iudico in. Erant clita eam eu, eum ad vidit legere splendide. Blandit vulputate dissentiet duo ad, dolores inciderint has et, et dicat accumsan torquatos mel. Option legendos consequuntur eos ad, fabellas conclusionemque per ad.
+                    Eam fastidii intellegam eu. Ex mea decore utroque. Vix et cotidieque accommodare disputationi, novum sanctus patrioque mea ea. Graeci iuvaret cu mei.</p>
+            </article>
+            <article class="foot4">
+                <h1>Blogg</h1>
+                <p>Lorem ipsum dolor sit amet, officiis consequat vis ea, albucius assueverit ea sed, et choro integre consectetuer pri. Alia verear dissentiunt quo id, qui legere convenire salutandi no. Ad fugit causae audiam vim. Malis omnium imperdiet in mea.
+                    Vix id graecis docendi ponderum, sed ea agam impedit temporibus. Eu maiorum liberavisse duo. Nullam democritum ex has. Sed ea elit singulis efficiantur, sit percipit imperdiet gubergren at, ad reformidans mediocritatem mel.
+                    Natum consul ridens quo ne, nam et latine aliquam. Eum tation reprimique ea, ex his legere sententiae. Est eu sonet detracto salutatus, ius epicuri maiestatis ad. Vel te denique perfecto, mel quas novum iudico in. Erant clita eam eu, eum ad vidit legere splendide. Blandit vulputate dissentiet duo ad, dolores inciderint has et, et dicat accumsan torquatos mel. Option legendos consequuntur eos ad, fabellas conclusionemque per ad.
+                    Eam fastidii intellegam eu. Ex mea decore utroque. Vix et cotidieque accommodare disputationi, novum sanctus patrioque mea ea. Graeci iuvaret cu mei.</p>
+            </article>
+        </div>
+    </article>
+</div>
+
+
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>

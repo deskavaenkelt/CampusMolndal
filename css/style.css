@@ -1,4 +1,79 @@
 body {
-    background-image: url("bilder/homeHero.jpg"); ;
-    background-size: cover;
+    background-color: antiquewhite;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:    "a a a a"
+                            "b b b c"
+                            "d d d d";
+}
+.grid-header {
+    grid-area: a;
+    grid-template-rows: 50px;
+}
+.grid-main {
+    grid-area: b;
+}
+.grid-aside {
+    grid-area: c;
+}
+.grid-footer {
+    grid-area: d;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    /*flex-direction: row;
+    flex-wrap: wrap;*/
+    /*
+    flex-direction: row;
+    flex-direction: row-reverse;
+
+    flex-direction: column;
+    flex-direction: column-reverse;
+    */
+}
+article{
+    padding: 10px;
+}
+.art-1{
+    background-color: red;
+    width: 200px;
+    order: 1;
+}
+.art-2{
+    background-color: green;
+    order: 1;
+    /*flex: 2;*/
+}
+.art-3{
+    background-color: yellow;
+    order: 2;
+}
+.art-4{
+    background-color: orange;
+    order: 3;
+}
+
+.flex-container-footer {
+    display: flex;
+    flex-direction: row;
+}
+article{
+    padding: 10px;
+}
+.foot1{
+    background-color: red;
+}
+.foot2{
+    background-color: green;
+}
+.foot3{
+    background-color: yellow;
+}
+.foot4{
+    background-color: orange;
 }
