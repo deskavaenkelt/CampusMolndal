@@ -2,88 +2,80 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Receptsida</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/gridRecept.css">
+    <link rel="stylesheet" type="text/css" href="css/mobile.css">
+    <link rel="stylesheet" type="text/css" href="css/tablet.css">
+    <!--<link rel="stylesheet" type="text/css" href="css/gridRecept.css">-->
 </head>
 <body>
 
 <div class="grid-container">
-    <article class="grid-header">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="index.html">MammasMat</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="valkommen.html" target="iframe_a">Start<span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="bakning.html" target="iframe_a">Bakning</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Dessert
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="dessertKall.html" target="iframe_a">Kall</a>
-                            <a class="dropdown-item" href="dessertVarm.html" target="iframe_a">Varm</a>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="fisk.html" target="iframe_a">Fisk</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Kött
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="not.html" target="iframe_a">Nöt</a>
-                            <a class="dropdown-item" href="gris.html" target="iframe_a">Gris</a>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="fagel.html" target="iframe_a">Fågel</a>
-                    </li>
-                </ul>
-                <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Sök" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Hitta</button>
-                </form>
-            </div>
+    <header class="grid-header">
+        <nav>
+            <div class="navbar-brand"><a href="index.html"><h1>MammasMat</h1></a></div><br>
+            <ul id="navUL">
+                <li class="navLi"><a class="active" href="valkommen.html" target="iframe_a">Start</a></li>
+                <li class="navLi"><a href="dessertKall.html" target="iframe_a">Kall dessert</a></li>
+                <li class="navLi"><a href="dessertVarm.html" target="iframe_a">Varm dessert</a></li>
+                <li class="navLi"><a href="fisk.html" target="iframe_a">Fisk</a></li>
+            </ul>
         </nav>
-    </article>
-    <article class="grid-main">
-        <iframe src="valkommen.html" style="border:none;" name="iframe_a" width="100%" height="100%"></iframe>
-    </article>
-    <article class="grid-aside">
+    </header>
+
+
+    <div class="grid-main">
+        <!--<iframe src="valkommen.html" id="mainIframe" name="iframe_a"></iframe>-->
+        <article>
+            <h1>Välkommen till MammasMat</h1>
+            <img id="husmor" src="bilder/husmor.jpg">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus beatae commodi deleniti dolorem,
+                doloremque eveniet expedita impedit incidunt inventore officiis pariatur provident,
+                quam quisquam repudiandae sapiente sed, sequi voluptas voluptates!</p>
+        </article>
+
+        <article>
+            <h1>Veckans recept</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus beatae commodi deleniti dolorem,
+                doloremque eveniet expedita impedit incidunt inventore officiis pariatur provident,
+                quam quisquam repudiandae sapiente sed, sequi voluptas voluptates!</p>
+        </article>
+    </div>
+
+
+    <aside class="grid-aside">
+        <article>
         <h1>Sign in</h1>
         <form action="/action_page.php">
-            Username:<br>
-            <input type="text" name="userName" value="Mickey">
-            <br>
-            Password:<br>
-            <input type="password" name="Password" value="Mouse">
-            <br><br>
-            <input type="submit" value="Submit">
+            <div >
+                <p>Username: <input type="text" name="userName" value="Mickey"></p>
+            </div>
+            <div>
+                <p>Password: <input type="password" name="userPassword" value="Mouse"></p>
+            </div>
+            <div class="clear"></div>
+            <div>
+                <button id="submit">Logga in</button>
+            </div>
         </form>
-
         <p>If you click the "Submit" button, the form-data will be sent to a page called "/action_page.php".</p>
+        </article>
+
+        <article>
         <h1>Topp 5</h1>
-        <ol>
+        <ol id="topFem">
             <li>Receptlänk</li>
             <li>Receptlänk</li>
             <li>Receptlänk</li>
             <li>Receptlänk</li>
             <li>Receptlänk</li>
         </ol>
-    </article>
-    <article class="grid-footer">
+        </article>
+    </aside>
+
+
+    <footer class="grid-footer">
         <div class="flex-container-footer">
             <article class="foot1">
                 <h1>Förslag 1</h1>
@@ -108,16 +100,14 @@
             </article>
             <article class="foot4">
                 <h1>Blogg</h1>
-                <a href="http://emelieholm.koket.se/"><img src="bilder/blogg.PNG"></a>
+                <a href="http://emelieholm.koket.se/"><img src="bilder/blogg.PNG" id="emelieholm"></a>
             </article>
         </div>
-    </article>
+    </footer>
 </div>
 
+<footer id="ansvarig"><div>@copy: 2018 <a href="dsve.se">dsve.se</a> </div></footer>
 
-
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script rel="script" src="js/jquery-3.3.1.min.js"></script>
 </body>
 </html>
