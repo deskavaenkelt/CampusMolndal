@@ -1,0 +1,85 @@
+{
+  "bakning": [
+    {
+      "bild": "../img/klassiskasemlor.jpg",
+      "titel": "Klassiska semlor",
+      "beskrivning": "Klassiskt recept på semlor med smak av kardemumma. Den lite större mängden jäst i degen gör våra semlor extra höga och luftiga.",
+      "ingredienser": [
+        "150 gram smör",
+        "3 dl standardmjölk",
+        "50 gram jäst",
+        "1,5 dl strösocker",
+        "1 st ägg",
+        "0,5 tsk salt",
+        "12 dl vetemjöl",
+        "2,5 msk kardemummakärnor"],
+      "tillagning": [
+        "Låt smöret bli rumsvarmt.",
+        "Krossa kardemummakärnorna i en mortel och värm med mjölken tills den är fingervarm.",
+        "Smula ner jästen i en bunke och lös upp med lite av mjölken, tillsätt sedan resten av mjölken.",
+        "Rör ner socker, salt, smör i bitar och ägg.",
+        "Tillsätt lite vetemjöl i taget, och bearbeta 10 minuter tills degen känns smidig och lite åt det kladdigare laget. Mängden mjöl kan variera från deg till deg, så känn efter.",
+        "Täck bunken med en kökshandduk eller ännu hellre plastfolie och jäs till dubbel storlek i 45-60 minuter.",
+        "Sätt ugnen på 220 grader. Stjälp upp degen på ett mjölat bord och dela den i 18 lika stora delar.",
+        "Rundriv bullarna, dvs forma släta bullar genom att dra i degen och vika skarvarna neråt, tills du får en slät yta. Placera på bullplåtar, 9 på varje, och låt jäsa i 45-60 minuter under kökshandduk eller plastfolie.",
+        "Vispa upp ägget och pensla bullarna. Grädda i mitten av ugnen i 7-10 minuter, tills semlorna blivit gyllene. Låt svalna på galler."]
+    },
+    {
+      "bild": "//icase.azureedge.net/imagevaultfiles/id_106282/cf_259/glasskyssar-718324.jpg",
+      "titel": "Glasskyssar",
+      "beskrivning": "Fantastiskt söta små desserter som smälter i munnen. Du kan själv enkelt bestämma storleken på desserten genom att göra mindre eller större maränger. Toppa med valfri topping – strössel, ätbart glitter eller smält choklad – variationsmöjligheterna är många!",
+      "ingredienser": [
+        "2 äggvitor",
+        "1/4 tsk majsmjöl",
+        "125 g strösocker",
+        "1/2 tsk vaniljextrakt",
+        "20 g florsocker",
+        "ätbart glitter (glittersocker) till garnering",
+        "4 kulor vaniljglass"],
+      "tillagning": [
+        "Värm ugnen till 80°C - 100°C och klä en plåt med bakplåtspapper.",
+        "Vispa äggvitorna och majsmjölet med en elvisp i en metallskål tills du har fasta toppar.",
+        "Häll långsamt sockret i ägg- och mjölblandningen och vispa tills blandningen är tjock och glansig. Till sist, häll i vaniljextraktet.",
+        "Skeda i marängen i en stor spritspåse med ett stort munstycke.",
+        "Spritsa små cirklar (ca 4 cm diameter) med några cm avstånd mellan varandra. Försök hålla ett jämnt tryck på påsen.",
+        "Låt dem stå i ugnen i 1 timme och 15 minuter. Stäng av ugnen och lämna plåten i ytterligare 1 timme för att marängerna ska torka ut.",
+        "Blanda florsockret med vatten till en tunn konsistens och pensla sedan toppen av varje kaka med en väldigt liten mängd. Doppa i glittersockret för en vacker effekt. Repetera med hälften av kakorna och lämna den andra hälften eftersom dessa kommer utgöra botten på dina glasskyssar.",
+        "Placera vaniljglassen i en andra spritspåse.",
+        "Spritsa lite glass på en ”bottenkaka” och toppa med en dekorerad topp. Repetera med samtliga kakor och servera omedelbart."]
+    },
+    {
+      "bild": "//icase.azureedge.net/imagevaultfiles/id_183141/cf_259/grillad-ananas-med-dulce-de-leche-724042-liten.jpg",
+      "titel": "Grillad ananas med dulce de leche",
+      "beskrivning": "Lägg ananas på grillen i sommar! Genom att grilla ananasen hel med skal behöver du inte vara rädd för att fruktköttet ska bli bränt. Du behöver inte heller oroa dig om skalet blir bränt – det påverkar inte fruktköttets smak. Servera den färdiggrillade ananasen i skivor och ringla över dulce de leche.",
+      "ingredienser": [
+        "1 ananas",
+        "1 dl dulce de leche eller karamelliserad mjölk",
+        "2 dl vispgrädde",
+        "1 dl rostade hackade valnötter,"],
+      "tillagning": [
+        "Lägg ananasen (med skal) på den glödande kolen. Baka ca 30 minuter tills den mjuknar. Vänd då och då. Låt svalna lite.",
+        "Värm dulce de lechen i en kastrull. Vispa grädden. Skär ananasen i skivor. Ringla över dulce de lechen. Toppa med vispad grädde och valnötter.",
+        "För alla",
+        "Innehåller laktos och mjölkprotein. Fri från gluten och ägg."]
+    },
+    {
+      "bild": "//icase.azureedge.net/imagevaultfiles/id_191579/cf_259/5-minuterssill-med-apple-rodbeta-och-pepparrot-724.jpg",
+      "titel": "5-minuterssill med äpple rödbeta och pepparrot",
+      "beskrivning": "Överraska med en sillinläggning som känns helt ny i smakkombinationerna. Använd 5-minuterssill så går det fort. Femminuterssill blandat med äpple och rödbetor ger sillen härlig smak och färg. Blandat med krämig smetana och med lite sting av färsk pepparrrot så kommer den här sillen bli en riktig klassiker i många år.",
+      "ingredienser": [
+        "2 förp 5-minuterssill i bitar (à 420 g)",
+        "2 medelstora färska rödbetor",
+        "1 äpple",
+        "2 dl smetana",
+        "3 msk färsk riven pepparrot",
+        "salt",
+        "svartpeppar"],
+      "tillagning": [
+        "Häll av sillen i ett durkslag.",
+        "Skala rödbetorna. Riv rödbetor och äpple grovt på ett rivjärn.",
+        "Blanda rödbetor och äpple med smetana.",
+        "Riv pepparroten fint på ett rivjärn och blanda i den och sillen i smetanan. Smaksätt med salt och peppar.",
+        "Till servering: Servera sillen på knäckebröd och strö gärna över gräslök."]
+    }
+  ]
+}

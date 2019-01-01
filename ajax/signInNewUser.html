@@ -1,0 +1,22 @@
+<!-- Registrera användare -->
+
+<h2>Registrera användare</h2>
+<form id="createUser">
+    <div class="row">
+        <div class="col-25"><label for="newUserName">Användarnamn: </label></div>
+        <div class="col-75"><input type="text" id="newUserName" name="newUserName" required></div>
+    </div>
+    <div class="row">
+        <div class="col-25"><label for="newUserEmail">E-mail: </label></div>
+        <div class="col-75"><input type="email" id="newUserEmail" name="email" required></div>
+    </div>
+    <div class="row">
+        <div class="col-25"><label for="newUserPassword">Lösenord: </label></div>
+        <div class="col-75"><input type="password" id="newUserPassword" name="newUserPassword" minlength="5" required></div>
+    </div>
+    <br>
+    <div class="row">
+        <button type="button" id="createUserSubmit">Skapa användare</button>
+        <button id="reset">Rensa</button>
+    </div>
+</form>

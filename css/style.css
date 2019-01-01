@@ -1,0 +1,275 @@
+@charset "utf-8";
+body{
+	background-color: #FFFFFF;
+	font-family: 'Roboto', sans-serif;
+}
+header{
+	text-align: center;
+	background-color: #F5F6F2;
+	margin-bottom: 1em;
+	border-radius: 10px;
+}
+main{
+	background-color: #F5F6F2;
+	border-radius: 10px;
+}
+footer{
+	background-color: #F5F6F2;
+	border-radius: 10px;
+}
+h2 {
+	color: #002516;
+}
+p{
+	font-size: 1em;
+}
+/********   Header   ********/
+.style-logo{
+	margin: 0 auto;
+	font-style: italic;
+	font-family: 'Tangerine', sans-serif;
+	font-size: 1.15em;
+	text-shadow: 4px 4px 4px #aaa;
+}
+.style-logo h1{
+	margin: 0;
+	color: #002516;
+}
+.style-nav {
+	display: flex;
+	flex-direction: column;
+}
+.navbarKnappar{
+	font-size: 1.2em;
+	color: #002516;
+	border:  1px solid #002516;
+	border-radius: 10px;
+	margin: 1px 1px;	
+}
+.navbarKnappar a{
+	display: block;
+	color: #002516;
+	background-color: #BCC2BD;
+	border-radius: 10px;
+	padding: 2px 0;
+}
+.navbarKnappar a.active{
+	background-color: #23592A;
+	color: #F5F6F2;
+	border-radius: 10px;
+}
+.navbarKnappar a:hover:not(.active){
+	background-color: #347036;
+	color: #F5F6F2;
+	border-radius: 10px;
+}
+/********   Main   ********/
+#info-box{
+	text-align: center;
+	height: auto;
+	border-bottom: 1px solid #BCC2BD;
+}
+#receptBilden{
+	width: 100%;
+}
+#recention{
+	text-align: center;
+}
+.recIndelning{
+	border:  1px solid #002516;
+	width: 400px;
+	margin: 0 auto;
+}
+.signIn{
+	text-align: center;
+}
+#inloggning{
+	box-sizing: border-box;
+	text-align: center;
+}
+
+.col-25, .col-75, input[type=submit] {
+	width: 100%;
+	margin-top: 0;
+}
+label{
+	font-size: 1em;
+}
+input{
+	width: 90%;
+	font-size: 1em;
+	padding: 6px;
+	border-radius: 4px;
+	text-align: center;
+}
+button{
+	font-size: 1em;
+	border-radius: 4px;
+	padding: 0.2em 0.4em;
+	color: #002516;
+	background-color: #BCC2BD;
+	border:  1px solid #002516;
+	margin: 0.5em 0.4em;
+}
+#husmor {
+	margin-top: 0.5em;
+}
+a{
+	text-decoration: none;
+}
+#blogg{
+    width: 100%;
+}
+/********   Footer   ********/
+.col {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+.row{
+	margin: 0;
+	padding: 0;
+}
+.row:before, .row:after {
+	content: "";
+	display: table;
+}
+.row:after {
+	clear: both;
+}
+#recept-grid{
+	display: grid;
+	margin: 0 auto;
+	width: 100%;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto auto auto;
+	grid-template-areas:    "a"
+							"b"
+							"c";
+}
+#receptBild{
+	grid-area: a;
+}
+#receptBild img{
+	height: 300px;
+	width: 70%;
+}
+#receptIngredienser{
+	grid-area: b;
+	text-align: left;
+}
+#receptTillagning{
+	grid-area: c;
+	text-align: left;
+}
+.footText{
+	padding: 0 1em;
+	text-align: center;
+}
+#foot1{	grid-area: a; border-bottom: 1px solid #BCC2BD;}
+#foot2{	grid-area: b; border-bottom: 1px solid #BCC2BD;}
+#foot3{	grid-area: c; border-bottom: 1px solid #BCC2BD;}
+#foot4{	grid-area: d; }
+
+#egenReklam {
+	text-align: center;
+}
+/*****************************/
+/*****    Tablet View    *****/
+/*****************************/
+@media (min-width:768px){
+	body{
+		max-width: 778px;
+		margin: 0 auto;
+	}
+	header{
+		border-bottom: 1px solid #BCC2BD;
+		border-radius: 0;
+		margin-bottom: 0;
+	}
+	main{
+		border-bottom: 1px solid #BCC2BD;
+		border-radius: 0;
+	}
+	footer{
+		border-radius: 0;
+	}
+	/********	Navbar   ********/
+	.style-nav {
+		flex-direction: row;
+		justify-content: center;
+	}
+	.navbarKnappar {
+		width: 130px;
+		margin: 0.4em;
+	}
+	/********	Main   ********/
+	.col-md-two-thirds{
+		width: 67%;
+	}
+	.col-md-one-thirds{
+		width: 33%;
+	}
+	.col-md-one-half{
+		width: 50%;
+	}
+	#info-box{
+		border-bottom: 0;
+	}
+	.col {
+		float: left;
+	}
+	.signIn{
+		margin-top: auto;
+		margin-bottom: auto;
+		height: auto
+	}
+    .top5{
+
+    }
+	/********	Footer   ********/
+	#foot1{ border: 0.2em solid #FFFFFF; height: 10em }
+	#foot2{ border: 0.2em solid #FFFFFF; height: 10em }
+	#foot3{ border: 0.2em solid #FFFFFF; height: 15em }
+	#foot4{ border: 0.2em solid #FFFFFF; height: 15em }
+}
+
+/******************************/
+/*****    Desktop View    *****/
+/******************************/
+@media (min-width:1024px){
+	body{
+		max-width: 1200px;
+	}
+	/********	Navbar   ********/
+	.style-logo {
+		float: left;
+		margin: 0.2em 1.4em;
+	}
+	.style-nav {
+		float: right;
+		margin-right: 1.4em;
+	}
+	/********	Main   ********/
+	#recept-grid{
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: auto auto;
+		grid-template-areas:    "a a a"
+								"b c c";
+	}
+
+	.col-lg-three-forths{
+		width: 75%;
+	}
+	.col-lg-one-forths{
+		width: 25%;
+	}
+	/********	Footer   ********/
+	#foot1{ border: none; height: auto }
+	#foot2{ border: none; height: auto }
+	#foot3{ border: none; height: auto }
+	#foot4{ border: none; height: auto }
+	.footText{
+		padding: 0 1em;
+	}
+}

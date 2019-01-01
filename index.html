@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="sv">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>MammasMat</title>
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+		<link href="css/style.css" rel="stylesheet" type="text/css">
+
+    </head>
+
+<body>
+
+
+<!--
+TODO: 	>>> G-nivå <<<
+TODO:	* Du ska lämna in en enkel beskrivning över vilka delar som är med på hemsidan och syftet med den. Lämnas in skriftligt som t ex word-fil tillsammans med källkoden till hemsidan.
+-->
+
+	<header>
+		<div class="row">
+			<div class="col">
+				<div class="style-logo"><h1>MammasMat</h1></div>
+<!--			Gör navbar med Flexbox-->
+				<nav>
+					<div class="style-nav">
+						<div class="navbarKnappar"><a href="#" id="menyStart">Start</a></div>
+						<div class="navbarKnappar"><a href="#" id="menyBakning" class="active">Bakning</a></div>
+						<div class="navbarKnappar"><a href="#" id="menyKallDessert">Kall dessert</a></div>
+						<div class="navbarKnappar"><a href="#" id="menyVarmDessert">Varm dessert</a></div>
+						<div class="navbarKnappar"><a href="#" id="menyFisk">Fisk</a></div>
+					</div>
+				</nav>
+			</div>
+		</div>
+	</header>
+
+
+	
+	<main>
+		<div class="row">
+			<div class="col col-md-two-thirds col-lg-three-forths">
+				<section id="info-box"></section>
+                <section id="recention"></section>
+			</div>
+			
+			<div class="col col-md-one-thirds col-lg-one-forths">
+				<section>
+					<!-- Login formulär -->
+					<article id="inloggning">
+						<div id="loginButtons"></div>
+						<div id="signIn"></div>
+					</article>
+
+					<!-- Topp 5 -->
+					<article>
+						<h2>Topp 5</h2>
+						<ol>
+							<li><a href="#" class="top5" id="receptLank1">Klassiska semlor</a></li>
+							<li><a href="#" class="top5" id="receptLank2">Glasskyssar</a></li>
+							<li><a href="#" class="top5" id="receptLank3">Grillad ananas med dulce de leche</a></li>
+							<li><a href="#" class="top5" id="receptLank4">Sill med äpple rödbeta och pepparrot</a></li>
+							<li><a href="#" class="top5" id="receptLank5">Receptlänk</a></li>
+						</ol>
+
+					</article>
+
+					<!-- Blogg -->
+					<article>
+						<a href="http://emelieholm.koket.se/">
+							<img src="img/blogg.PNG" id="blogg" alt="Referens till våran blogg">
+							<h3>Länk till vår blogg</h3>
+						</a>
+					</article>
+				</section>
+			</div>
+		</div>
+	</main>
+
+
+	<!-- Innehåller de 4 rekomendationerna och läses in med JSON-->
+	<footer>
+		<div class="footer-item">
+			<div class="col col-md-one-half col-lg-one-forths"><article id="foot1" class="footText"></article></div>
+			<div class="col col-md-one-half col-lg-one-forths"><article id="foot2" class="footText"></article></div>
+			<div class="col col-md-one-half col-lg-one-forths"><article id="foot3" class="footText"></article></div>
+			<div class="col col-md-one-half col-lg-one-forths"><article id="foot4" class="footText"></article></div>
+		</div>
+
+        <div id="egenReklam">MammasMat © 2018 All rights reserved. Producerad av <a href="http://www.dsve.se" title="DSVE">DSVE Webbyrå</a></div>
+	</footer>
+
+<div id="result"></div>
+	<!-- Hänvisning till javascriptfil och jquery bibliotek-->
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/script.js"></script>
+	<script src="js/navbar.js"></script>
+	<script src="js/login.js"></script>
+	<script src="js/footer.js"></script>
+</body>
+</html>
