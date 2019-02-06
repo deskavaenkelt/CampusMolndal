@@ -1,5 +1,3 @@
-# datalogiUppgift1
-
 <h1>Datalogi - uppgift 1 – Arrays</h1>
 
 <article>
@@ -61,6 +59,5 @@ Exempelvis: toUppercase(char[] x);</li>
 		<li>Från metoden i <strong>f)</strong> skall en ny metod anropas varje gång ett nytt värde sätts in i er String array. Metoden skall vara funktionell och använda rekursion. Metoden skall skriva ut samtliga värden i er String array till skärmen. Texten skall skrivas ut som en String.</li>
 		<li>(Extra uppgift)<br>
 			Nu skall ni bygga in ett val i början av programmet. Antingen kan man starta programmet så tidigare med ett input fält alternativt ges ett input fält där en enbart en <strong>int</strong> får anges. Därefter skall programmet köras som tidigare men istället för user input skall det vara random input från alfabetet <strong>X</strong> gånger där <strong>X</strong> är int värdet i input. När detta fungerar testa gärna att pressa gränserna på ert program och fundera över vart och varför kommer programmet få problem när ni ökar er <strong>int</strong>?</li>
-		<li></li>
 	</ol>
 </article>
