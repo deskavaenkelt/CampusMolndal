@@ -42,7 +42,9 @@
 	<p>char[] charArray2 = { ’s’, ’i’, ’n’, ’g’};</p>
 	<p>detectTInArray(charArray1);</p>
 	<p>detectTInArray(charArray2);</p>
+</article>
 
+<article>
 	<p>Bygg ett program som kan ta emot en Array med bokstäver. Programmet skall kontrollera om input innehåller ett ’t’. Om programmet hittar ett ’t’ skall programmet skriva true till skärmen annars false. Programmet skall även hantera om inputen ändras till andra char arrays.</p>
 	<p>När detta är byggt och fungerar korrekt kan ni börja utveckla programmet genom delpunkterna nedan.<strong>Kom ihåg att printa ut charArray1 och charArray2 samt vilken delpunkt till skärmen efter varje delpunkt fram till e). Detta skall vara en egen funktion.</strong></p>
 </article>
