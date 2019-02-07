@@ -1,12 +1,14 @@
 package com.dsve;
 
+import java.util.Scanner;
+
 public class Main {
 
-    public static void main(String[] args) {
-        char[] charArray1 = { 's', 't', 'r', 'i', 'n', 'g' };
-        char[] charArray2 = { 's', 'i', 'n', 'g' };
+    public static Scanner scan = new Scanner(System.in);
 
-        String[] returArray = {"\ncharArray1 returnerar: " , "\ncharArray2 returnerar: " };
+    public static void main(String[] args) {
+        /*char[] charArray1 = { 's', 't', 'r', 'i', 'n', 'g' };
+        char[] charArray2 = { 's', 'i', 'n', 'g' };
 
         // TODO: Startuppgift
         System.out.println("Startuppgift");
@@ -28,10 +30,11 @@ public class Main {
         // TODO: d)
         // compareTwoArrays
         compareTwoArrays(computedCharArray1, computedCharArray2);
-        compareTwoArrays(charArray1,charArray2);
+        compareTwoArrays(charArray1,charArray2);*/
 
         // TODO: e)
-        // Skapa input-fält
+        //  Skapa input-fält
+        //inputField();
 
         // TODO: f)
         // t -> T
@@ -42,8 +45,8 @@ public class Main {
         // TODO: h)
         // t -> T
 
-
-
+        System.out.println(getValidCharArray(3));
+        scan.close();
     }
 
     private static char[] detectTInArray(char[] charArray, int id) {
@@ -105,7 +108,7 @@ public class Main {
     private static void compareTwoArrays(char[] charArray1, char[] charArray2) {
         boolean isIdentical = true;
         int i;
-        for (i = 0; i < (charArray1.length) && (i < charArray2.length) ; i++) {
+        for (i = 0; i < (charArray1.length) && (i < charArray2.length); i++) {
             if (charArray1[i] != charArray2[i]) {
                 isIdentical = false;
             }
@@ -116,4 +119,71 @@ public class Main {
             System.out.println("Array 1 and Array 2 missmatched");  // Debugg
         }*/
     }
+
+    private static void inputField() {
+        // TODO: e)
+        //  1) String tar emot vad som helst.   ==> userInputStringToCharArray()
+        //  2) Sätt in i en char array[3]       ==> getValidCharArray()
+        //  3) Om denna array är fylld skall programmet fråga om ny input
+        //  4) I denna input skall en siffra skrivas in för vilken plats i er array som skall ersättas med det nya värdet.
+        //  5) Programmet skall därefter sätta in det nya värdet på begärd plats och skriva ut er array.
+        //  6) När detta är gjort skall programmet begära ny input om input är tom skall programmet brytas.
+
+        char[] aCharArray = getValidCharArray(3);
+        System.out.println("aCharArray: " + aCharArray);                // debug
+
+        int replaceCharAtPos = userInputReadNumbers(0, 2);
+        System.out.println("replaceCharAtPos: " + replaceCharAtPos);    // debug
+
+        char[] replaceCharWith = getValidCharArray(1);
+        System.out.println("replaceCharWith: " + replaceCharWith);      // debug
+
+    }
+
+    private static char[] getValidCharArray(int maxLengtOfReturnedCharArray) {
+        char[] inputFieldCharArray = new char[maxLengtOfReturnedCharArray];
+        boolean isInputFieldCharArrayFull = false;
+
+        int i = 0;
+        while (!isInputFieldCharArrayFull) {
+            System.out.println("\nÄr inne i while-loop\n");           // debug
+            char[] recivedInput = userInputStringToCharArray();
+            for (; i < maxLengtOfReturnedCharArray; i++) {
+                if (recivedInput[i] != ' ') {
+                    inputFieldCharArray[i] = recivedInput[i];
+                }
+            }
+            if (inputFieldCharArray[maxLengtOfReturnedCharArray - 1] != ' ') {
+                isInputFieldCharArrayFull = true;
+            }
+        }
+        return inputFieldCharArray;
+    }
+
+    private static char[] userInputStringToCharArray() {
+        System.out.print("Skriv in en sträng: ");
+        String userInput = scan.nextLine();
+        char[] returningCharArray = userInput.toCharArray();
+        return returningCharArray;
+    }           // kontrollerad och fungerar, returnerar hel stäng utan vidare kontroll
+
+    private static int userInputReadNumbers(int min, int max) {
+        System.out.print("Skriv in ett tal mellan " + min + "-" + max + ": ");
+        int scannedInt = 0;
+        boolean dontBreakLoop = true;
+
+        while (dontBreakLoop) {
+            boolean hasNextInt = scan.hasNextInt();
+            if (hasNextInt) {
+                scannedInt = scan.nextInt();
+                scan.nextLine(); // handle next line character (enter key)
+                if (scannedInt >= min && scannedInt <= max) {
+                    dontBreakLoop = false;
+                } else {
+                    System.out.println("Mata in giltlig siffra");
+                }
+            }
+        }
+        return scannedInt;
+    }    // kontrollerad och fungerar
 }
