@@ -1,10 +1,13 @@
 package com.dsve;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
 
     public static Scanner scan = new Scanner(System.in);
+
+    public static boolean globalFlag = true;
 
     public static void main(String[] args) {
         /*char[] charArray1 = { 's', 't', 'r', 'i', 'n', 'g' };
@@ -37,15 +40,35 @@ public class Main {
         //inputField();
 
         // TODO: f)
-        // t -> T
+        //  1) Skapa stringarray men en plats
+        //  2)
+        //  3)
+        //  4)
+        //  5)
+        //  6)
+        //  7)
 
         // TODO: g)
-        // t -> T
+        //  1)
+        //  2)
+        //  3)
+        //  4)
+        //  5)
+        //  6)
+        //  7)
 
         // TODO: h)
-        // t -> T
+        //  1)
+        //  2)
+        //  3)
+        //  4)
+        //  5)
+        //  6)
+        //  7)
 
-        System.out.println(getValidCharArray(3));
+//        char[] temp = getValidCharArray(3);
+//        System.out.println("Returneras från getValidCharArray: " + Arrays.toString(temp));
+        inputField();
         scan.close();
     }
 
@@ -122,55 +145,74 @@ public class Main {
 
     private static void inputField() {
         // TODO: e)
-        //  1) String tar emot vad som helst.   ==> userInputStringToCharArray()
+        //  1) String tar emot vad som helst.   ==> userInputString()
         //  2) Sätt in i en char array[3]       ==> getValidCharArray()
-        //  3) Om denna array är fylld skall programmet fråga om ny input
+        //  3) Om denna array är fylld skall programmet fråga om ny input               ej null mm, måste få plats i char
         //  4) I denna input skall en siffra skrivas in för vilken plats i er array som skall ersättas med det nya värdet.
         //  5) Programmet skall därefter sätta in det nya värdet på begärd plats och skriva ut er array.
         //  6) När detta är gjort skall programmet begära ny input om input är tom skall programmet brytas.
+        //  7) Tom input bryter programmet.
 
         char[] aCharArray = getValidCharArray(3);
-        System.out.println("aCharArray: " + aCharArray);                // debug
+        System.out.println("aCharArray: " + Arrays.toString(aCharArray));                // debug
 
-        int replaceCharAtPos = userInputReadNumbers(0, 2);
-        System.out.println("replaceCharAtPos: " + replaceCharAtPos);    // debug
+        globalFlag = true;
+        while (globalFlag) {
+            globalFlag = false;
 
-        char[] replaceCharWith = getValidCharArray(1);
-        System.out.println("replaceCharWith: " + replaceCharWith);      // debug
+            int replaceCharAtPos = userInputReadNumbers(0, 2);
+            System.out.println("replaceCharAtPos: " + replaceCharAtPos);                     // debug
+
+            char[] replaceCharWith = getValidCharArray(1);
+            System.out.println("replaceCharWith: " + Arrays.toString(replaceCharWith));      // debug
+        }
+
 
     }
 
     private static char[] getValidCharArray(int maxLengtOfReturnedCharArray) {
-        char[] inputFieldCharArray = new char[maxLengtOfReturnedCharArray];
-        boolean isInputFieldCharArrayFull = false;
 
-        int i = 0;
-        while (!isInputFieldCharArrayFull) {
-            System.out.println("\nÄr inne i while-loop\n");           // debug
-            char[] recivedInput = userInputStringToCharArray();
-            for (; i < maxLengtOfReturnedCharArray; i++) {
-                if (recivedInput[i] != ' ') {
-                    inputFieldCharArray[i] = recivedInput[i];
+        char[] inputFieldCharArray = new char[maxLengtOfReturnedCharArray];
+        boolean flag = true;
+
+        int i;
+        int counter = 0;
+        while (flag) {
+            flag = false;
+            String recivedString = userInputString();
+            char[] tempCharArray = recivedString.toCharArray();
+
+            for (i = 0; i < tempCharArray.length; i++) {
+                inputFieldCharArray[counter] = tempCharArray[i];
+                counter++;
+                if (counter == 3) {
+                    break;
                 }
             }
-            if (inputFieldCharArray[maxLengtOfReturnedCharArray - 1] != ' ') {
-                isInputFieldCharArrayFull = true;
+            if (counter < maxLengtOfReturnedCharArray) {
+                flag = true;
             }
         }
         return inputFieldCharArray;
-    }
+    }   // Kontrollerad och fungerar
 
-    private static char[] userInputStringToCharArray() {
+    private static String userInputString() {
+        globalFlag = true;
         System.out.print("Skriv in en sträng: ");
         String userInput = scan.nextLine();
-        char[] returningCharArray = userInput.toCharArray();
-        return returningCharArray;
+        if (userInput.isEmpty()) {
+            globalFlag = false;
+        }
+        return userInput;
     }           // kontrollerad och fungerar, returnerar hel stäng utan vidare kontroll
 
     private static int userInputReadNumbers(int min, int max) {
+        globalFlag =true;
         System.out.print("Skriv in ett tal mellan " + min + "-" + max + ": ");
         int scannedInt = 0;
         boolean dontBreakLoop = true;
+
+        int temp = scan.hasNextInt();
 
         while (dontBreakLoop) {
             boolean hasNextInt = scan.hasNextInt();
@@ -179,6 +221,8 @@ public class Main {
                 scan.nextLine(); // handle next line character (enter key)
                 if (scannedInt >= min && scannedInt <= max) {
                     dontBreakLoop = false;
+                } else if (scannedInt == ' ') {
+                    globalFlag = false;
                 } else {
                     System.out.println("Mata in giltlig siffra");
                 }
