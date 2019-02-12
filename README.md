@@ -1,0 +1,1 @@
+# datalogiUppgift2Primtal
