@@ -26,7 +26,7 @@
 </article>
 
 <article>
-    <h1>I denna uppgift arbetar du ensam och inlämning är senast 23:59 Fredagen 15:e Februari.</h1>
+    <h2>I denna uppgift arbetar du ensam och inlämning är senast 23:59 Fredagen 15:e Februari.</h2>
 </article>
 
 <article>
