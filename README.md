@@ -25,7 +25,10 @@
 </table>
 </article>
 
-	<h1>I denna uppgift arbetar du ensam och inlämning är senast 23:59 Fredagen 15:e Februari.</h1>
+<article>
+    <h1>I denna uppgift arbetar du ensam och inlämning är senast 23:59 Fredagen 15:e Februari.</h1>
+</article>
+
 <article>
 	<h2>Introduktion</h2>
 	<p>Ett primtal är ett tal som är större än 1 och kan enbart delas med 1 eller en positiv version av sig själv. Tex 2, 3 och 5 är primtal.</p>
