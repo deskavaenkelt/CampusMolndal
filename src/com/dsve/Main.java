@@ -23,17 +23,6 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        /*DataHolder databas = new DataHolder();
-
-        databas.addDatahHolderItem(String.valueOf(89));
-        databas.addDatahHolderItem(String.valueOf(79));
-        databas.addDatahHolderItem(String.valueOf(69));
-        databas.addDatahHolderItem(String.valueOf(59));
-
-        System.out.println(databas.getDataHolder().get(0));
-
-        System.out.println("Is dublicate: " + databas.isDuplicate(89));*/
-
         runProgram();
     }
 
@@ -44,13 +33,7 @@ public class Main {
             printActions();
             int action = InputDialog.getNumber();
 
-            if (       action == 0
-                    || action == 1
-                    || action == 2
-                    || action == 3
-                    || action == 4
-                    || action == 5
-                    || action == 7) {
+            if (action == 0 || action == 1 || action == 2 || action == 3 || action == 4 || action == 8 || action == 9) {
                 switch (action) {
                     case 0:
                         System.out.println("\nShutting down...");
@@ -70,10 +53,10 @@ public class Main {
                         Add.multipleNumbers();
                         Add.sumOfArray();
                         break;
-                    case 5:
+                    case 8:
                         Add.printDatabase();
                         break;
-                    case 7:
+                    case 9:
                         Add.importDatabase();
                         break;
                 }
@@ -83,35 +66,36 @@ public class Main {
 
     private static void printActions() {
         System.out.println("\nAvailable actions:");
-        System.out.println( "0  - Shutdown\n" +
-                            "1  - Add\n" +
-                            "2  - Sort\n" +
-                            "3  - Search\n" +
-                            "4  - Add multiple numbers\n" +
-                            "5  - Print Database\n" +
-                            "7  - Import Database\n");
-        System.out.print("\nEnter action: ");
+        System.out.println(
+                "+----------------------------+\n" +
+                "| 1  - Add                   |\n" +
+                "| 2  - Sort                  |\n" +
+                "| 3  - Search                |\n" +
+                "| 4  - Add multiple numbers  |\n" +
+                "|                            |\n" +
+                "| ========== EXTRA ========= |\n" +
+                "| 8  - Print Database        |\n" +
+                "| 9  - Import Database       |\n" +
+                "| 0  - Shutdown              |\n" +
+                "+----------------------------+\n");
+        System.out.print("Enter action: ");
+    }
+}
+
+class Sort {
+    public static void start() {
+        System.out.println("\nInitialize Sort...");
+        Add.printDatabase();
+        Add.sortArray();
+    }
+}
+
+class Search {
+    public static void start() {
+        System.out.print("Number to be searched for: ");
+        Add.searchForNumber();
     }
 }
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-* 88. Bug Fix for ArrayList Challenge innehåller mycket som löser uppgiften
-* */

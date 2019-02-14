@@ -30,7 +30,6 @@ public class Add {
         System.out.print("Skriv in ett tal: ");
         getNumber();
     }
-
     private static void getNumber() {
         int number = InputDialog.getNumber();
         if (number == -1) {
@@ -39,7 +38,6 @@ public class Add {
         // Jag har ett giltligt nummer, kolla om det är ett primtal
         primeValidation(number);
     }
-
     private static void primeValidation(int number) {
         if (Prime.getPrime(number)) {
             // Kolla om talet redan finns i databasen
@@ -51,12 +49,18 @@ public class Add {
             return;
         }
     }
-    
+
     public static void printDatabase(){
+        printDatabaseInternal();
+    }
+    private static void printDatabaseInternal(){
         System.out.println("Database contains: " + database.getDataHolder());
     }
-    
+
     public static void sumOfArray() {
+        sumOfArrayInternal();
+    }
+    private static void sumOfArrayInternal() {
         int sum = 0;
         for (int i = 0; i < database.getDataHolder().size(); i++) {
             sum += Integer.parseInt(database.getDataHolder().get(i));
@@ -66,15 +70,30 @@ public class Add {
     }
 
     public static void searchForNumber() {
-        int number = InputDialog.getNumber();
-        if (number == -1) {
+        searchForNumberInternal();
+    }
+    private static void searchForNumberInternal() {
+        boolean isArrayListIsEmpty = database.getDataHolder().isEmpty();
+
+        if (isArrayListIsEmpty) {
+            System.out.println("No numbers in database!");
             return;
+        } else {
+            int number = InputDialog.getNumber();
+            if (number == -1) {
+                return;
+            }
+            // Jag har ett giltligt nummer, kolla om det finns
+            database.searchFor(number);
         }
-        // Jag har ett giltligt nummer, kolla om det finns
-        database.searchFor(number);
+
+
     }
 
     public static void importDatabase() {
+        importDatabaseInternal();
+    }
+    private static void importDatabaseInternal() {
         primeValidation(5);
         primeValidation(13);
         primeValidation(3);
@@ -87,8 +106,12 @@ public class Add {
     }
 
     public static void multipleNumbers(){
-        System.out.print("How many numbers to enter? ");
+        multipleNumbersInternal();
+    }
+    private static void multipleNumbersInternal(){
+        System.out.print("\nHow many numbers to enter? ");
         int number = InputDialog.getNumber();
+        System.out.println();
         if (number == -1) {
             return;
         }
@@ -99,15 +122,23 @@ public class Add {
         }
     }
 
+    // TODO: Sort
     public static void sortArray() {
-        clearTemporaryArrayLists();
-        copyDatabaseToTemporaryDataHolder();
-        System.out.println("Copied ArrayList: " + Arrays.toString(temporaryDataHolder.toArray()));
-        sort();
-        System.out.println("Sorted ArrayList: " + Arrays.toString(sortedList.toArray()));
-
+        sortArrayInternal();
     }
+    private static void sortArrayInternal() {
+        boolean isArrayListIsEmpty = database.getDataHolder().isEmpty();
 
+        if (isArrayListIsEmpty) {
+            System.out.println("No numbers in database!");
+            return;
+        } else {
+            clearTemporaryArrayLists();
+            copyDatabaseToTemporaryDataHolder();
+            sort();
+            System.out.println("Sorted ArrayList:  " + Arrays.toString(sortedList.toArray()));
+        }
+    }
     private static void clearTemporaryArrayLists() {
         temporaryDataHolder.clear();
         sortedList.clear();
@@ -135,9 +166,6 @@ public class Add {
             sortedList.add(temporaryDataHolder.get(idOfLowestNumber));
             temporaryDataHolder.remove(idOfLowestNumber);
             databaseLengt--;
-            //System.out.println("Lowest number ID: " + idOfLowestNumber);
-            //System.out.println("Sorted ArrayList contains: " + Arrays.toString(sortedList.toArray()));
-            //System.out.println("temporaryDataHolder contains: " + Arrays.toString(temporaryDataHolder.toArray()));
 
             if (sortedArrayLengt < databaseLengt) {
                 flag = true;

@@ -21,15 +21,17 @@ package com.dsve;
 public class Prime {
 
     public static boolean getPrime(int numberToTest) {
-        return isPrime(numberToTest);
-        //return getAPrime(numberToTest);
+        return getPrimeInternal(numberToTest);
     }
 
-    private static int getAPrime(int numberToTest) {
-        System.out.println("Skriv in en siffra");
-        int number = InputDialog.getNumber();
-
-        return number;
+    private static boolean getPrimeInternal(int numberToTest) {
+        boolean result = isPrime(numberToTest);
+        if (result) {
+            System.out.println(numberToTest + " is a Prime number\n");
+        } else {
+            System.out.println(numberToTest + " is NOT a Prime number\n");
+        }
+        return result;
     }
 
     private static boolean isPrime(int number) {
