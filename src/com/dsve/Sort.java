@@ -20,7 +20,7 @@ package com.dsve;
  */
 public class Sort {
     public static void start() {
-        System.out.println("Sort.start");
+        System.out.println("Initialize Sort...");
         Add.printDatabase();
         Add.sortArray();
     }

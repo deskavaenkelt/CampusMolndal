@@ -99,53 +99,13 @@ public class Add {
         }
     }
 
-    /*public static void sort() {
-        int databaseLengt = database.getDataHolder().size();
-        int[] arrayToBeSorted = new int[databaseLengt];
-
-        for (int i = 0; i < databaseLengt; i++) {
-            arrayToBeSorted[i] = Integer.parseInt(database.getDataHolder().get(i));
-        }
-
-        int temp = Integer.MAX_VALUE;
-        int id = 0;
-
-        for (int i = 0; i < arrayToBeSorted.length; i++) {
-        }
-
-
-
-        System.out.println("Database contains: " + Arrays.toString(arrayToBeSorted));
-    }*/
-
     public static void sortArray() {
         clearTemporaryArrayLists();
         copyDatabaseToTemporaryDataHolder();
-
-
         System.out.println("Copied ArrayList: " + Arrays.toString(temporaryDataHolder.toArray()));
+        sort();
+        System.out.println("Sorted ArrayList: " + Arrays.toString(sortedList.toArray()));
 
-        /*int lowestNumberInList = Integer.MAX_VALUE;
-        int idOfLowestNumber = Integer.MAX_VALUE;
-
-        int counter = 0;
-
-        while (database.getDataHolder().size() >= temporaryDataHolder.size()) {
-            for (int i = 0; i < database.getDataHolder().size(); i++) {
-                int temp = Integer.parseInt(database.getDataHolder().get(i));
-                if (temp == numberToBeChecked) {
-                    System.out.println(dataHolder.get(i) + " was found");
-                }
-        }
-
-
-
-            newDistance = Math.abs(numberToBeChecked - temp);   // Extra
-            if (newDistance < distance) {
-                idClosest = i;
-                distance = newDistance;
-            }
-        }*/
     }
 
     private static void clearTemporaryArrayLists() {
@@ -157,4 +117,32 @@ public class Add {
             temporaryDataHolder.add(Integer.parseInt(database.getDataHolder().get(i)));
         }
     }
+    private static void sort() {
+        int databaseLengt = database.getDataHolder().size();
+        int sortedArrayLengt = sortedList.size();
+
+        boolean flag = true;
+        while (flag) {
+            flag =false;
+            int newLowestNumber = temporaryDataHolder.get(0);
+            int idOfLowestNumber = 0;
+            for (int i = 0; i < databaseLengt; i++) {
+                if (temporaryDataHolder.get(i) < newLowestNumber) {
+                    newLowestNumber = temporaryDataHolder.get(i);
+                    idOfLowestNumber = i;
+                }
+            }
+            sortedList.add(temporaryDataHolder.get(idOfLowestNumber));
+            temporaryDataHolder.remove(idOfLowestNumber);
+            databaseLengt--;
+            //System.out.println("Lowest number ID: " + idOfLowestNumber);
+            //System.out.println("Sorted ArrayList contains: " + Arrays.toString(sortedList.toArray()));
+            //System.out.println("temporaryDataHolder contains: " + Arrays.toString(temporaryDataHolder.toArray()));
+
+            if (sortedArrayLengt < databaseLengt) {
+                flag = true;
+            }
+        }
+    }
+
 }

@@ -65,8 +65,4 @@ public class DataHolder {
 
         System.out.println("Closest number is: " + dataHolder.get(idClosest));
     }
-
-    public void clearArrayList() {
-        dataHolder.remove(dataHolder);
-    }
 }
