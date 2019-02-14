@@ -63,20 +63,20 @@
 <article>
 	<p><strong>Sort:</strong></p>
 	<ul>
-		<li><strong>e)</strong>Programmet skall via en separat metod sortera datastrukturen. En utskrift av datastrukturen skall ske innan och efter sortering. <strong>(Extra)</strong> Bubblesort får inte användas. Lägg en kommentar inne i programmet vilken sortering du använder.</li>
+		<li><strong>e) </strong>Programmet skall via en separat metod sortera datastrukturen. En utskrift av datastrukturen skall ske innan och efter sortering. <strong>(Extra)</strong> Bubblesort får inte användas. Lägg en kommentar inne i programmet vilken sortering du använder.</li>
 	</ul>
 </article>
 
 <article>
 	<p><strong>Search:</strong></p>
 	<ul>
-		<li><strong>f)</strong>En sökruta skall nu visas för användaren. Vid input skall programmet kontrollera om det givna värdet finns i datastrukturen. Om den hittar värdet skall den visa det för användaren genom ”X was found”.  Hittar den inte värdet skall den istället ge responsen ”X was not found”. <strong>(Extra)</strong> Dessutom om den inte hittar det angivna värdet skall den istället återge det närmsta värdet som finns, om det finns värden i datastrukturen.</li>
+		<li><strong>f) </strong>En sökruta skall nu visas för användaren. Vid input skall programmet kontrollera om det givna värdet finns i datastrukturen. Om den hittar värdet skall den visa det för användaren genom ”X was found”.  Hittar den inte värdet skall den istället ge responsen ”X was not found”. <strong>(Extra)</strong> Dessutom om den inte hittar det angivna värdet skall den istället återge det närmsta värdet som finns, om det finns värden i datastrukturen.</li>
 	</ul>
 </article>
 
 <article>
 	<p><strong>(Extra)</strong></p>
 	<ul>
-		<li><strong>g)</strong>Öka antalet alternativ i ditt initiala läge till fyra alternativ. Det nya alternativet skall fråga om hur många nya primtal användaren vill hitta och endast ta emot input av typen <strong>int</strong> i sitt input fält. Programmet skall därefter hitta det högsta värdet i datastrukturen och leta efter <strong>x</strong> nya primtal med högre värde och sätta in dessa i datastruktruen.</li>
+		<li><strong>g) </strong>Öka antalet alternativ i ditt initiala läge till fyra alternativ. Det nya alternativet skall fråga om hur många nya primtal användaren vill hitta och endast ta emot input av typen <strong>int</strong> i sitt input fält. Programmet skall därefter hitta det högsta värdet i datastrukturen och leta efter <strong>x</strong> nya primtal med högre värde och sätta in dessa i datastruktruen.</li>
 	</ul>
 </article>
