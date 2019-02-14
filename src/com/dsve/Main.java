@@ -10,8 +10,6 @@ package com.dsve;
 
 */
 
-import java.util.ArrayList;
-
 /**
  * datalogiUppgift2Primtal
  *

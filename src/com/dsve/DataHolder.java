@@ -21,13 +21,11 @@ import java.util.ArrayList;
  * https://github.com/deskavaenkelt/
  */
 public class DataHolder {
-
     private ArrayList<String> dataHolder = new ArrayList<>();
 
     public void addDatahHolderItem(String item) {
         dataHolder.add(item);
     }
-
 
     public ArrayList<String> getDataHolder() {
         return dataHolder;
