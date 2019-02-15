@@ -21,7 +21,7 @@ import java.util.Arrays;
  * @since 2019-02-13
  * https://github.com/deskavaenkelt/
  */
-public class Add {
+class Add {
 
     // Skapa databasen
     private static DataHolder database = new DataHolder();
@@ -31,7 +31,7 @@ public class Add {
 
 
     // 1. Add
-    public static void addNumber() {
+    static void addNumber() {
         System.out.print("Enter a number: ");
         getNumber();
     }
@@ -52,13 +52,11 @@ public class Add {
                 // Spara i datastruktur om false
                 database.addDatahHolderItem(String.valueOf(number));
             }
-        } else {
-            return;
         }
     }
 
     // Add.d) extra Summera alla talen i listan och kontrollera om det är ett primtal, isf sätt in i listan
-    public static void sumOfArray() {
+    static void sumOfArray() {
         sumOfArrayInternal();
     }
     private static void sumOfArrayInternal() {
@@ -75,7 +73,7 @@ public class Add {
 
 
     // 2. Sort
-    public static void sortArray() {
+    static void sortArray() {
         sortArrayInternal();
     }
     private static void sortArrayInternal() {
@@ -83,7 +81,6 @@ public class Add {
 
         if (isArrayListIsEmpty) {
             System.out.println("No numbers in database!");
-            return;
         } else {
             clearTemporaryArrayLists();
             copyDatabaseToTemporaryDataHolder();
@@ -128,7 +125,7 @@ public class Add {
 
 
     // 3. Search
-    public static void searchForNumber() {
+    static void searchForNumber() {
         searchForNumberInternal();
     }
     private static void searchForNumberInternal() {
@@ -137,7 +134,6 @@ public class Add {
 
         if (isArrayListIsEmpty) {                           // Databasen är tom
             System.out.println("No numbers in database!");
-            return;
         } else {                                            // Databasen är INTE tom
             int number = InputDialog.getNumber();
             if (number == -1) {
@@ -153,7 +149,7 @@ public class Add {
 
 
     // 4. Extra-uppgift: Skriv in multipla tal
-    public static void multipleNumbers(){
+    static void multipleNumbers(){
         multipleNumbersInternal();
     }
     private static void multipleNumbersInternal(){
@@ -177,7 +173,7 @@ public class Add {
 
 
     // 8. Skriver ut databasen
-    public static void printDatabase(){
+    static void printDatabase(){
         printDatabaseInternal();
     }
     private static void printDatabaseInternal(){
@@ -187,7 +183,7 @@ public class Add {
 
 
     // 9. Min egen import av nummer för att spara tid =P
-    public static void importDatabase() {
+    static void importDatabase() {
         importDatabaseInternal();
     }
     private static void importDatabaseInternal() {

@@ -23,10 +23,10 @@ package com.dsve;
 
 import java.util.Scanner;
 
-public class InputDialog {
+class InputDialog {
     private static Scanner scanner = new Scanner(System.in);
 
-    public static int getNumber() {
+    static int getNumber() {
         return readNumber();
     }
 
@@ -62,7 +62,7 @@ public class InputDialog {
     }
 
     // Close scanner
-    public static void closeScanner() {
+    static void closeScanner() {
         scanner.close();
     }
 }

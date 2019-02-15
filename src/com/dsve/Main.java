@@ -78,6 +78,7 @@ public class Main {
 
     // Alla metoder sort,search m.fl. går via add-klassen
     private static void add() {
+        System.out.println("\nInitialize Add...");
         Add.addNumber();
         Add.sumOfArray();   //Extra
     }
@@ -87,17 +88,21 @@ public class Main {
         Add.sortArray();
     }
     private static void search() {
+        System.out.println("\nInitialize Search...");
         System.out.print("Number to be searched for: ");
         Add.searchForNumber();
     }
     private static void addMultipleNumbers() {
+        System.out.println("\nInitialize Add Multiple numbers...");
         Add.multipleNumbers();
         Add.sumOfArray();
     }
     private static void printDatabase() {
+        System.out.println("\nInitialize Print database...");
         Add.printDatabase();
     }
     private static void importDatabase() {
+        System.out.println("\nInitialize Import Database...");
         Add.importDatabase();
     }
     private static void quit() {
