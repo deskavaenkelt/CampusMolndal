@@ -20,49 +20,46 @@ package com.dsve;
  */
 
 public class Main {
+    private static boolean quit = false;
     public static void main(String[] args) {
         runProgram();
     }
 
+    // Anropar respektive metod vid val
     private static void runProgram() {
-        boolean quit = false;
-
         while(!quit) {
-            printActions();
+            printMeny();
             int action = InputDialog.getNumber();
 
             if (action == 0 || action == 1 || action == 2 || action == 3 || action == 4 || action == 8 || action == 9) {
                 switch (action) {
-                    case 0:
-                        System.out.println("\nShutting down...");
-                        quit = true;
-                        break;
                     case 1:
-                        Add.start();
-                        Add.sumOfArray();   //Extra
+                        add();
                         break;
                     case 2:
-                        Sort.start();
+                        sort();
                         break;
                     case 3:
-                        Search.start();
+                        search();
                         break;
                     case 4:
-                        Add.multipleNumbers();
-                        Add.sumOfArray();
+                        addMultipleNumbers();
                         break;
                     case 8:
-                        Add.printDatabase();
+                        printDatabase();
                         break;
                     case 9:
-                        Add.importDatabase();
+                        importDatabase();
+                        break;
+                    case 0:
+                        quit();
                         break;
                 }
             }
         }
     }
 
-    private static void printActions() {
+    private static void printMeny() {
         System.out.println("\nAvailable actions:");
         System.out.println(
                 "+----------------------------+\n" +
@@ -78,22 +75,38 @@ public class Main {
                 "+----------------------------+\n");
         System.out.print("Enter action: ");
     }
-}
 
-class Sort {
-    public static void start() {
+    // Alla metoder sort,search m.fl. går via add-klassen
+    private static void add() {
+        Add.addNumber();
+        Add.sumOfArray();   //Extra
+    }
+    private static void sort() {
         System.out.println("\nInitialize Sort...");
         Add.printDatabase();
         Add.sortArray();
     }
-}
-
-class Search {
-    public static void start() {
+    private static void search() {
         System.out.print("Number to be searched for: ");
         Add.searchForNumber();
     }
+    private static void addMultipleNumbers() {
+        Add.multipleNumbers();
+        Add.sumOfArray();
+    }
+    private static void printDatabase() {
+        Add.printDatabase();
+    }
+    private static void importDatabase() {
+        Add.importDatabase();
+    }
+    private static void quit() {
+        System.out.println("\nShutting down...");
+        InputDialog.closeScanner();     // Stänger scannern
+        quit = true;
+    }
 }
+
 
 
 

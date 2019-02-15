@@ -24,6 +24,7 @@ public class Prime {
         return getPrimeInternal(numberToTest);
     }
 
+    // Kontrollera om primtal, returnera en boolean
     private static boolean getPrimeInternal(int numberToTest) {
         boolean result = isPrime(numberToTest);
         if (result) {
@@ -34,6 +35,7 @@ public class Prime {
         return result;
     }
 
+    // Verifierar number
     private static boolean isPrime(int number) {
         if (number <= 1) {
             return false;

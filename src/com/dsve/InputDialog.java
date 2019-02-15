@@ -18,6 +18,9 @@ package com.dsve;
  * @since 2019-02-13
  * https://github.com/deskavaenkelt/
  */
+
+// Använder en separat klass för all hantering av inläsning
+
 import java.util.Scanner;
 
 public class InputDialog {
@@ -28,7 +31,9 @@ public class InputDialog {
     }
 
     private static int readNumber() {
-        String input = getStringInput();
+        // Läs in nummret
+        String input = userInput();
+        // returnera -1 vid felaktig inmatning
         int number = -1;
         if (isInteger(input)) {
             number = Integer.parseInt(input);
@@ -36,23 +41,28 @@ public class InputDialog {
         return number;
     }
 
+    private static String userInput() {
+        return scanner.nextLine();
+    }
+
     private static boolean isInteger(String passedString) {
+        // Validera att input är en int
         boolean isValidInteger = false;
         try
         {
-            Integer.parseInt(passedString);        // s is a valid integer
+            Integer.parseInt(passedString);        // passedString is a valid integer
             isValidInteger = true;
         }
         catch (NumberFormatException ex)
         {
-            // s is not an integer
+            // passedString is not an integer
         }
 
         return isValidInteger;
     }
 
-    private static String getStringInput() {
-        return scanner.nextLine();
+    // Close scanner
+    public static void closeScanner() {
+        scanner.close();
     }
-
 }

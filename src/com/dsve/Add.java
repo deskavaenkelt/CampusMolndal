@@ -22,15 +22,21 @@ import java.util.Arrays;
  * https://github.com/deskavaenkelt/
  */
 public class Add {
+
+    // Skapa databasen
     private static DataHolder database = new DataHolder();
+    // Temporära databaser vid sortering, bara accessbara här
     private static ArrayList<Integer> temporaryDataHolder = new ArrayList<>();
     private static ArrayList<Integer> sortedList = new ArrayList<>();
 
-    public static void start() {
-        System.out.print("Skriv in ett tal: ");
+
+    // 1. Add
+    public static void addNumber() {
+        System.out.print("Enter a number: ");
         getNumber();
     }
     private static void getNumber() {
+        // Läs in nummer
         int number = InputDialog.getNumber();
         if (number == -1) {
             return;
@@ -39,10 +45,11 @@ public class Add {
         primeValidation(number);
     }
     private static void primeValidation(int number) {
+        // Kolla om number är ett primtal
         if (Prime.getPrime(number)) {
             // Kolla om talet redan finns i databasen
             if (!database.isDuplicate(number)) {
-                // Spara i datastruktur
+                // Spara i datastruktur om false
                 database.addDatahHolderItem(String.valueOf(number));
             }
         } else {
@@ -50,79 +57,24 @@ public class Add {
         }
     }
 
-    public static void printDatabase(){
-        printDatabaseInternal();
-    }
-    private static void printDatabaseInternal(){
-        System.out.println("Database contains: " + database.getDataHolder());
-    }
-
+    // Add.d) extra Summera alla talen i listan och kontrollera om det är ett primtal, isf sätt in i listan
     public static void sumOfArray() {
         sumOfArrayInternal();
     }
     private static void sumOfArrayInternal() {
+        // Summering av alla tal
         int sum = 0;
         for (int i = 0; i < database.getDataHolder().size(); i++) {
             sum += Integer.parseInt(database.getDataHolder().get(i));
         }
         System.out.println("Sum of array is: " + sum);
+        // Validering om det är ett primtal och validera så det inte finns en dublett
         primeValidation(sum);
     }
 
-    public static void searchForNumber() {
-        searchForNumberInternal();
-    }
-    private static void searchForNumberInternal() {
-        boolean isArrayListIsEmpty = database.getDataHolder().isEmpty();
-
-        if (isArrayListIsEmpty) {
-            System.out.println("No numbers in database!");
-            return;
-        } else {
-            int number = InputDialog.getNumber();
-            if (number == -1) {
-                return;
-            }
-            // Jag har ett giltligt nummer, kolla om det finns
-            database.searchFor(number);
-        }
 
 
-    }
-
-    public static void importDatabase() {
-        importDatabaseInternal();
-    }
-    private static void importDatabaseInternal() {
-        primeValidation(5);
-        primeValidation(13);
-        primeValidation(3);
-        primeValidation(11);
-        primeValidation(2);
-        primeValidation(7);
-        printDatabase();
-        sumOfArray();
-        printDatabase();
-    }
-
-    public static void multipleNumbers(){
-        multipleNumbersInternal();
-    }
-    private static void multipleNumbersInternal(){
-        System.out.print("\nHow many numbers to enter? ");
-        int number = InputDialog.getNumber();
-        System.out.println();
-        if (number == -1) {
-            return;
-        }
-        for (int i = 0; i < number; i++) {
-            System.out.print("Enter number" + (i+1) + ": ");
-            int multipleNumber = InputDialog.getNumber();
-            primeValidation(multipleNumber);
-        }
-    }
-
-    // TODO: Sort
+    // 2. Sort
     public static void sortArray() {
         sortArrayInternal();
     }
@@ -173,4 +125,84 @@ public class Add {
         }
     }
 
+
+
+    // 3. Search
+    public static void searchForNumber() {
+        searchForNumberInternal();
+    }
+    private static void searchForNumberInternal() {
+        // kontrollera om databasen är tom, true if empty
+        boolean isArrayListIsEmpty = database.getDataHolder().isEmpty();
+
+        if (isArrayListIsEmpty) {                           // Databasen är tom
+            System.out.println("No numbers in database!");
+            return;
+        } else {                                            // Databasen är INTE tom
+            int number = InputDialog.getNumber();
+            if (number == -1) {
+                return;
+            }
+            // Jag har ett giltligt nummer, kolla om det finns i databasen, anropa searchFor i DataHolder
+            database.searchFor(number);
+        }
+
+
+    }
+
+
+
+    // 4. Extra-uppgift: Skriv in multipla tal
+    public static void multipleNumbers(){
+        multipleNumbersInternal();
+    }
+    private static void multipleNumbersInternal(){
+        System.out.print("\nHow many numbers to enter? ");
+        int number = InputDialog.getNumber();
+
+        // Extra radbryt för snyggare program
+        System.out.println();
+        if (number == -1) {
+            return;
+        }
+
+        // Lopa antalet begärda inmatningar och validera om primtal
+        for (int i = 0; i < number; i++) {
+            System.out.print("Enter number" + (i+1) + ": ");
+            int multipleNumber = InputDialog.getNumber();
+            primeValidation(multipleNumber);
+        }
+    }
+
+
+
+    // 8. Skriver ut databasen
+    public static void printDatabase(){
+        printDatabaseInternal();
+    }
+    private static void printDatabaseInternal(){
+        System.out.println("Database contains: " + database.getDataHolder());
+    }
+
+
+
+    // 9. Min egen import av nummer för att spara tid =P
+    public static void importDatabase() {
+        importDatabaseInternal();
+    }
+    private static void importDatabaseInternal() {
+        // Anropar primeValidation direkt, då jag inte har någon user input
+        primeValidation(5);
+        primeValidation(13);
+        primeValidation(3);
+        primeValidation(11);
+        primeValidation(2);
+        primeValidation(7);
+        // Printa importerade nummer
+        printDatabase();
+        // Kontrollera om summan är pimtal
+        sumOfArray();
+        // Printa den nya arreyListen
+        printDatabase();
+    }
 }
