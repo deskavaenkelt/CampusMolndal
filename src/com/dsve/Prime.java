@@ -18,9 +18,9 @@ package com.dsve;
  * @since 2019-02-13
  * https://github.com/deskavaenkelt/
  */
-public class Prime {
+class Prime {
 
-    public static boolean getPrime(int numberToTest) {
+    static boolean getPrime(int numberToTest) {
         return getPrimeInternal(numberToTest);
     }
 
