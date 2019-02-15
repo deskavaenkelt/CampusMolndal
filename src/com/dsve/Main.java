@@ -31,7 +31,7 @@ public class Main {
             printMeny();
             int action = InputDialog.getNumber();
 
-            if (action == 0 || action == 1 || action == 2 || action == 3 || action == 4 || action == 8 || action == 9) {
+            if (action == 0 || action == 1 || action == 2 || action == 3 || action == 4 || action == 7 || action == 8 || action == 9) {
                 switch (action) {
                     case 1:
                         add();
@@ -43,6 +43,9 @@ public class Main {
                         search();
                         break;
                     case 4:
+                        searchForXprimes();
+                        break;
+                    case 7:
                         addMultipleNumbers();
                         break;
                     case 8:
@@ -66,9 +69,10 @@ public class Main {
                 "| 1  - Add                   |\n" +
                 "| 2  - Sort                  |\n" +
                 "| 3  - Search                |\n" +
-                "| 4  - Add multiple numbers  |\n" +
+                "| 4  - Search for X primes   |\n" +
                 "|                            |\n" +
                 "| ========== EXTRA ========= |\n" +
+                "| 7  - Add multiple numbers  |\n" +
                 "| 8  - Print Database        |\n" +
                 "| 9  - Import Database       |\n" +
                 "| 0  - Shutdown              |\n" +
@@ -91,6 +95,11 @@ public class Main {
         System.out.println("\nInitialize Search...");
         System.out.print("Number to be searched for: ");
         Add.searchForNumber();
+    }
+    private static void searchForXprimes() {
+        System.out.println("\nInitialize Search...");
+        Add.searchForXprimes();
+        Add.sumOfArray();
     }
     private static void addMultipleNumbers() {
         System.out.println("\nInitialize Add Multiple numbers...");

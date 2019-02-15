@@ -147,8 +147,46 @@ class Add {
     }
 
 
+    // TODO: Fråga hur många nya primtal som ska letas efter
+    //  hämta största siffran i arraylist => kör en sort
+    // 4. Sök efter X antal primtal
+    static void searchForXprimes() {
+        searchForXprimesInternal();
+    }
+    private static void searchForXprimesInternal() {
+        // Sorterar databasen och högsta numret ligger sist, kollar dessutom så att arrayList inte är tom.
+        boolean isArrayListIsEmpty = database.getDataHolder().isEmpty();
 
-    // 4. Extra-uppgift: Skriv in multipla tal
+        if (isArrayListIsEmpty) {
+            System.out.println("No numbers in database!");
+        } else {
+            sortArrayInternal();
+            int bigestPrimeId = sortedList.size();
+            int bigestPrimeValue = sortedList.get(bigestPrimeId-1);
+            System.out.println("bigestPrimeValue: "+ bigestPrimeValue);
+
+            // Fråga efter antal primtal att söka efter
+            System.out.print("\nEnter the number of primes to serch for: ");
+            int findXprimes = InputDialog.getNumber();
+
+            int counter = 0;
+
+            for (int i = bigestPrimeValue; i < Integer.MAX_VALUE; i++) {
+                boolean findPrime = Prime.getPrime(i);
+                if (findPrime) {
+                    primeValidation(i);
+                    counter++;
+                }
+                if (counter == findXprimes+1) {
+                    break;
+                }
+            }
+        }
+    }
+
+
+
+    // 7. Extra-uppgift: Skriv in multipla tal
     static void multipleNumbers(){
         multipleNumbersInternal();
     }
