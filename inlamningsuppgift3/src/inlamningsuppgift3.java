@@ -57,10 +57,12 @@ public class inlamningsuppgift3 {
     }
 
     private static void add() {
+        System.out.println("Går till addfunktion...");
         Add.userInput();
     }
     private static void edit() {
         System.out.println("Redigera");
+
     }
     private static void search() {
         System.out.println("Går till sökfunktion...");
@@ -68,12 +70,15 @@ public class inlamningsuppgift3 {
     }
     private static void sort() {
         System.out.println("Sorterar...");
+
     }
     private static void delete() {
         System.out.println("Radera...");
+
     }
     private static void printExtra() {
         System.out.println("Extra uppgift");
+
     }
     private static void quit() {
         System.out.println("Avslutar...");
