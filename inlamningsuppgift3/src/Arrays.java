@@ -45,24 +45,24 @@ class Arrays {
 
 
     //----- Setters -----//
-    public static void setStrings(ArrayList<String> strings) {
-        Arrays.strings = strings;
+    public static void setStrings(String string) {
+        strings.add(string);
     }
 
-    public static void setFibonacci(ArrayList<Integer> fibonacci) {
-        Arrays.fibonacci = fibonacci;
+    public static void setFibonacci(int number) {
+        fibonacci.add(number);
     }
 
     public static void setTimeStamp(ArrayList<Date> timeStamp) {
         Arrays.timeStamp = timeStamp;
     }
 
-    public static void setEvenNumbers(ArrayList<Integer> evenNumbers) {
-        Arrays.evenNumbers = evenNumbers;
+    public static void setEvenNumbers(int evenNumber) {
+        evenNumbers.add(evenNumber);
     }
 
-    public static void setOddNumbers(ArrayList<Integer> oddNumbers) {
-        Arrays.oddNumbers = oddNumbers;
+    public static void setOddNumbers(int oddNumber) {
+        oddNumbers.add(oddNumber);
     }
 
     public void setDateFormat(SimpleDateFormat dateFormat) {

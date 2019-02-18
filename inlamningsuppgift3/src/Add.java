@@ -8,15 +8,14 @@
  */
 class Add {
 
-    static String userInput() {
+    static void userInput() {
         System.out.print("Skriv in text: ");
         String input = UserInput.getString();
         Arrays.setStrings(input);
-        return returnUserInput();
+        printWholeArray();
     }
 
-    private static String returnUserInput() {
-        return Arrays.getStrings().toString();
-
+    private static void printWholeArray() {
+        System.out.print(Arrays.getStrings().toString());
     }
 }
