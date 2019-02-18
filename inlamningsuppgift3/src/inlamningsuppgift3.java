@@ -57,7 +57,7 @@ public class inlamningsuppgift3 {
     }
 
     private static void add() {
-        System.out.println("Lägg till");
+        Add.userInput();
     }
     private static void edit() {
         System.out.println("Redigera");
