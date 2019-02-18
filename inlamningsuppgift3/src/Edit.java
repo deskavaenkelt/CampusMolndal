@@ -7,7 +7,7 @@
  * https://github.com/deskavaenkelt/
  */
 public class Edit {
-    public static void edit() {
+    private static void edit() {
         System.out.println("Skriv in vad vill ändra på: ");
         String checkInput = UserInput.getString();
         String newvalue;

@@ -62,7 +62,7 @@ public class inlamningsuppgift3 {
     }
     private static void edit() {
         System.out.println("Redigera");
-
+        Edit.edit();
     }
     private static void search() {
         System.out.println("Går till sökfunktion...");
