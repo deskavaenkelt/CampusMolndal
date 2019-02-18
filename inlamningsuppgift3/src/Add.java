@@ -12,6 +12,7 @@ class Add {
         System.out.print("Skriv in text: ");
         String input = UserInput.getString();
         Arrays.setStrings(input);
+
         printWholeArray();
     }
 
