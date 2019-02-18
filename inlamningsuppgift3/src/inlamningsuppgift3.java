@@ -63,7 +63,8 @@ public class inlamningsuppgift3 {
         System.out.println("Redigera");
     }
     private static void search() {
-        System.out.println("Sök efter :");
+        System.out.println("Går till sökfunktion...");
+        Search.goToSerach();
     }
     private static void sort() {
         System.out.println("Sorterar...");
