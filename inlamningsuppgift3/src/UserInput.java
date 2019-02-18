@@ -11,12 +11,16 @@ import java.util.Scanner;
 class UserInput {
     private static Scanner scanner = new Scanner(System.in);
 
-    static int getNumber() {
-        return readNumber();
-    }
-
     static String getString() {
         return userInput();
+    }
+
+    private static String userInput() {
+        return scanner.nextLine();
+    }
+
+    static int getNumber() {
+        return readNumber();
     }
 
     private static int readNumber() {
@@ -28,10 +32,6 @@ class UserInput {
             number = Integer.parseInt(input);
         }
         return number;
-    }
-
-    private static String userInput() {
-        return scanner.nextLine();
     }
 
     private static boolean isInteger(String passedString) {
