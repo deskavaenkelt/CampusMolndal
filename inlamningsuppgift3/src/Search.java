@@ -26,7 +26,7 @@ class Search {
         if (1 == input) {
             id();
         } else if (2 == input) {
-            namn();
+            namn(input);
         }
     }
 
