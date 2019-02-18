@@ -19,7 +19,7 @@ import java.util.Scanner;
  * @since 2019-02-18
  * https://github.com/deskavaenkelt/
  */
-public class UserInput {
+class UserInput {
     private static Scanner scanner = new Scanner(System.in);
 
     static int getNumber() {
