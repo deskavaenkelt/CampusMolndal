@@ -27,7 +27,7 @@ class UserInput {
     }
 
     static String getString() {
-        userInput();
+        return userInput();
     }
 
     private static int readNumber() {
