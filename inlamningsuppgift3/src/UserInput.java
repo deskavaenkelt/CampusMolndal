@@ -26,6 +26,10 @@ public class UserInput {
         return readNumber();
     }
 
+    static String getString() {
+        userInput();
+    }
+
     private static int readNumber() {
         // Läs in nummret
         String input = userInput();

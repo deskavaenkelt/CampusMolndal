@@ -76,6 +76,7 @@ public class inlamningsuppgift3 {
     }
     private static void quit() {
         System.out.println("Avslutar...");
+        UserInput.closeScanner();
         quit = true;
     }
 
