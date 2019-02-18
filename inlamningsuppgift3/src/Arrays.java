@@ -53,6 +53,7 @@ class Arrays {
         fibonacci.add(number);
     }
 
+    // Timstamp fungerar inte ännu
     public static void setTimeStamp(ArrayList<Date> timeStamp) {
         Arrays.timeStamp = timeStamp;
     }

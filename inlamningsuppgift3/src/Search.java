@@ -7,20 +7,50 @@
  * https://github.com/deskavaenkelt/
  */
 class Search {
-    
+
 
     protected static void goToSerach() {
         internal();
     }
     private static void internal() {
-        System.out.println("something");
+        meny();
+    }
+
+    private static void meny() {
+        System.out.println(
+                "Vill du söka på id eller namn?\n" +
+                "1. ID\n" +
+                "2. Namn\n" +
+                "Val:");
+        int input = UserInput.getNumber();
+        if (1 == input) {
+            id();
+        } else if (2 == input) {
+            namn();
+        }
+    }
+
+    private static void id() {
+
+    }
+
+    private static String namn(String searchItem) {
+        //boolean exists = groceryList.contains(searchItem);
+
+        int position = Arrays.getStrings().indexOf(searchItem);
+        if(position >=0) {
+            return Arrays.getStrings().get(position);
+        }
+
+        return null;
     }
 
 
-    protected static void searchAndGet() {
-        searchAndGetString();
+
+    /*protected static void searchAndGet() {
+        System.out.println(searchAndGetString());
     }
-    private String searchAndGetString() {
-        System.out.println("something");
-    }
+    private static String searchAndGetString() {
+        return "something";
+    }*/
 }
