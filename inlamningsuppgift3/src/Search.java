@@ -72,7 +72,7 @@ class Search {
         if (indexId >= 0) {
             System.out.println(Arrays.getStrings().get(indexId) + " fanns!");
         } else {
-            System.out.println(input + "fanns ej!");
+            System.out.println(input + " fanns ej!");
         }
     }
     private static void searchDate() {
@@ -82,7 +82,7 @@ class Search {
         if (indexId >= 0) {
             System.out.println(Arrays.getTimeStamp().get(indexId) + " fanns!");
         } else {
-            System.out.println(input + "fanns ej!");
+            System.out.println(input + " fanns ej!");
         }
     }
 
