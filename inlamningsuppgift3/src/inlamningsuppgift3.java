@@ -93,8 +93,11 @@ public class inlamningsuppgift3 {
         //Delete.start();
     }
     private static void printExtra() {
-        System.out.println("Extra uppgift");
-
+        System.out.println(
+                "Skriver ut den jämna och ojämna Fibonacci serien\n" +
+                "OddNumbers:  " + Arrays.getOddNumbers().toString() +"\n" +
+                "EvenNumbers: " + Arrays.getEvenNumbers().toString()
+                );
     }
     private static void countWords() {
         System.out.println("Räkna Ord...");
