@@ -8,16 +8,17 @@
  */
 /**Class that sorts the String Array in two ways.*/
 public class Sort {
-
+    /**Calls on the method internalSort*/
     protected static void goToSort() {
         internalSort();
     }
+    /**Calls on the methods menuSort and UserChoiseSort*/
     private static void internalSort() {
-        menySort();
+        menuSort();
         userChoiseSort();
     }
-
-    private static void menySort() {
+   /**Menu so that the user get to choose how to sort the array. */
+    private static void menuSort() {
         System.out.print(
                 "+--------------+\n" +
                         "| Alternativ:  |\n" +
@@ -56,8 +57,10 @@ public class Sort {
     }
     /**Sorting method that sorts the Array from Z - A*/
     private static void sortArrayInReversOrder() {
+        //Sorts the array in revers order.
         Arrays.getStrings().sort(Collections.reverseOrder());
         System.out.println("Sorterar i motsatt håll: ");
+        //Loops out the new order of the array 
         for(String string: Arrays.getStrings()){
             System.out.println(string);
         }
