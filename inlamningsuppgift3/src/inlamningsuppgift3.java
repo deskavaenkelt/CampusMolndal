@@ -110,7 +110,7 @@ public class inlamningsuppgift3 {
     }
     private static void recursion() {
         System.out.println("Rekursiv metod..");
-        Recursion.startEecursion();
+        Recursion.startRecursion();
     }
     private static void debug() {
         Debug.start();
