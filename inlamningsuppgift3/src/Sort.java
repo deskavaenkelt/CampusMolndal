@@ -6,7 +6,9 @@
  * @since 2019-02-18
  * https://github.com/deskavaenkelt/
  */
+/**Class that sorts the String Array in two ways.*/
 public class Sort {
+    
     protected static void goToSort() {
         internalSort();
     }
@@ -24,6 +26,7 @@ public class Sort {
                         "+--------------+\n" +
                         "Val:");
     }
+    /**Checks what choice User wants to do.*/
     private static void userChoiseSort() {
         int input = UserInput.getNumber();
         if (1 == input) {
@@ -32,6 +35,7 @@ public class Sort {
             sortArrayInReversOrder();
         }
     }
+    /**Sorting method that sorts the Array from a-z*/
     private static void sortArray(){
         String[] newArray = Arrays.getStrings().toArray(new String[Arrays.getStrings().size()]);
 
@@ -48,6 +52,7 @@ public class Sort {
             System.out.println(newArray[a]);
         }
     }
+    /**Sorting method that sorts the Array from Z - A*/
     private static void sortArrayInReversOrder() {
         Arrays.getStrings().sort(Collections.reverseOrder());
         System.out.println("Sorterar i motsatt håll: ");
