@@ -8,7 +8,7 @@
  */
 /**Class that sorts the String Array in two ways.*/
 public class Sort {
-    
+
     protected static void goToSort() {
         internalSort();
     }
@@ -37,8 +37,10 @@ public class Sort {
     }
     /**Sorting method that sorts the Array from a-z*/
     private static void sortArray(){
+        //Change the arrayList to an Array.
         String[] newArray = Arrays.getStrings().toArray(new String[Arrays.getStrings().size()]);
 
+        //Algorithm to sort the array. 
         for (int a = 0; a < newArray.length; a++) {
             int minIndex = a;
             for (int b = a + 1; b < newArray.length; b++) {
