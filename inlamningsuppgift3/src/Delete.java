@@ -7,7 +7,7 @@
  * https://github.com/deskavaenkelt/
  */
 public class Delete {
-    
+
     public class Delete {
 
         protected static void deleteStart(){

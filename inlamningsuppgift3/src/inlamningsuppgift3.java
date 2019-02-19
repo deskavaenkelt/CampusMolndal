@@ -101,6 +101,7 @@ public class inlamningsuppgift3 {
     }
     private static void countWords() {
         System.out.println("Räkna Ord...");
+        CountWords.startCount();
     }
     private static void debug() {
         Debug.start();
