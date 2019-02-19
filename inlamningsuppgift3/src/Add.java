@@ -13,8 +13,12 @@ class Add {
     static void userInput() {
         System.out.print("Skriv in text: ");
         String input = UserInput.getString();
-        Arrays.setStrings(input);
-        System.out.println("\nEn ny sträng '" + input + "' lades till..");
+
+        // Här ska krypering in
+        String thisIsEncrypted = Encryption.stringToEncrypt(input);
+        Arrays.setStrings(thisIsEncrypted);
+
+        System.out.println("\nEn ny sträng '" + input + "' lades till.. " + thisIsEncrypted);
         printWholeArray();
         timeStamp();
         System.out.println("Ökar fibbonacci serien...");

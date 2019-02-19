@@ -32,7 +32,7 @@ class Debug {
             case 2:
                 importLists();
                 break;
-            case 3:
+            /*case 3:
                 encrypt();
                 break;
             case 4:
@@ -43,7 +43,7 @@ class Debug {
                 break;
             case 6:
                 encryptLoop();
-                break;
+                break;*/
         }
     }
 
@@ -87,7 +87,7 @@ class Debug {
         Fibonacci.addNewFibonacci();
     }
 
-    private static void encrypt() {
+    /*private static void encrypt() {
         System.out.println("Encrypting...");
         Encryption.stringToEncrypt("oneplus");
     }
@@ -106,6 +106,6 @@ class Debug {
         encrypt();
         printKrytedString();
         decrypt();
-    }
+    }*/
 }
 

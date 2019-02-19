@@ -14,8 +14,9 @@ class Search {
     }
     private static int serachAndGetStringIndexInternal(String searchFor) {
         int position = -1;
-        if (Arrays.getStrings().contains(searchFor)) {              // if searchFor exist == true => get position
-            position = Arrays.getStrings().indexOf(searchFor);
+        String searchForEncrypted = Encryption.stringToEncrypt(searchFor);
+        if (Arrays.getStrings().contains(searchForEncrypted)) {              // if searchFor exist == true => get position
+            position = Arrays.getStrings().indexOf(searchForEncrypted);
         }
 
         return position;    // if -1 is returned, the element was not found
