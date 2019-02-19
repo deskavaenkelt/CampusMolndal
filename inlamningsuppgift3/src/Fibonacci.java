@@ -12,7 +12,9 @@ public class Fibonacci {
 
     private static int counter = 0;
 
-    /** Call this function to add a new fibonacci number to the series */
+    /**
+     * Call this function to add a new fibonacci number to the series
+     */
     protected static void addNewFibonacci() {
         createAnewFibonacciElement();
     }
@@ -36,7 +38,9 @@ public class Fibonacci {
 
 
 
-    /** Call this function to print the series */
+    /**
+     * Call this function to print the series
+     */
     protected static void printGeneratedFibonacciSeries() {
         printFibonacciSeries();
     }
