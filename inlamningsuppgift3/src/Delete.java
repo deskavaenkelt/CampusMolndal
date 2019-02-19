@@ -18,7 +18,7 @@ class Delete {
         int index = Search.serachAndGetStringIndex(checkValue);
 
         if (Arrays.getStrings().contains(checkValue)) {
-            System.out.println(checkValue + " Är bort tagen");
+            System.out.println(checkValue + " Är borttagen");
             Arrays.getStrings().remove(index);
             Arrays.getTimeStamp().remove(index);
 

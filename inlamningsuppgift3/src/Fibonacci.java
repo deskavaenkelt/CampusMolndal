@@ -45,12 +45,12 @@ public class Fibonacci {
         printFibonacciSeries();
     }
     private static void printFibonacciSeries() {
-        System.out.println("Aktuell serie: " + Arrays.getFibonacci().toString());
+        System.out.println("Aktuell fibonacci serie: " + Arrays.getFibonacci().toString());
     }
 
 
     /**
-     * Extra our own functionality - check  if number is odd oe even
+     * Extra our own functionality - check if number is odd or even
      */
     private static void checkIfEvenorOddNumber() {
         int value = whatIsValueOfID(whatIsHighestValidIndex());
@@ -82,6 +82,6 @@ public class Fibonacci {
         printEvenNumbers();
     }
     private static void printEvenNumbers() {
-        System.out.println("Udda serie: " + Arrays.getEvenNumbers().toString());
+        System.out.println("Jämn serie: " + Arrays.getEvenNumbers().toString());
     }
 }

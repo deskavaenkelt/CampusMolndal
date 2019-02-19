@@ -21,6 +21,7 @@ public class Edit {
             System.out.println("Vad vill du ändra till? ");
             newvalue = UserInput.getString();
             Arrays.getStrings().set(index,newvalue);
+            System.out.println("'" + checkInput + "'" + " ändrades till " + "'" + newvalue + "'!");
 
         } else {
             System.out.println("Värdet finns ej");
