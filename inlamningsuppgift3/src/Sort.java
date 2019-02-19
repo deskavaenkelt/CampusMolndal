@@ -60,7 +60,7 @@ public class Sort {
         //Sorts the array in revers order.
         Arrays.getStrings().sort(Collections.reverseOrder());
         System.out.println("Sorterar i motsatt håll: ");
-        //Loops out the new order of the array 
+        //Loops out the new order of the array
         for(String string: Arrays.getStrings()){
             System.out.println(string);
         }

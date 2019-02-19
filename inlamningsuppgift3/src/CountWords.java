@@ -1,3 +1,11 @@
+/**
+ * datalogiUppgift3slutuppgift
+ *
+ * @author Lars Strömberg , Madeleine Hallqvist
+ * @version 1.0
+ * @since 2019-02-18*/
+
+/**Class that counts how many words there are in the Array.*/
 public class CountWords {
 
     protected static void startCount() {
