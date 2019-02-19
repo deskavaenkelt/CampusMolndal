@@ -10,23 +10,7 @@ import java.util.Date;
  * https://github.com/deskavaenkelt/
  */
 class Search {
-
-
-    protected static void goToSerach() {
-        internal();
-    }
-    private static void internal() {
-        meny();
-    }
-
-    private static void meny() {
-        System.out.print("Skriv in det du söker efter: ");
-        String temp = UserInput.getString();
-
-
-    }
-
-
+    /** search methods used by every search function in the program */
     protected static int serachAndGetStringIndex(String searchFor) {
         return serachAndGetStringIndexInternal(searchFor);
         // if -1 is returned, the element was not found
@@ -53,6 +37,58 @@ class Search {
         return position;    // if -1 is returned, the element was not found
     }
 
+
+
+    /** Explicit for Search Meny */
+    protected static void goToSerach() {
+        internal();
+    }
+    private static void internal() {
+        meny();
+        userChoise();
+    }
+
+    private static void meny() {
+        System.out.print(
+                        "+--------------+\n" +
+                        "| Alternativ:  |\n" +
+                        "|  1. Sträng   |\n" +
+                        "|  2. Datum    |\n" +
+                        "+--------------+\n" +
+                        "Val:");
+    }
+    private static void userChoise() {
+        int input = UserInput.getNumber();
+        if (1 == input) {
+            serachSting();
+        } else if (2 == input) {
+            searchDate();
+        }
+    }
+    private static void serachSting() {
+        System.out.print("Skriv in det du söker efter: ");
+        String input = UserInput.getString();
+        int indexId = serachAndGetStringIndexInternal(input);
+        if (indexId >= 0) {
+            System.out.println(Arrays.getStrings().get(indexId) + " fanns!");
+        } else {
+            System.out.println(input + "fanns ej!");
+        }
+    }
+    private static void searchDate() {
+        System.out.print("Skriv in det datum (YYYY-MM-DD HH:mm) du söker efter: ");
+        int input = UserInput.getNumber();
+        int indexId = serachAndGetTimeStampInternal(input);
+        if (indexId >= 0) {
+            System.out.println(Arrays.getTimeStamp().get(indexId) + " fanns!");
+        } else {
+            System.out.println(input + "fanns ej!");
+        }
+    }
+
+
+
+
     /*private static String namn(String searchItem) {
         //boolean exists = groceryList.contains(searchItem);
 
@@ -65,19 +101,7 @@ class Search {
     }*/
 
 
-    /*private static void meny() {
-        System.out.println(
-                "Vill du söka på id eller namn?\n" +
-                        "1. ID\n" +
-                        "2. Namn\n" +
-                        "Val:");
-        int input = UserInput.getNumber();
-        if (1 == input) {
-            id();
-        } else if (2 == input) {
-            //namn(input);
-        }
-    }*/
+
 
     /*protected static void searchAndGet() {
         System.out.println(searchAndGetString());
