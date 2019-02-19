@@ -74,7 +74,7 @@ public class inlamningsuppgift3 {
     }
     private static void delete() {
         System.out.println("Radera...");
-
+        Delete.start();
     }
     private static void printExtra() {
         System.out.println("Extra uppgift");
