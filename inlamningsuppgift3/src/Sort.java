@@ -6,8 +6,11 @@
  * @since 2019-02-18
  * https://github.com/deskavaenkelt/
  */
+
+import java.util.Collections;
+
 /**Class that sorts the String Array in two ways.*/
-public class Sort {
+class Sort {
     /**Calls on the method internalSort*/
     protected static void goToSort() {
         internalSort();
