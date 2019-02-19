@@ -90,7 +90,7 @@ public class inlamningsuppgift3 {
     }
     private static void delete() {
         System.out.println("Radera...");
-        //Delete.start();
+        Delete.deleteStart();
     }
     private static void printExtra() {
         System.out.println(
