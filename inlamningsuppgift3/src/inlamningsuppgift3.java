@@ -86,7 +86,7 @@ public class inlamningsuppgift3 {
     }
     private static void sort() {
         System.out.println("Sorterar...");
-
+        Sort.startSort()
     }
     private static void delete() {
         System.out.println("Radera...");
