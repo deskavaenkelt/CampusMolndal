@@ -1,16 +1,17 @@
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
 /**
  * datalogiUppgift3slutuppgift
  *
- * @author Lars Strömberg , Madeleine Hallqvist, Mattias Ahlström
+ * @author Lars Strömberg, Madeleine Hallqvist, Mattias Ahlström
  * @version 1.0
  * @since 2019-02-18
- * https://github.com/deskavaenkelt/
+ * https://github.com/deskavaenkelt/datalogiUppgift3slutuppgift
  */
-class Arrays {
 
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+
+class Arrays {
 
     private static ArrayList<String> strings = new ArrayList<>();
     private static ArrayList<Integer> fibonacci = new ArrayList<>();

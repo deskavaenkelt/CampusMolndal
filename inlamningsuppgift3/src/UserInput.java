@@ -1,13 +1,14 @@
-import java.util.Scanner;
-
 /**
  * datalogiUppgift3slutuppgift
  *
- * @author Lars Strömberg , Madeleine Hallqvist
+ * @author Lars Strömberg, Madeleine Hallqvist, Mattias Ahlström
  * @version 1.0
  * @since 2019-02-18
- * https://github.com/deskavaenkelt/
+ * https://github.com/deskavaenkelt/datalogiUppgift3slutuppgift
  */
+
+import java.util.Scanner;
+
 class UserInput {
     private static Scanner scanner = new Scanner(System.in);
 

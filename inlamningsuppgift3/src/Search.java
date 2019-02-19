@@ -1,11 +1,12 @@
 /**
  * datalogiUppgift3slutuppgift
  *
- * @author Lars Strömberg , Madeleine Hallqvist
+ * @author Lars Strömberg, Madeleine Hallqvist, Mattias Ahlström
  * @version 1.0
  * @since 2019-02-18
- * https://github.com/deskavaenkelt/
+ * https://github.com/deskavaenkelt/datalogiUppgift3slutuppgift
  */
+
 class Search {
     /** search methods used by every search function in the program */
     protected static int serachAndGetStringIndex(String searchFor) {
