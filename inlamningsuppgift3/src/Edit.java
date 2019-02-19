@@ -16,7 +16,15 @@ public class Edit {
         String checkInput = UserInput.getString();
         String newvalue;
         //Get index of the value that the user want to change
-       
+        int index = Search.serachAndGetStringIndex(checkInput);
+        if (Arrays.getStrings().contains(checkInput)) {
+            System.out.println("Vad vill du ändra till? ");
+            newvalue = UserInput.getString();
+            Arrays.getStrings().set(index,newvalue);
+
+        } else {
+            System.out.println("Värdet finns ej");
+        }
 
     }
 }
