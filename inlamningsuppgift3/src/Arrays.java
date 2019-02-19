@@ -54,8 +54,8 @@ class Arrays {
     }
 
     // Timstamp fungerar inte ännu
-    public static void setTimeStamp(ArrayList<Date> timeStamp) {
-        Arrays.timeStamp = timeStamp;
+    public static void setTimeStamp(Date date) {
+        timeStamp.add(date);
     }
 
     public static void setEvenNumbers(int evenNumber) {
