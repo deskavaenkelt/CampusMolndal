@@ -9,7 +9,7 @@ public class inlamningsuppgift3 {
             printMeny();
             int action = UserInput.getNumber();
 
-            if (action == 0 || action == 1 || action == 2 || action == 3 || action == 4 || action == 5 || action == 6 || action == 7) {
+            if (action == 0 || action == 1 || action == 2 || action == 3 || action == 4 || action == 5 || action == 6 || action == 7 || action == 8 || action == 9) {
                 switch (action) {
                     case 1:
                         add();
@@ -32,6 +32,12 @@ public class inlamningsuppgift3 {
                     case 7:
                         printExtra();
                         break;
+                    case 8:
+                        countWords();
+                        break;
+                    case 9:
+                        debug();
+                        break;
                     case 0:
                         quit();
                         break;
@@ -51,6 +57,8 @@ public class inlamningsuppgift3 {
                         "| 5  - Ta bort               |\n" +
                         "| 6  - Skriv ut meny         |\n" +
                         "| 7  - Skriv ut EXTRA        |\n" +
+                        "| 8  - Räkna ord             |\n" +
+                        "| 9  - Debug                 |\n" +
                         "| 0  - Avsluta               |\n" +
                         "+----------------------------+\n");
         System.out.print("Ditt val: ");
@@ -74,16 +82,22 @@ public class inlamningsuppgift3 {
     }
     private static void delete() {
         System.out.println("Radera...");
-        Delete.start();
+        //Delete.start();
     }
     private static void printExtra() {
         System.out.println("Extra uppgift");
 
+    }
+    private static void countWords() {
+        System.out.println("Räkna Ord...");
+    }
+    private static void debug() {
+        Debug.start();
     }
     private static void quit() {
         System.out.println("Avslutar...");
         UserInput.closeScanner();
         quit = true;
     }
-
 }
+
