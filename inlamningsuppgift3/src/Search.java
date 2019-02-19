@@ -1,10 +1,7 @@
-import java.sql.Timestamp;
-import java.util.Date;
-
 /**
  * datalogiUppgift3slutuppgift
  *
- * @author Lars Strömberg
+ * @author Lars Strömberg , Madeleine Hallqvist
  * @version 1.0
  * @since 2019-02-18
  * https://github.com/deskavaenkelt/
@@ -85,28 +82,4 @@ class Search {
             System.out.println(input + " fanns ej!");
         }
     }
-
-
-
-
-    /*private static String namn(String searchItem) {
-        //boolean exists = groceryList.contains(searchItem);
-
-        int position = Arrays.getStrings().indexOf(searchItem);
-        if(position >=0) {
-            return Arrays.getStrings().get(position);
-        }
-
-        return null;
-    }*/
-
-
-
-
-    /*protected static void searchAndGet() {
-        System.out.println(searchAndGetString());
-    }
-    private static String searchAndGetString() {
-        return "something";
-    }*/
 }

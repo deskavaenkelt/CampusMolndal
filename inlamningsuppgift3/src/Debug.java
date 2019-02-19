@@ -2,7 +2,10 @@ import java.util.Date;
 
 /**
  * datalogiUppgift3slutuppgift
- * Created by Lars Strömberg 2019-02-19.
+ *
+ * @author Lars Strömberg , Madeleine Hallqvist
+ * @version 1.0
+ * @since 2019-02-18
  * https://github.com/deskavaenkelt/
  */
 
