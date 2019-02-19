@@ -18,7 +18,7 @@ public class inlamningsuppgift3 {
             printMeny();
             int action = UserInput.getNumber();
 
-            if (action == 0 || action == 1 || action == 2 || action == 3 || action == 4 || action == 5 || action == 6 || action == 7 || action == 8 || action == 9) {
+            if (action == 0 || action == 1 || action == 2 || action == 3 || action == 4 || action == 5 || action == 6 || action == 7 || action == 8 || action == 9 || action == 10) {
                 switch (action) {
                     case 1:
                         add();
@@ -47,6 +47,9 @@ public class inlamningsuppgift3 {
                     case 9:
                         debug();
                         break;
+                    case 10:
+                        recursion();
+                        break;
                     case 0:
                         quit();
                         break;
@@ -68,6 +71,7 @@ public class inlamningsuppgift3 {
                         "| 7  - Skriv ut EXTRA        |\n" +
                         "| 8  - Räkna ord             |\n" +
                         "| 9  - Debug                 |\n" +
+                        "| 10 - Rekursiv              |\n" +
                         "| 0  - Avsluta               |\n" +
                         "+----------------------------+\n");
         System.out.print("Ditt val: ");
@@ -103,6 +107,10 @@ public class inlamningsuppgift3 {
     private static void countWords() {
         System.out.println("Räkna Ord...");
         CountWords.startCount();
+    }
+    private static void recursion() {
+        System.out.println("Rekursiv metod..");
+        Recursion.startEecursion();
     }
     private static void debug() {
         Debug.start();
