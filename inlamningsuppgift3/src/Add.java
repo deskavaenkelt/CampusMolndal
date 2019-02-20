@@ -6,7 +6,6 @@
  * @since 2019-02-18
  * https://github.com/deskavaenkelt/datalogiUppgift3slutuppgift
  */
-
 import java.util.Date;
 
 class Add {
@@ -26,17 +25,14 @@ class Add {
         Fibonacci.addNewFibonacci();
         Fibonacci.printGeneratedFibonacciSeries();
     }
-
     private static void printWholeArray() {
         System.out.println(Arrays.getStrings());
     }
-
     private static void timeStamp(){
         Date date = new Date();
         Arrays.getTimeStamp().add(date);
         printTimeStamp();
     }
-
     private static void printTimeStamp(){
         System.out.println(Arrays.getTimeStamp());
     }

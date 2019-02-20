@@ -11,19 +11,16 @@ import java.util.Scanner;
 
 class UserInput {
     private static Scanner scanner = new Scanner(System.in);
-
     static String getString() {
         return userInput();
     }
-
     private static String userInput() {
         return scanner.nextLine();
     }
-
     static int getNumber() {
         return readNumber();
     }
-
+    
     private static int readNumber() {
         // Läs in nummret
         String input = userInput();

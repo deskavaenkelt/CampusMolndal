@@ -76,7 +76,6 @@ public class inlamningsuppgift3 {
                         "+----------------------------+\n");
         System.out.print("Ditt val: ");
     }
-
     private static void add() {
         System.out.println("Går till addfunktion...");
         Add.userInput();

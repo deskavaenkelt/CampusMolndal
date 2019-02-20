@@ -6,9 +6,7 @@
  * @since 2019-02-18
  * https://github.com/deskavaenkelt/datalogiUppgift3slutuppgift
  */
-
 import java.util.Collections;
-
 /**Class that sorts the String Array in two ways.*/
 class Sort {
     /**Calls on the method internalSort*/
@@ -16,10 +14,7 @@ class Sort {
         internalSort();
     }
     /**Calls on the methods menuSort and UserChoiseSort*/
-    private static void internalSort() {
-        menuSort();
-        userChoiseSort();
-    }
+    private static void internalSort() {menuSort();userChoiseSort();}
    /**Menu so that the user get to choose how to sort the array. */
     private static void menuSort() {
         System.out.print(
@@ -43,7 +38,6 @@ class Sort {
     private static void sortArray(){
         //Change the arrayList to an Array.
         String[] newArray = Arrays.getStrings().toArray(new String[Arrays.getStrings().size()]);
-
         //Algorithm to sort the array.
         for (int a = 0; a < newArray.length; a++) {
             int minIndex = a;

@@ -19,10 +19,8 @@ class Search {
         if (Arrays.getStrings().contains(searchForEncrypted)) {              // if searchFor exist == true => get position
             position = Arrays.getStrings().indexOf(searchForEncrypted);
         }
-
         return position;    // if -1 is returned, the element was not found
     }
-
     protected static int serachAndGetTimeStamp(int searchDate) {
         return serachAndGetTimeStampInternal(searchDate);
         // if -1 is returned, the element was not found
@@ -32,21 +30,11 @@ class Search {
         if (Arrays.getTimeStamp().contains(searchDate)) {              // if searchFor exist == true => get position
             position = Arrays.getTimeStamp().indexOf(searchDate);
         }
-
         return position;    // if -1 is returned, the element was not found
     }
-
-
-
     /** Explicit for Search Meny */
-    protected static void goToSerach() {
-        internal();
-    }
-    private static void internal() {
-        meny();
-        userChoise();
-    }
-
+    protected static void goToSerach() {internal();}
+    private static void internal() {meny();userChoise();}
     private static void meny() {
         System.out.print(
                         "+--------------+\n" +

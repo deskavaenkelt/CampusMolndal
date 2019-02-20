@@ -10,7 +10,6 @@
 import java.util.Date;
 
 class Debug {
-
     protected static void start() {
         meny();
     }
@@ -46,7 +45,6 @@ class Debug {
                 break;*/
         }
     }
-
     private static void printAllLists() {
         System.out.println("Skriver ut allt som fins i arrayer...");
         System.out.println("Strings:     " + Arrays.getStrings().toString());

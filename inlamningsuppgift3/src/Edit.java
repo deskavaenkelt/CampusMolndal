@@ -26,10 +26,8 @@ public class Edit {
             newvalue = UserInput.getString();
             Arrays.getStrings().set(index,newvalue);
             System.out.println("'" + checkInput + "'" + " ändrades till " + "'" + newvalue + "'!");
-
         } else { //if the input value is not found.
             System.out.println("Värdet finns ej");
         }
-
     }
 }
