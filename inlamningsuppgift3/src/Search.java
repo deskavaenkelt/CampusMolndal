@@ -14,12 +14,13 @@ class Search {
         // if -1 is returned, the element was not found
     }
     private static int serachAndGetStringIndexInternal(String searchFor) {
-        int position = -1;
+        return Encryption.searchEncrypt(searchFor);
+        /*int position = -1;
         String searchForEncrypted = Encryption.stringToEncrypt(searchFor);
         if (Arrays.getStrings().contains(searchForEncrypted)) {              // if searchFor exist == true => get position
             position = Arrays.getStrings().indexOf(searchForEncrypted);
         }
-        return position;    // if -1 is returned, the element was not found
+        return position;    // if -1 is returned, the element was not found*/
     }
     protected static int serachAndGetTimeStamp(int searchDate) {
         return serachAndGetTimeStampInternal(searchDate);
@@ -57,7 +58,7 @@ class Search {
         String input = UserInput.getString();
         int indexId = serachAndGetStringIndexInternal(input);
         if (indexId >= 0) {
-            System.out.println(Arrays.getStrings().get(indexId) + " fanns!");
+            System.out.println(Encryption.stringToDecrypt(Arrays.getStrings().get(indexId)) + " fanns!");
         } else {
             System.out.println(input + " fanns ej!");
         }

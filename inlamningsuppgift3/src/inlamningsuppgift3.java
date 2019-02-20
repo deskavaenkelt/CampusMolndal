@@ -10,6 +10,19 @@
 public class inlamningsuppgift3 {
     private static boolean quit = false;
     public static void main(String[] args) {
+        /*// TODO: encrypt
+        String encryptThis = "abcd";
+        System.out.println("String to encrypt: " + encryptThis);
+        String thisIsEncrypted = Encryption.stringToEncrypt(encryptThis);
+        // TODO: print result from arraylist
+        int indexId = 0;
+        Arrays.setStrings(thisIsEncrypted); // lagra i databas
+        System.out.println("Encrypted string:  " + Arrays.getStrings().get(indexId));
+        // TODO: decrypt
+        String encryptedStringFromArrayList = Arrays.getStrings().get(indexId);
+        String thisIsDecrypted = Encryption.stringToDecrypt(encryptedStringFromArrayList);
+        System.out.println("Decrypted string:  " + thisIsDecrypted);*/
+
         runProgram();
     }
 
@@ -114,6 +127,7 @@ public class inlamningsuppgift3 {
     private static void debug() {
         Debug.start();
     }
+
     private static void quit() {
         System.out.println("Avslutar...");
         UserInput.closeScanner();
