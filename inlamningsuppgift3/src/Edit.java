@@ -21,13 +21,17 @@ public class Edit {
         //Get index of the value that the user want to change
         int index = Search.serachAndGetStringIndex(checkInput);
         //If the value exists it changes to the new user input value.
-        if (Arrays.getStrings().contains(checkInput)) {
+        if (index >= 0) {
             System.out.println("Vad vill du ändra till? ");
             newvalue = UserInput.getString();
             Arrays.getStrings().set(index,newvalue);
-            System.out.println("'" + checkInput + "'" + " ändrades till " + "'" + newvalue + "'!");
+            //Encrypts the newvalue.
+            String thisIsEncrypted = Encryption.stringToEncrypt(newvalue);
+            Arrays.setStrings(thisIsEncrypted);
+            System.out.println("'" + checkInput + "'" + " ändrades till " + "'" + newvalue + "' " + thisIsEncrypted );
         } else { //if the input value is not found.
             System.out.println("Värdet finns ej");
         }
+
     }
 }

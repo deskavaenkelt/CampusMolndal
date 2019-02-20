@@ -20,7 +20,7 @@ class UserInput {
     static int getNumber() {
         return readNumber();
     }
-    
+
     private static int readNumber() {
         // Läs in nummret
         String input = userInput();
