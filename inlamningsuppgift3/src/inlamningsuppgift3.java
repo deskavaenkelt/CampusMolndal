@@ -121,7 +121,6 @@ public class inlamningsuppgift3 {
         CountWords.startCount();
     }
     private static void recursion() {
-        System.out.println("Rekursiv metod..");
         Recursion.startRecursion();
     }
     private static void debug() {

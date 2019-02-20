@@ -15,7 +15,7 @@ public class Recursion {
         //Changes the Arraylist to an Array
         Integer[] numArray = Arrays.getFibonacci().toArray(new Integer[Arrays.getFibonacci().size()]);
         //Prints + calls on findSumOfFibonacci
-        System.out.println(findSumOfFibonacci(numArray, numArray.length));
+        System.out.println("Rekursiv metod applicerad på lagrad Fibonacci serie blir: " + findSumOfFibonacci(numArray, numArray.length));
     }
     /**Method that uses recursion to sum the Fibonacci Array*/
     private static int findSumOfFibonacci(Integer Array[], int lenght) {
