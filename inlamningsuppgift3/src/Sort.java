@@ -49,7 +49,7 @@ class Sort {
             String temp = newArray[a];
             newArray[a] = newArray[minIndex];
             newArray[minIndex] = temp;
-            System.out.println(newArray[a]);
+            System.out.println(Encryption.stringToDecrypt(newArray[a]));
         }
     }
     /**Sorting method that sorts the Array from Z - A*/
@@ -59,7 +59,7 @@ class Sort {
         System.out.println("Sorterar i motsatt håll: ");
         //Loops out the new order of the array
         for(String string: Arrays.getStrings()){
-            System.out.println(string);
+            System.out.println(Encryption.stringToDecrypt(string));
         }
     }
 }
