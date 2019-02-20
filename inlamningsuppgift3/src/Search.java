@@ -51,13 +51,20 @@ class Search {
      * EXTRA if there is no match on Fibonacci, tell user what number is closest.
      */
     private static void serachSting() {
-        System.out.print("Skriv in det du söker efter: ");
-        String input = UserInput.getString();
-        int indexId = serachAndGetStringIndexInternal(input);
-        if (indexId >= 0) {
-            System.out.println(Encryption.stringToDecrypt(Arrays.getStrings().get(indexId)) + " fanns!");
+        // Check if Arrays.strings is empty, true if empty
+        boolean isArrayListIsEmpty = Arrays.getStrings().isEmpty();
+
+        if (isArrayListIsEmpty) {                           // if isEmpty = true
+            System.out.println("Inga nummer lagrade ännu!");
         } else {
-            System.out.println(input + " fanns ej!");
+            System.out.print("Skriv in det du söker efter: ");
+            String input = UserInput.getString();
+            int indexId = serachAndGetStringIndexInternal(input);
+            if (indexId >= 0) {
+                System.out.println(Encryption.stringToDecrypt(Arrays.getStrings().get(indexId)) + " fanns!");
+            } else {
+                System.out.println(input + " fanns ej!");
+            }
         }
     }
     private static void searchFibonacci() {

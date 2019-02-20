@@ -112,8 +112,8 @@ public class inlamningsuppgift3 {
     private static void printExtra() {
         System.out.println(
                 "Skriver ut den jämna och ojämna Fibonacci serien\n" +
-                "OddNumbers:  " + Arrays.getOddNumbers().toString() +"\n" +
-                "EvenNumbers: " + Arrays.getEvenNumbers().toString()
+                "OddNumbers contains  " + Arrays.getOddNumbers().size() + " " + Arrays.getOddNumbers().toString() +"\n" +
+                "EvenNumbers contains " + Arrays.getEvenNumbers().size() + " " + Arrays.getEvenNumbers().toString()
                 );
     }
     private static void countWords() {
@@ -134,3 +134,4 @@ public class inlamningsuppgift3 {
     }
 }
 
+// TODO:
