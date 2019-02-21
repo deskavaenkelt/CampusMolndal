@@ -7,7 +7,7 @@
  * https://github.com/deskavaenkelt/datalogiUppgift3slutuppgift
  */
 
-public class inlamningsuppgift3 {
+public class Main {
     private static boolean quit = false;
     public static void main(String[] args) {
         runProgram();
@@ -129,3 +129,5 @@ public class inlamningsuppgift3 {
         quit = true;
     }
 }
+
+// TODO: blir något fel i dekryprering när man ändrat på ett värde som redan finns i databasen
