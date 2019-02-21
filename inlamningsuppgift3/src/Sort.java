@@ -11,18 +11,21 @@ import java.util.Collections;
  * Class that sorts the String Array in two ways.
  */
 class Sort {
+
     /**
      * Calls on the method internalSort
      */
     protected static void goToSort() {
         internalSort();
     }
+
     /**
      * Calls on the methods menuSort and UserChoiceSort
      */
-    private static void internalSort() {menuSort();userChoiseSort();}
+    private static void internalSort() {menuSort();userChoiceSort();}
+
     /**
-    * Menu so that the user get to choose how to sort the array.
+    * Menu so that the user gets to decide on how to sort the array.
     */
     private static void menuSort() {
         System.out.print(
@@ -31,25 +34,26 @@ class Sort {
                         "|  1. A - Ö    |\n" +
                         "|  2. Ö - A    |\n" +
                         "+--------------+\n" +
-                        "Val:");
+                        "Val: ");
     }
 
     /**
-     * Checks what choice User wants to do.
+     * Checks what choice the User wants to do.
      */
-    private static void userChoiseSort() {
+    private static void userChoiceSort() {
         int input = UserInput.getNumber();
         if (1 == input) {
             sortArray();
         } else if (2 == input) {
-            sortArrayInReversOrder();
+            sortArrayInReverseOrder();
         }
     }
+
     /**
      * Sorting method that sorts the Array from a-z
      */
     private static void sortArray(){
-        //Change the arrayList to an Array.
+        //Change the ArrayList to an Array.
         String[] newArray = Arrays.getStrings().toArray(new String[Arrays.getStrings().size()]);
         //Algorithm to sort the array.
         for (int a = 0; a < newArray.length; a++) {
@@ -65,10 +69,11 @@ class Sort {
             System.out.println(Encryption.stringToDecrypt(newArray[a]));
         }
     }
+
     /**
      * Sorting method that sorts the Array from Z - A
      */
-    private static void sortArrayInReversOrder() {
+    private static void sortArrayInReverseOrder() {
         //Sorts the array in reverse order.
         Arrays.getStrings().sort(Collections.reverseOrder());
         System.out.println("Sorterar i motsatt håll: ");

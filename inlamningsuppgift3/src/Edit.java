@@ -11,22 +11,24 @@
  * to a new value.
  */
 public class Edit {
+
     /**
      * Starts the edit part and calls on edit()
      */
     protected static void start() {
         edit();
     }
+
     /**
-     * Method that changes value of already existing values in the string array
+     * Method that changes the value of an already existing value in the string array
      */
     private static void edit() {
         System.out.println("Skriv in vad vill ändra på: ");
         String checkInput = UserInput.getString();
         String newValue;
         //Get index of the value that the user want to change
-        int index = Search.serachAndGetStringIndex(checkInput);
-        //If the value exists it changes to the new user input value.
+        int index = Search.searchAndGetStringIndex(checkInput);
+        //If the value exists, it changes to the new user input value.
         if (index >= 0) {
             System.out.println("Vad vill du ändra till? ");
             newValue = UserInput.getString();
@@ -34,10 +36,9 @@ public class Edit {
             //Encrypts the newValue.
             String thisIsEncrypted = Encryption.stringToEncrypt(newValue);
             Arrays.setStrings(thisIsEncrypted);
-            System.out.println("'" + checkInput + "'" + " ändrades till " + "'" + newValue + "' " + thisIsEncrypted );
+            System.out.println("'" + checkInput + "'" + " ändrades till " + "'" + newValue + "' " + thisIsEncrypted);
         } else { //if the input value is not found.
             System.out.println("Värdet finns ej");
         }
-
     }
 }

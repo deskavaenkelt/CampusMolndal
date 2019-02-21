@@ -15,7 +15,7 @@ public class inlamningsuppgift3 {
 
     private static void runProgram() {
         while(!quit) {
-            printMeny();
+            printMenu();
             int action = UserInput.getNumber();
 
             if (action == 0 || action == 1 || action == 2 || action == 3 || action == 4 || action == 5 || action == 6 || action == 7 || action == 8 || action == 9 || action == 10) {
@@ -36,7 +36,7 @@ public class inlamningsuppgift3 {
                         delete();
                         break;
                     case 6:
-                        printMeny();
+                        printMenu();
                         break;
                     case 7:
                         printExtra();
@@ -58,7 +58,7 @@ public class inlamningsuppgift3 {
         }
     }
 
-    private static void printMeny() {
+    private static void printMenu() {
         System.out.println("\nTillgängliga val:");
         System.out.println(
                         "+----------------------------+\n" +
@@ -76,40 +76,49 @@ public class inlamningsuppgift3 {
                         "+----------------------------+\n");
         System.out.print("Ditt val: ");
     }
+
     private static void add() {
         System.out.println("Går till addfunktion...");
         Add.userInput();
     }
+
     private static void edit() {
         System.out.println("Redigera");
         Edit.start();
     }
+
     private static void search() {
         System.out.println("Går till sökfunktion...");
-        Search.goToSerach();
+        Search.goToSearch();
     }
+
     private static void sort() {
         System.out.println("Sorterar...");
         Sort.goToSort();
     }
+
     private static void delete() {
         System.out.println("Radera...");
         Delete.deleteStart();
     }
+
     private static void printExtra() {
         System.out.println(
                 "Skriver ut den jämna och ojämna Fibonacci serien\n" +
-                "OddNumbers contains  " + Arrays.getOddNumbers().size() + " " + Arrays.getOddNumbers().toString() +"\n" +
-                "EvenNumbers contains " + Arrays.getEvenNumbers().size() + " " + Arrays.getEvenNumbers().toString()
+                "OddNumbers contains: " + Arrays.getOddNumbers().size() + " " + Arrays.getOddNumbers().toString() +"\n" +
+                "EvenNumbers contains: " + Arrays.getEvenNumbers().size() + " " + Arrays.getEvenNumbers().toString()
                 );
     }
+
     private static void countWords() {
         System.out.println("Räkna Ord...");
         CountWords.startCount();
     }
+
     private static void recursion() {
         Recursion.startRecursion();
     }
+
     private static void debug() {
         Debug.start();
     }

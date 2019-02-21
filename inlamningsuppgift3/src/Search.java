@@ -8,58 +8,62 @@
  */
 
 class Search {
+
     /**
      * Search methods used by every search function in the program
      * returns indexId when the element is found or -1 if the element isn't found
      */
-    protected static int serachAndGetStringIndex(String searchFor) {
-        return serachAndGetStringIndexInternal(searchFor);
+    protected static int searchAndGetStringIndex(String searchFor) {
+        return searchAndGetStringIndexInternal(searchFor);
         // if -1 is returned, the element was not found
     }
-    private static int serachAndGetStringIndexInternal(String searchFor) {
+
+    private static int searchAndGetStringIndexInternal(String searchFor) {
         return Encryption.searchEncrypt(searchFor);
     }
 
-
     /**
-     * Explicit for Search Meny
+     * Explicit for Search Menu
      */
-    protected static void goToSerach() {internal();}
-    private static void internal() {meny();userChoise();}
-    private static void meny() {
+    protected static void goToSearch() {internal();}
+
+    private static void internal() {menu();userChoice();}
+
+    private static void menu() {
         System.out.print(
                         "+----------------+\n" +
                         "|   Alternativ:  |\n" +
                         "|  1. Sträng     |\n" +
                         "|  2. Fibonacci  |\n" +
                         "+----------------+\n" +
-                        "Val:");
+                        "Val: ");
     }
-    private static void userChoise() {
+
+    private static void userChoice() {
         int input = UserInput.getNumber();
         if (1 == input) {
-            serachSting();
+            searchString();
         } else if (2 == input) {
             searchFibonacci();
         }
     }
 
-
     /**
      * The two different search methods
      * One to search for stored strings and the other to search for stored fibonacci numbers.
-     * EXTRA if there is no match on Fibonacci, tell user what number is closest.
+     * (EXTRA)
+     * if there is no match on Fibonacci, tell user what number is closest.
      */
-    private static void serachSting() {
+    private static void searchString() {
         // Check if Arrays.strings is empty, true if empty
-        boolean isArrayListIsEmpty = Arrays.getStrings().isEmpty();
+        boolean ArrayListIsEmpty = Arrays.getStrings().isEmpty();
 
-        if (isArrayListIsEmpty) {                           // if isEmpty = true
+        if (ArrayListIsEmpty) {                           // if isEmpty = true
             System.out.println("Inga nummer lagrade ännu!");
         } else {
             System.out.print("Skriv in det du söker efter: ");
             String input = UserInput.getString();
-            int indexId = serachAndGetStringIndexInternal(input);
+            int indexId = searchAndGetStringIndexInternal(input);
             if (indexId >= 0) {
                 System.out.println(Encryption.stringToDecrypt(Arrays.getStrings().get(indexId)) + " fanns!");
             } else {
@@ -67,11 +71,12 @@ class Search {
             }
         }
     }
+
     private static void searchFibonacci() {
         // Check if Arrays.strings is empty, true if empty
-        boolean isArrayListIsEmpty = Arrays.getFibonacci().isEmpty();
+        boolean ArrayListIsEmpty = Arrays.getFibonacci().isEmpty();
 
-        if (isArrayListIsEmpty) {                           // if isEmpty = true
+        if (ArrayListIsEmpty) {                           // if isEmpty = true
             System.out.println("Inga nummer lagrade ännu!");
         } else {                                            // if isEmpty = false
             System.out.print("Skriv in det nummer du vill söka efter: ");
@@ -83,12 +88,13 @@ class Search {
             searchFor(userInput);
         }
     }
+
     /**
      * Search for the number and in the same loop check for closest number
      */
     private static void searchFor(int numberToBeChecked) {
         int distance = Integer.MAX_VALUE;
-        int idClosest= 0;
+        int idClosest = 0;
         int newDistance;
 
         for (int i = 0; i < Arrays.getFibonacci().size(); i++) {
@@ -114,11 +120,11 @@ class Search {
 
 
     // TODO: Ta bort de nedan, sparas tills programmet är klart
-    protected static int serachAndGetTimeStamp(int searchDate) {
-        return serachAndGetTimeStampInternal(searchDate);
+    protected static int searchAndGetTimeStamp(int searchDate) {
+        return searchAndGetTimeStampInternal(searchDate);
         // if -1 is returned, the element was not found
     }
-    private static int serachAndGetTimeStampInternal(int searchDate) {
+    private static int searchAndGetTimeStampInternal(int searchDate) {
         int position = -1;
         if (Arrays.getTimeStamp().contains(searchDate)) {              // if searchFor exist == true => get position
             position = Arrays.getTimeStamp().indexOf(searchDate);
