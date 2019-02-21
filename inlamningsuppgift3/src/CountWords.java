@@ -17,7 +17,7 @@ public class CountWords {
      */
     protected static void startCount() {
         int amountOfWords =0;
-        for (String input : Arrays.getStrings()) {
+        for (String input : Arrays.getStrings()) {              // TODO: Måste decryptera informationen först
             amountOfWords = amountOfWords + countWords(input);
         }
         System.out.println(amountOfWords);

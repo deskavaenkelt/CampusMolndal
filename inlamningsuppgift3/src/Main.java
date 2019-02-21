@@ -18,7 +18,7 @@ public class Main {
             printMenu();
             int action = UserInput.getNumber();
 
-            if (action == 0 || action == 1 || action == 2 || action == 3 || action == 4 || action == 5 || action == 6 || action == 7 || action == 8 || action == 9 || action == 10) {
+            if (action >= 0 && action <= 9) {
                 switch (action) {
                     case 1:
                         add();
@@ -36,19 +36,16 @@ public class Main {
                         delete();
                         break;
                     case 6:
-                        printMenu();
-                        break;
-                    case 7:
                         printExtra();
                         break;
-                    case 8:
+                    case 7:
                         countWords();
+                        break;
+                    case 8:
+                        recursion();
                         break;
                     case 9:
                         debug();
-                        break;
-                    case 10:
-                        recursion();
                         break;
                     case 0:
                         quit();
@@ -67,11 +64,10 @@ public class Main {
                         "| 3  - Sök                   |\n" +
                         "| 4  - Sortera               |\n" +
                         "| 5  - Ta bort               |\n" +
-                        "| 6  - Skriv ut meny         |\n" +
-                        "| 7  - Skriv ut EXTRA        |\n" +
-                        "| 8  - Räkna ord             |\n" +
+                        "| 6  - Skriv ut EXTRA        |\n" +
+                        "| 7  - Räkna ord             |\n" +
+                        "| 8  - Rekursiv              |\n" +
                         "| 9  - Debug                 |\n" +
-                        "| 10 - Rekursiv              |\n" +
                         "| 0  - Avsluta               |\n" +
                         "+----------------------------+\n");
         System.out.print("Ditt val: ");
@@ -131,3 +127,5 @@ public class Main {
 }
 
 // TODO: blir något fel i dekryprering när man ändrat på ett värde som redan finns i databasen
+
+// TODO: Räkna ord rapporterar för många ord, borde rapportera 12 på import, rapporterar 743...
