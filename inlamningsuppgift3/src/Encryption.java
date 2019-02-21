@@ -32,9 +32,7 @@ class Encryption {
         String newEncryptedString = changePosition(encryptThis);
         return newEncryptedString;
     }
-    /**
-     * Move chars x positions
-     */
+    /** Move chars x positions */
     private static String changePosition(String changeChars) {
         String stringToReturn = "";
         int dec;
@@ -45,15 +43,39 @@ class Encryption {
         }
         return stringToReturn;
     }
-    /**
-     * Used to fill upp a string of 256 characters
-     */
-    private static char inputRandomChars() {
-        // TODO: generera 256 tecken lång hash/salt
-        //       sätt börja fylla på kryperad data på hash indexId 82 105 99 107 97 114 100 32 103 101 114 32 111 115 115 32 86 71 = 1616
-        //       1616/256= 6,3125 ==> element 80 varav 7
+
+    private static String buildEncryptedString(String encryptThis) {
+        String stage1 = changePosition(encryptThis);
+        String stage2 = getRandomSting();
+        String stage3 =
+        return "något";
+    }
+    private static String deBuildEncryptedString(String decryptThis) {
+        String newDecryptedString = changePosition(decryptThis);
+        return "något";
+    }
+
+    /** Used to fill upp a string of 256 characters */
+    private static String getRandomSting() {
         String alphabet = "qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM+0987654321§½!#¤%&/()=?@£$€{[]}";
-        return alphabet.charAt(randomizer.nextInt(alphabet.length()));
+        String myHash = "";
+        for (int i = 0; i < 256; i++) {
+            myHash += alphabet.charAt(randomizer.nextInt(alphabet.length()));
+        }
+        return myHash;
+    }
+    /** Offset i want to use */
+    private static int offset() {
+        // TODO: sätt börja fylla på kryperad data på hash indexId 82 105 99 107 97 114 100 32 103 101 114 32 111 115 115 32 86 71 = 1616
+        //       1616/256= 6,3125 ==> element 80 varav 7
+        int[] array = {82, 105, 99, 107, 97, 114, 100, 32, 103, 101, 114, 32, 111, 115, 115, 32, 86, 71};
+        int sumOfArray = 0;
+        for (int i = 0; i < array.length; i++) {
+            sumOfArray += i;
+        }
+        // ASCII table is 128 element long, divide by that
+        int returnModulus = sumOfArray%128;
+        return returnModulus;
     }
 
 
