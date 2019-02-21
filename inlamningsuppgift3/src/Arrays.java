@@ -28,7 +28,9 @@ class Arrays {
     public static ArrayList<Integer> getFibonacci() {
         return fibonacci;
     }
-    public static ArrayList<Date> getTimeStamp() { return timeStamp; }
+    public static ArrayList<Date> getTimeStamp() {
+        return timeStamp;
+    }
     public static ArrayList<Integer> getEvenNumbers() {
         return evenNumbers;
     }
@@ -46,6 +48,7 @@ class Arrays {
     public static void setFibonacci(int number) {
         fibonacci.add(number);
     }
+    // Timstamp fungerar inte ännu
     public static void setTimeStamp(Date date) {
         timeStamp.add(date);
     }

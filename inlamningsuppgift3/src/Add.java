@@ -21,21 +21,18 @@ class Add {
         System.out.println("\nEn ny sträng '" + input + "' lades till.. " + thisIsEncrypted);
         printWholeArray();
         timeStamp();
-        System.out.println("Ökar fibonacci serien...");
+        System.out.println("Ökar fibbonacci serien...");
         Fibonacci.addNewFibonacci();
         Fibonacci.printGeneratedFibonacciSeries();
     }
-
     private static void printWholeArray() {
         System.out.println(Arrays.getStrings());
     }
-
     private static void timeStamp(){
         Date date = new Date();
         Arrays.getTimeStamp().add(date);
         printTimeStamp();
     }
-
     private static void printTimeStamp(){
         System.out.println(Arrays.getTimeStamp());
     }

@@ -10,19 +10,17 @@
  * Class that counts how many words there are in the Array.
  */
 public class CountWords {
-
     /**
      * Method that calls on the method that count how
-     * many words there are in the array, adds them and prints out.
+     * many words there are in the array, and adds them and prints out.
      */
     protected static void startCount() {
-        int amountOfWords =0;
+        int amoutOfWords =0;
         for (String input : Arrays.getStrings()) {
-            amountOfWords = amountOfWords + countWords(input);
+            amoutOfWords = amoutOfWords + countWords(input);
         }
-        System.out.println(amountOfWords);
+        System.out.println(amoutOfWords);
     }
-
     /**
      * Method that counts how many words there are in the array.
      */

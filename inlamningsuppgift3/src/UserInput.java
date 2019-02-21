@@ -35,16 +35,17 @@ class UserInput {
     private static boolean isInteger(String passedString) {
         // Validate so that input is an int
         boolean isValidInteger = false;
-        try {
+        try
+        {
             Integer.parseInt(passedString);        // passedString is a valid integer
             isValidInteger = true;
         }
-        catch (NumberFormatException ex) {
+        catch (NumberFormatException ex)
+        {
             // passedString is not an integer
         }
         return isValidInteger;
     }
-
     // Close scanner
     static void closeScanner() {
         scanner.close();
