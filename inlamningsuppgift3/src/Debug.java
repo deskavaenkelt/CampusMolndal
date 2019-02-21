@@ -7,6 +7,7 @@
  * https://github.com/deskavaenkelt/datalogiUppgift3slutuppgift
  */
 
+import java.sql.Array;
 import java.util.Date;
 
 class Debug {
@@ -61,37 +62,52 @@ class Debug {
         }
     }
     private static void printAllLists() {
-        System.out.println("Skriver ut allt som fins i arrayer...");
-        System.out.println("Strings:     " + Arrays.getStrings().toString());
+        System.out.print("Skriv in lösenord: ");
+        String enterdPassword = UserInput.getString();
+
+        System.out.println("Skriver ut allt som finns i arrayer...");
+        if (Encryption.checkPassword(enterdPassword)) {
+            String[] array = new String[Arrays.getStrings().size()];
+            System.out.print("Strings:     [");
+            for (int i = 0; i < Arrays.getStrings().size(); i++) {
+                array[i] = Encryption.stringToDecrypt(Arrays.getStrings().get(i));
+                System.out.print(Encryption.stringToDecrypt(Arrays.getStrings().get(i)) + " ");
+            }
+            System.out.print("]");
+            System.out.println();
+        } else {
+            System.out.println("Strings:     " + Arrays.getStrings().toString());
+        }
         System.out.println("Fibonachi:   " + Arrays.getFibonacci().toString());
         System.out.println("TimeStamp:   " + Arrays.getTimeStamp().toString());
         System.out.println("OddNumbers:  " + Arrays.getOddNumbers().toString());
         System.out.println("EvenNumbers: " + Arrays.getEvenNumbers().toString());
+
     }
     private static void importLists() {
-        Arrays.setStrings("Januari");
+        Arrays.setStrings(Encryption.stringToEncrypt("Januari"));
         timeStamp();
-        Arrays.setStrings("Februari");
+        Arrays.setStrings(Encryption.stringToEncrypt("Februari"));
         timeStamp();
-        Arrays.setStrings("Mars");
+        Arrays.setStrings(Encryption.stringToEncrypt("Mars"));
         timeStamp();
-        Arrays.setStrings("April");
+        Arrays.setStrings(Encryption.stringToEncrypt("April"));
         timeStamp();
-        Arrays.setStrings("Maj");
+        Arrays.setStrings(Encryption.stringToEncrypt("Maj"));
         timeStamp();
-        Arrays.setStrings("Juni");
+        Arrays.setStrings(Encryption.stringToEncrypt("Juni"));
         timeStamp();
-        Arrays.setStrings("Juli");
+        Arrays.setStrings(Encryption.stringToEncrypt("Juli"));
         timeStamp();
-        Arrays.setStrings("Augusti");
+        Arrays.setStrings(Encryption.stringToEncrypt("Augusti"));
         timeStamp();
-        Arrays.setStrings("September");
+        Arrays.setStrings(Encryption.stringToEncrypt("September"));
         timeStamp();
-        Arrays.setStrings("Oktober");
+        Arrays.setStrings(Encryption.stringToEncrypt("Oktober"));
         timeStamp();
-        Arrays.setStrings("November");
+        Arrays.setStrings(Encryption.stringToEncrypt("November"));
         timeStamp();
-        Arrays.setStrings("December");
+        Arrays.setStrings(Encryption.stringToEncrypt("December"));
         timeStamp();
     }
     private static void timeStamp(){

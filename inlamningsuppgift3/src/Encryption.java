@@ -22,6 +22,19 @@ class Encryption {
      *      System.out.println("Encrypted string:  " + Arrays.getStrings().get(indexId));
      */
 
+    public static boolean checkPassword (String input) {
+        return validPassword(input);
+    }
+
+    private static boolean validPassword(String input) {
+        if (input.equals(key)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    private static String key = "Rickard ger oss VG";  // keySum is 1616 => 1616/256= 6,3125 ==> element 80 på varav 7.
 
     // Encrypt
     protected static String stringToEncrypt(String sometingToEncrypt) {
@@ -56,7 +69,6 @@ class Encryption {
     private static int offset() {
         // TODO: sätt börja fylla på kryperad data på hash indexId 82 105 99 107 97 114 100 32 103 101 114 32 111 115 115 32 86 71 = 1616
         //       1616/256= 6,3125 ==> element 80 varav 7
-        String key = "Rickard ger oss VG";  // keySum is 1616 => 1616/256= 6,3125 ==> element 80 på varav 7.
         int keySum = 0;
 
         for (int i = 0; i < key.length(); i++) {
@@ -106,19 +118,17 @@ class Encryption {
         return decrypt(decryptThis);
     }
     private static String decrypt(String decryptThis) {
-        StringBuilder getHex = new StringBuilder();
-        for (int i = 0; i < 2; i++) {
-            getHex.append(i);
-        }
-        String hex = getHex.toString();
-        int value = Integer.parseInt(hex, 16);
-        StringBuilder stringToDecrypt = new StringBuilder();
-        for (int i = 0; i < value; i++) {
-            stringToDecrypt.append(i + offset());
-        }
+        // Get hexadecimal number for lengt of string
+        String hex = decryptThis.substring(0, 2);
 
-        String processString = changePositionRevert(stringToDecrypt.toString());
-        return processString;
+        // Convert hex to int
+        int hexValue = Integer.parseInt(hex, 16);
+
+        // Get the real data from the string
+        String stringToDecrypt = decryptThis.substring(offset(), offset() + hexValue);
+
+        // Revert encryption
+        return changePositionRevert(stringToDecrypt);
     }
 
 
@@ -147,11 +157,42 @@ class Encryption {
     }
     private static int searchEncryptInternal(String stringToSearchFor) {
         int idToReturn = -1;
-        String encryptedStringToSerchFor = encrypt(stringToSearchFor);
-        if (Arrays.getStrings().contains(encryptedStringToSerchFor)) {              // if searchFor exist == true => get position
-            idToReturn = Arrays.getStrings().indexOf(encryptedStringToSerchFor);
+
+        String temp = "";
+        for (int i = 0; i < Arrays.getStrings().size(); i++) {
+            temp = decrypt(Arrays.getStrings().get(i));
+            if (temp.equals(stringToSearchFor)) {
+                idToReturn = i;
+                break;
+            }
         }
         return idToReturn;
+
+        /*// Get hexadecimal number for lengt of string
+        int hexLength = stringToSearchFor.length();
+
+        String encryptedStringToSerchFor = changePosition(stringToSearchFor);
+
+        // Compare "encryptedStringToSerchFor" with data in database
+        StringBuilder getEncryptedStringToCompare = new StringBuilder();
+        for (int i = 0; i < hexLength; i++) {
+            getEncryptedStringToCompare.append()
+        }
+
+        //String getEncryptedStringToCompare = stringToSearchFor.substring(offset(), offset() + hexLength);
+        System.out.println("getEncryptedStringToCompare: " + getEncryptedStringToCompare);
+
+        String temp = "";
+        for (int i = 0; i < hexLength; i++) {
+            temp = Arrays.getStrings().get(i);
+            if (temp.substring(offset(), offset() + hexLength) == getEncryptedStringToCompare) {
+                idToReturn = i;
+            }
+        }*/
+
+        /*if (Arrays.getStrings().contains(encryptedStringToSerchFor)) {              // if searchFor exist == true => get position
+            idToReturn = Arrays.getStrings().indexOf(encryptedStringToSerchFor);
+        }*/
     }
 
 
