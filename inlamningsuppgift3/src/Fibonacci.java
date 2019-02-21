@@ -17,36 +17,43 @@ public class Fibonacci {
     protected static void addNewFibonacci() {
         createAnewFibonacciElement();
     }
+
     private static void createAnewFibonacciElement() {
         if (0 == counter || 1 == counter) {
             Arrays.setFibonacci(counter);
             counter++;
-/*            if (0 == counter) {
+            /*
+            if (0 == counter) {
                 Arrays.setEvenNumbers(counter);
             } else {
                 Arrays.setOddNumbers(counter);
-            }*/
+            }
+            */
         } else {
             Arrays.setFibonacci(Arrays.getFibonacci().get(counter-1) + Arrays.getFibonacci().get(counter-2));
             counter++;
         }
         if (counter > 1) {
-            checkIfEvenorOddNumber();
+            checkIfEvenOrOddNumber();
         }
     }
+
     /**
      * Call this function to print the series
      */
     protected static void printGeneratedFibonacciSeries() {
         printFibonacciSeries();
     }
+
     private static void printFibonacciSeries() {
         System.out.println("Aktuell fibonacci serie: " + Arrays.getFibonacci().toString());
     }
+
     /**
-     * Extra our own functionality - check if number is odd or even
+     * (Extra)
+     * Our own functionality - check if number is odd or even
      */
-    private static void checkIfEvenorOddNumber() {
+    private static void checkIfEvenOrOddNumber() {
         int value = whatIsValueOfID(whatIsHighestValidIndex());
 
         if (0 == value) {                       // division by zero is forbidden
