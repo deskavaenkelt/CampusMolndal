@@ -22,9 +22,9 @@ class UserInput {
     }
 
     private static int readNumber() {
-        // Läs in nummret
+        // Read the number
         String input = userInput();
-        // returnera -1 vid felaktig inmatning
+        // return -1 if not an integer
         int number = -1;
         if (isInteger(input)) {
             number = Integer.parseInt(input);
@@ -33,7 +33,7 @@ class UserInput {
     }
 
     private static boolean isInteger(String passedString) {
-        // Validera att input är en int
+        // Validate so that input is an int
         boolean isValidInteger = false;
         try
         {
@@ -44,10 +44,8 @@ class UserInput {
         {
             // passedString is not an integer
         }
-
         return isValidInteger;
     }
-
     // Close scanner
     static void closeScanner() {
         scanner.close();

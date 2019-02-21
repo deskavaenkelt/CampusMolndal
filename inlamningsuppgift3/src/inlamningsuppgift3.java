@@ -10,8 +10,7 @@
 public class inlamningsuppgift3 {
     private static boolean quit = false;
     public static void main(String[] args) {
-        System.out.println(Encryption.offset());
-//        runProgram();
+        runProgram();
     }
 
     private static void runProgram() {

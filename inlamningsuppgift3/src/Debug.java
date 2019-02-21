@@ -101,7 +101,14 @@ class Debug {
     }
 
     private static void encrypt() {
+        String encryptThis ="abcdefghijklmnopqrstvwxyz";
+        System.out.println("\nWord to encrypt: \n" + encryptThis);
 
+        String encryptedString = Encryption.stringToEncrypt(encryptThis);
+        System.out.println("\nEncrypted string look like this: \n" + encryptedString);
+
+        String decryptedString = Encryption.stringToDecrypt(encryptedString);
+        System.out.println("\nDecrypted word is: \n" + decryptedString);
     }
 
     private static void printKrytedString() {
