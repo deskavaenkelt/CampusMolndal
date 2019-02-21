@@ -11,7 +11,9 @@ public class Fibonacci {
 
     private static int counter = 0;
 
-    /**Call this function to add a new fibonacci number to the series*/
+    /**
+     * Call this function to add a new fibonacci number to the series
+     */
     protected static void addNewFibonacci() {
         createAnewFibonacciElement();
     }
@@ -32,14 +34,18 @@ public class Fibonacci {
             checkIfEvenorOddNumber();
         }
     }
-    /**Call this function to print the series*/
+    /**
+     * Call this function to print the series
+     */
     protected static void printGeneratedFibonacciSeries() {
         printFibonacciSeries();
     }
     private static void printFibonacciSeries() {
         System.out.println("Aktuell fibonacci serie: " + Arrays.getFibonacci().toString());
     }
-    /** Extra our own functionality - check if number is odd or even*/
+    /**
+     * Extra our own functionality - check if number is odd or even
+     */
     private static void checkIfEvenorOddNumber() {
         int value = whatIsValueOfID(whatIsHighestValidIndex());
 

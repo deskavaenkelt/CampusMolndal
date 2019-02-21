@@ -14,7 +14,7 @@ class Add {
         System.out.print("Skriv in text: ");
         String input = UserInput.getString();
 
-        // Här ska krypering in
+        // Här ska kryptering in
         String thisIsEncrypted = Encryption.stringToEncrypt(input);
         Arrays.setStrings(thisIsEncrypted);
 
