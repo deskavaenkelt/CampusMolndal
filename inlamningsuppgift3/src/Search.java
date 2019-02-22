@@ -117,18 +117,4 @@ class Search {
                 "Närmsta nummer är: " + Arrays.getFibonacci().get(idClosest)
                 );
     }
-
-
-    // TODO: Ta bort de nedan, sparas tills programmet är klart
-    protected static int searchAndGetTimeStamp(int searchDate) {
-        return searchAndGetTimeStampInternal(searchDate);
-        // if -1 is returned, the element was not found
-    }
-    private static int searchAndGetTimeStampInternal(int searchDate) {
-        int position = -1;
-        if (Arrays.getTimeStamp().contains(searchDate)) {              // if searchFor exist == true => get position
-            position = Arrays.getTimeStamp().indexOf(searchDate);
-        }
-        return position;    // if -1 is returned, the element was not found
-    }
 }
