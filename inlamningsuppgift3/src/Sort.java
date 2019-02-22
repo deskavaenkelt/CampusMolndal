@@ -29,11 +29,11 @@ class Sort {
     */
     private static void menuSort() {
         System.out.print(
-                "+--------------+\n" +
-                        "| Alternativ:  |\n" +
-                        "|  1. A - Ö    |\n" +
-                        "|  2. Ö - A    |\n" +
-                        "+--------------+\n" +
+                        "+---------------------+\n" +
+                        "|    Alternativ:      |\n" +
+                        "|  1. Kort => Lång    |\n" +
+                        "|  2. Lång => Kort    |\n" +
+                        "+---------------------+\n" +
                         "Val: ");
     }
 

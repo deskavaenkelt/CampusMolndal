@@ -23,10 +23,10 @@ class Debug {
                     "+----------------------------+\n" +
                     "| 1. Import 12 strings       |\n" +
                     "| 2. Print All lists         |\n" +
-                    "| 3. Encrypt                 |\n" +
-                    "| 4. Print krypted string    |\n" +
-                    "| 5. Decrypt                 |\n" +
-                    "| 6. Encrypt loop            |\n" +
+                    "| 3. Encrypt Test1           |\n" +
+                    "| 4. Encrypt Test2           |\n" +
+                   /* "| 5. Decrypt                 |\n" +
+                    "| 6. Encrypt loop            |\n" +*/
                     "| 9. Exit meny               |\n" +
                     "+----------------------------+\n\n" +
                     "Ditt Val: "
@@ -43,14 +43,14 @@ class Debug {
                     encrypt();
                     break;
                 case 4:
-                    printKrytedString();
-                    break;
-                case 5:
-                    decrypt();
-                    break;
-                case 6:
                     encryptLoop();
                     break;
+                /*case 5:
+                    printKrytedString();
+                    break;
+                case 6:
+                    decrypt();
+                    break;*/
                 case 9:
                     System.out.println("Leaving meny...");
                     quit = true;

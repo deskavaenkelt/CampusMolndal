@@ -96,8 +96,8 @@ class Encryption {
         String alphabet = "qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM0987654321";
         String myHash = "";
         for (int i = 0; i < 263; i++) {
-            //myHash += alphabet.charAt(randomizer.nextInt(alphabet.length()));
-            myHash += "-";
+            myHash += alphabet.charAt(randomizer.nextInt(alphabet.length()));
+            //myHash += "-";
         }
         return myHash;
     }
