@@ -22,13 +22,6 @@ public class Fibonacci {
         if (0 == counter || 1 == counter) {
             Arrays.setFibonacci(counter);
             counter++;
-            /*
-            if (0 == counter) {
-                Arrays.setEvenNumbers(counter);
-            } else {
-                Arrays.setOddNumbers(counter);
-            }
-            */
         } else {
             Arrays.setFibonacci(Arrays.getFibonacci().get(counter-1) + Arrays.getFibonacci().get(counter-2));
             counter++;

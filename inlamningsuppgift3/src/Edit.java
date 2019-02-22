@@ -33,14 +33,11 @@ public class Edit {
             System.out.println("Vad vill du ändra till? ");
             newValue = UserInput.getString();
 
+            //Encrypts the newValue.
             String thisIsEncrypted = Encryption.stringToEncrypt(newValue);
 
             //Write to database
             Arrays.getStrings().set(index,thisIsEncrypted);
-
-
-
-            //Encrypts the newValue.
 
             //Arrays.setStrings(thisIsEncrypted);
             System.out.println("'" + checkInput + "'" + " ändrades till " + "'" + newValue + "' " + thisIsEncrypted);
