@@ -128,4 +128,3 @@ public class Main {
 
 // TODO: blir något fel i dekryprering när man ändrat på ett värde som redan finns i databasen
 
-// TODO: Räkna ord rapporterar för många ord, borde rapportera 12 på import, rapporterar 743...
