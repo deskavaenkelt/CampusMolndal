@@ -18,7 +18,7 @@ public class CountWords {
     protected static void startCount() {
         int amountOfWords =0;
         int index = 0;
-        for (String input : Arrays.getStrings()){// TODO: Måste decryptera informationen först
+        for (String input : Arrays.getStrings()){
             input =Encryption.stringToDecrypt(Arrays.getStrings().get(index));
             amountOfWords = amountOfWords + countWords(input);
             index++;

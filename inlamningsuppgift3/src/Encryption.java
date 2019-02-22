@@ -22,10 +22,12 @@ class Encryption {
      *      System.out.println("Encrypted string:  " + Arrays.getStrings().get(indexId));
      */
 
+    private static String key = "Rickard ger oss VG";   // keySum is 1616 => 1616/256= 6,3125 ==> element 80 på varav 7.
+                                                        // sätt börja fylla på kryperad data på hash indexId 82 105 99 107 97 114 100 32 103 101 114 32 111 115 115 32 86 71 = 1616
+
     public static boolean checkPassword (String input) {
         return validPassword(input);
     }
-
     private static boolean validPassword(String input) {
         if (input.equals(key)) {
             return true;
@@ -34,7 +36,7 @@ class Encryption {
         }
     }
 
-    private static String key = "Rickard ger oss VG";  // keySum is 1616 => 1616/256= 6,3125 ==> element 80 på varav 7.
+
 
     // Encrypt
     protected static String stringToEncrypt(String sometingToEncrypt) {
@@ -43,7 +45,7 @@ class Encryption {
     private static String encrypt(String encryptThis) {
         StringBuilder newRandomString = new StringBuilder(getRandomSting());
         String encryptedString = changePosition(encryptThis);
-        int startPosition = offset();
+        int startPosition = keyOffset();
 
         // Save the lengt off the string in the first to elements
         String hex=Integer.toHexString(encryptedString.length());
@@ -66,9 +68,7 @@ class Encryption {
 
     // Sub-parts to encryption
     /** Offset I want to use */
-    private static int offset() {
-        // TODO: sätt börja fylla på kryperad data på hash indexId 82 105 99 107 97 114 100 32 103 101 114 32 111 115 115 32 86 71 = 1616
-        //       1616/256= 6,3125 ==> element 80 varav 7
+    private static int keyOffset() {
         int keySum = 0;
 
         for (int i = 0; i < key.length(); i++) {
@@ -93,10 +93,11 @@ class Encryption {
     /** Used to fill upp a string of 256 characters -2 that i add manually with hex*/
     private static String getRandomSting() {
         Random randomizer = new Random();
-        String alphabet = "qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM+0987654321§½!#¤%&/()=?@£$€{[]}";
+        String alphabet = "qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM0987654321";
         String myHash = "";
         for (int i = 0; i < 263; i++) {
-            myHash += alphabet.charAt(randomizer.nextInt(alphabet.length()));
+            //myHash += alphabet.charAt(randomizer.nextInt(alphabet.length()));
+            myHash += "-";
         }
         return myHash;
     }
@@ -125,7 +126,7 @@ class Encryption {
         int hexValue = Integer.parseInt(hex, 16);
 
         // Get the real data from the string
-        String stringToDecrypt = decryptThis.substring(offset(), offset() + hexValue);
+        String stringToDecrypt = decryptThis.substring(keyOffset(), keyOffset() + hexValue);
 
         // Revert encryption
         return changePositionRevert(stringToDecrypt);
@@ -151,7 +152,6 @@ class Encryption {
      * Search function returns index ID
      * If function returns -1, the searched for string was not found
      */
-    // TODO: search utan att decryptera
     protected static int searchEncrypt(String stringToSearchFor) {
         return searchEncryptInternal(stringToSearchFor);
     }
@@ -167,32 +167,6 @@ class Encryption {
             }
         }
         return idToReturn;
-
-        /*// Get hexadecimal number for lengt of string
-        int hexLength = stringToSearchFor.length();
-
-        String encryptedStringToSerchFor = changePosition(stringToSearchFor);
-
-        // Compare "encryptedStringToSerchFor" with data in database
-        StringBuilder getEncryptedStringToCompare = new StringBuilder();
-        for (int i = 0; i < hexLength; i++) {
-            getEncryptedStringToCompare.append()
-        }
-
-        //String getEncryptedStringToCompare = stringToSearchFor.substring(offset(), offset() + hexLength);
-        System.out.println("getEncryptedStringToCompare: " + getEncryptedStringToCompare);
-
-        String temp = "";
-        for (int i = 0; i < hexLength; i++) {
-            temp = Arrays.getStrings().get(i);
-            if (temp.substring(offset(), offset() + hexLength) == getEncryptedStringToCompare) {
-                idToReturn = i;
-            }
-        }*/
-
-        /*if (Arrays.getStrings().contains(encryptedStringToSerchFor)) {              // if searchFor exist == true => get position
-            idToReturn = Arrays.getStrings().indexOf(encryptedStringToSerchFor);
-        }*/
     }
 
 

@@ -32,10 +32,17 @@ public class Edit {
         if (index >= 0) {
             System.out.println("Vad vill du ändra till? ");
             newValue = UserInput.getString();
-            Arrays.getStrings().set(index,newValue);
-            //Encrypts the newValue.
+
             String thisIsEncrypted = Encryption.stringToEncrypt(newValue);
-            Arrays.setStrings(thisIsEncrypted);
+
+            //Write to database
+            Arrays.getStrings().set(index,thisIsEncrypted);
+
+
+
+            //Encrypts the newValue.
+
+            //Arrays.setStrings(thisIsEncrypted);
             System.out.println("'" + checkInput + "'" + " ändrades till " + "'" + newValue + "' " + thisIsEncrypted);
         } else { //if the input value is not found.
             System.out.println("Värdet finns ej");
