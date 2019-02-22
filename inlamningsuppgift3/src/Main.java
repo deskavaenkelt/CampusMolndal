@@ -126,4 +126,9 @@ public class Main {
     }
 }
 
+<<<<<<< HEAD
 // TODO: blir något fel i dekryprering när man ändrat på ett värde som redan finns i databasen
+=======
+// TODO: blir något fel i dekryprering när man ändrat på ett värde som redan finns i databasen
+
+>>>>>>> 0effc1b3a1e5225b9b2a8865a99731141b46600c
