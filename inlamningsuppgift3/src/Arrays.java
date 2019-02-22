@@ -18,7 +18,6 @@ class Arrays {
     private static ArrayList<Integer> evenNumbers = new ArrayList<>();
     private static ArrayList<Integer> oddNumbers = new ArrayList<>();
 
-    //https://www.quora.com/How-do-I-sort-an-ArrayList-of-dates-based-on-the-current-date-in-Java
     private SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
 
     //----- Getters -----//
