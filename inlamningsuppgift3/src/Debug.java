@@ -127,20 +127,7 @@ class Debug {
         System.out.println("\nDecrypted word is: \n" + decryptedString);
     }
 
-    private static void printKrytedString() {
-
-    }
-
-    private static void decrypt() {
-
-    }
-
-    private static void encryptLoop() {
-        /*encrypt();
-        printKrytedString();
-        decrypt();*/
-
-        String encryptThis = "oneplus";
+    private static void encryptLoop() {String encryptThis = "oneplus";
         System.out.println("String to encrypt: " + encryptThis);
         String thisIsEncrypted = Encryption.stringToEncrypt(encryptThis);
         int indexId = 0;
@@ -152,12 +139,57 @@ class Debug {
         System.out.println("Decrypted string:  " + thisIsDecrypted);
     }
 
+    /*private static void printKrytedString() {
+    }
+    private static void decrypt() {
+    }*/
+
     private static void easter() {
         egg();
     }
     private static void egg() {
         print();
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     private static void print() {
         System.out.println(
             "####################################################################################\n" +
