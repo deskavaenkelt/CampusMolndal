@@ -18,28 +18,28 @@ DESCRIBE films;
 SELECT * FROM films;
 
 INSERT INTO films (filmChronologicalOrder, filmName, filmYear, filmLengthMinutes)
-VALUES (2, 'Iron Man', 2008, 126),
-       (1, 'Captain America: The First Avenger', 2011, 124),
+VALUES (1, 'Captain America: The First Avenger', 2011, 124),
+       (2, 'Captain Marvel', 2019, 124),
+       (3, 'Iron Man', 2008, 126),
        (4, 'Iron Man 2', 2010, 124),
-       (3, 'The Incredible Hulk', 2008, 112),
-       (6, 'The Avengers', 2012, 143),
-       (5, 'Thor', 2011, 115),
+       (5, 'The Incredible Hulk', 2008, 112),
+       (6, 'Thor', 2011, 115),
+       (7, 'The Avengers', 2012, 143),
        (8, 'Thor: The Dark World', 2013, 112),
-       (7, 'Iron Man 3', 2013, 130),
-       (10, 'Guardians of the Galaxy', 2014, 121),
-       (9, 'Captain America: The Winter Soldier', 2014, 136),
-       (12, 'Avengers: Age of Ultron', 2015, 141),
-       (11, 'Guardians of the Galaxy Vol. 2', 2017, 136),
-       (14, 'Captain America: Civil War', 2016, 147),
-       (13, 'Ant-Man', 2015, 117),
-       (16, 'Doctor Strange', 2016, 115),
-       (15, 'Spider-Man: Homecoming', 2017, 133),
-       (18, 'Black Panther', 2018, 134),
-       (19, 'Avengers: Infinity War', 2018, 149),
+       (9, 'Guardians of the Galaxy', 2014, 121),
+       (10, 'Guardians of the Galaxy Vol. 2', 2017, 136),
+       (11, 'Iron Man 3', 2013, 130),
+       (12, 'Captain America: The Winter Soldier', 2014, 136),
+       (13, 'Avengers: Age of Ultron', 2015, 141),
+       (14, 'Ant-Man', 2015, 117),
+       (15, 'Captain America: Civil War', 2016, 147),
+       (16, 'Black Panther', 2018, 134),
+       (17, 'Spider-Man: Homecoming', 2017, 133),
+       (18, 'Doctor Strange', 2016, 115),
+       (19, 'Thor: Ragnarok', 2017, 130),
        (20, 'Ant-Man and the Wasp', 2018, 118),
-       (17, 'Thor: Ragnarok', 2017, 130),
-       (22, 'Blade Runner 2049', 2017, 153),
-       (21, 'Captain Marvel', 2019, 124);
+       (21, 'Avengers: Infinity War', 2018, 149),
+       (22, 'Blade Runner 2049', 2017, 153);
 
 SELECT *
 FROM films
