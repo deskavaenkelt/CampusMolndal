@@ -15,12 +15,6 @@ SHOW TABLES;
 
 DESCRIBE films;
 
-ALTER TABLE films
-  ADD COLUMN filmChronologicalOrder INT NOT NULL;
-
-ALTER TABLE films
-  ADD COLUMN filmYear INT NOT NULL;
-
 SELECT * FROM films;
 
 INSERT INTO films (filmChronologicalOrder, filmName, filmYear, filmLengthMinutes)

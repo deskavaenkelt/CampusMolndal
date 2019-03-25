@@ -139,3 +139,9 @@ VALUES ('David', 'May', 'dmay@gmail.com', 'M'),
        ('Renton', 'McDonald', 'rent@gmail.com', 'M'),
        ('Maggie', 'Chu', 'chuchu@gmail.com', 'F');
 
+SELECT *
+FROM customers;
+
+SELECT *
+FROM customers
+ORDER BY customerLastName;

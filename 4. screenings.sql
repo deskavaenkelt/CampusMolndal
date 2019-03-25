@@ -233,8 +233,8 @@ VALUES (1, 1, '2017-10-01 13:00:00'),
        (2, 2, '2017-10-31 16:30:00'),
        (3, 3, '2017-10-31 17:00:00');
 
-
-
+SELECT *
+FROM screenings;
 
 SELECT *
 FROM screenings

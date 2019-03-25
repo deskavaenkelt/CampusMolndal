@@ -164,6 +164,8 @@ VALUES ('A', 1, 1),
        ('F', 5, 3),
        ('F', 6, 3);
 
+SELECT *
+FROM seats;
 
 
 SELECT *

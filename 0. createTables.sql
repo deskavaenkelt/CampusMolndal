@@ -9,16 +9,21 @@
 
 */
 
+SHOW DATABASES;
+
 CREATE DATABASE dsve_cinema_booking_system;
 USE dsve_cinema_booking_system;
 
 -- 1
 CREATE TABLE films
 (
-  filmsId           INT PRIMARY KEY AUTO_INCREMENT,
-  filmName          VARCHAR(45) NOT NULL UNIQUE,
-  filmLengthMinutes INT         NOT NULL
+  filmsId                 INT PRIMARY KEY AUTO_INCREMENT,
+  filmName                VARCHAR(45) NOT NULL UNIQUE,
+  filmLengthMinutes       INT         NOT NULL,
+  filmChronologicalOrder  INT         NOT NULL,
+  filmYear                INT         NOT NULL
 );
+DESCRIBE films;
 
 
 -- 2
@@ -30,6 +35,7 @@ CREATE TABLE customers
   customerGender    ENUM ('M', 'F') NOT NULL,
   customerEmail     VARCHAR(45)     NOT NULL UNIQUE
 );
+DESCRIBE customers;
 
 
 -- 3
@@ -39,6 +45,7 @@ CREATE TABLE rooms
   roomName          VARCHAR(45) NOT NULL,
   roomNumberOfSeats INT         NOT NULL
 );
+DESCRIBE rooms;
 
 
 -- 4
@@ -51,6 +58,7 @@ CREATE TABLE screenings
   FOREIGN KEY (screeningFilmId) REFERENCES films (filmsId),
   FOREIGN KEY (screeningRoomId) REFERENCES rooms (roomId)
 );
+DESCRIBE screenings;
 
 
 -- 5
@@ -62,6 +70,7 @@ CREATE TABLE seats
   seatRoomId INT     NOT NULL,
   FOREIGN KEY (seatRoomId) REFERENCES rooms (roomId)
 );
+DESCRIBE seats;
 
 
 -- 6
@@ -73,14 +82,19 @@ CREATE TABLE bookings
   FOREIGN KEY (bookingScreeningId) REFERENCES screenings (screeningId),
   FOREIGN KEY (bookingCustomerId) REFERENCES customers (customerId)
 );
+DESCRIBE bookings;
 
 
 -- 7
 CREATE TABLE reservedSeats
 (
-  reservedSeatId        INT PRIMARY KEY NOT NULL,
-  reservedSeatBookingId INT             NOT NULL,
-  reservedSeatSeatId    INT             NOT NULL,
+  reservedSeatId        INT PRIMARY KEY AUTO_INCREMENT,
+  reservedSeatBookingId INT NOT NULL,
+  reservedSeatSeatId    INT NOT NULL,
   FOREIGN KEY (reservedSeatBookingId) REFERENCES bookings (bookingId),
   FOREIGN KEY (reservedSeatSeatId) REFERENCES seats (seatsId)
 );
+DESCRIBE reservedSeats;
+
+
+SHOW TABLES;

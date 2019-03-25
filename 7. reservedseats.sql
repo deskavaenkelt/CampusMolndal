@@ -763,7 +763,8 @@ VALUES (1, 74),
        (410, 118),
        (410, 119);
 
-
+SELECT *
+FROM reservedseats;
 
 SELECT *
 FROM reservedseats

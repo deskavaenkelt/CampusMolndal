@@ -24,6 +24,8 @@ VALUES
        ('Rogers',36),
        ('Banner',18);
 
+SELECT *
+FROM rooms;
 
 SELECT *
 FROM rooms
