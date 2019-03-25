@@ -108,18 +108,49 @@ GROUP BY f.filmName;
 
 
 
--- VIEW antal säten sorterat  GROUP BY per rum
-CREATE VIEW customersViewedFilms AS
-SELECT c.customerFirstName, c.customerLastName, f.filmName
-FROM customers c
-JOIN bookings b on c.customerId = b.bookingCustomerId
-JOIN screenings s on b.bookingScreeningId = s.screeningId
-JOIN films f on s.screeningFilmId = f.filmsId;
+/*-- VIEW antal säten sorterat  GROUP BY per rum
+SELECT * FROM reservedseats;
+SELECT * FROM screenings;
+
+SELECT COUNT(*)
+FROM bookings
+JOIN screenings s on bookings.bookingScreeningId = s.screeningId
+JOIN reservedseats r on bookings.bookingId = r.reservedSeatBookingId
+WHERE screeningId = 20;
+
+
+
+-- From screnningsId=1 get reservedSeats
+
+CREATE VIEW reservedSeats AS;
+SELECT f.filmName, r.roomName, COUNT(r2.reservedSeatSeatId())
+FROM screenings s
+       JOIN films f ON s.screeningFilmId = f.filmsId
+       JOIN rooms r ON s.screeningRoomId = r.roomId
+       JOIN seats s2 ON r.roomId = s2.seatRoomId
+       JOIN reservedseats r2 ON s2.seatsId = r2.reservedSeatSeatId
+GROUP BY roomName;*/
+
 
 -- Lista vilka filmer resp. kunder sett
 SELECT *
 FROM customersViewedFilms
 ORDER BY customerLastName;
+
+
+-- VIEW som visar vilka filmer olika kunder sett
+CREATE VIEW customersViewedFilms AS
+SELECT c.customerFirstName, c.customerLastName, f.filmName
+FROM customers c
+JOIN bookings b ON c.customerId = b.bookingCustomerId
+JOIN screenings s ON b.bookingScreeningId = s.screeningId
+JOIN films f ON s.screeningFilmId = f.filmsId;
+
+-- Lista vilka filmer resp. kunder sett
+SELECT *
+FROM customersViewedFilms
+ORDER BY customerLastName;
+
 
 
 
