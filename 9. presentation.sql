@@ -13,6 +13,14 @@ USE dsve_cinema_booking_system;
 
 SHOW TABLES;
 
+DESCRIBE bookings;
+DESCRIBE customers;
+DESCRIBE films;
+DESCRIBE reservedseats;
+DESCRIBE rooms;
+DESCRIBE screenings;
+DESCRIBE seats;
+
 SELECT * FROM bookings;
 SELECT * FROM customers;
 SELECT * FROM films;
