@@ -18,19 +18,19 @@ package com;
  * @since 2019-04-03.
  * https://github.com/deskavaenkelt/
  */
-public class Customer {
+public class Account {
     private int id;
     private String name;
     private double balance;
     private boolean vip;
 
-    public Customer(int id, String name, double balance) {
+    public Account(int id, String name, double balance) {
         this.id = id;
         this.name = name;
         this.balance = balance;
         this.vip = false;
     }
-    private Customer(int id, String name, double balance, boolean vip) {
+    private Account(int id, String name, double balance, boolean vip) {
         this.id = id;
         this.name = name;
         this.balance = balance;

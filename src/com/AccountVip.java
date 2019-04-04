@@ -18,10 +18,10 @@ package com;
  * @since 2019-04-03.
  * https://github.com/deskavaenkelt/
  */
-public class CustomerVip extends Customer {
+/*public class AccountVip extends Account {
     private double creditLimit;
 
-    public CustomerVip(int id, String name, double balance, double creditLimit, boolean vip) {
+    public AccountVip(int id, String name, double balance, double creditLimit, boolean vip) {
         super(id, name, balance, true);
         this.creditLimit = creditLimit;
     }
@@ -42,4 +42,4 @@ public class CustomerVip extends Customer {
                     ". \nAllowed credit is: -" + creditLimit + "\n");
         }
     }
-}
+}*/

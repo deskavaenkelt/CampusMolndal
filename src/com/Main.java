@@ -10,6 +10,8 @@ package com;
 
 */
 
+import java.util.ArrayList;
+
 /**
  * java_inlamningsuppgift2_vg
  *
@@ -19,7 +21,35 @@ package com;
  * https://github.com/deskavaenkelt/
  */
 public class Main {
+
+    private static int id = 0;
+    private static ArrayList<AccountVip> customers = new ArrayList<>();
+
+
     public static void main(String[] args) {
-        System.out.println("=P");
+
+        run();
+
+        System.out.println(customers.contains(id));
+    }
+
+    private static void run() {
+        System.out.println("Enter customer initials: ");
+        String customerInitials = UserInput.getString();
+        System.out.println("Enter customer name: ");
+        String customerName = UserInput.getString();
+        System.out.println("Enter initial balance: ");
+        int initialBalance = UserInput.getNumber();
+
+        //customerInitials;
+
+        Account newAccount = new Account(id, customerName, initialBalance);
+        customers.add(newAccount);
+        id++;
     }
 }
+
+/*
+customers.add(id);
+        id++;
+ */
