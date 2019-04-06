@@ -18,22 +18,22 @@ package com;
  * @since 2019-04-03.
  * https://github.com/deskavaenkelt/
  */
-/*public class AccountVip extends Account {
-    private double creditLimit;
+public class AccountVip extends Account {
+    private int creditLimit;
 
-    public AccountVip(int id, String name, double balance, double creditLimit, boolean vip) {
-        super(id, name, balance, true);
+    public AccountVip(String name, int balance, int creditLimit) {
+        super(name, balance, true);
         this.creditLimit = creditLimit;
     }
 
     @Override
-    public void withdrawal(double withdrawalAmount) {
-        double totalCredit = 0 - this.creditLimit;
+    public void withdrawal(int withdrawalAmount) {
+        int totalCredit = 0 - this.creditLimit;
 
-        double tryingToWithdrawAmount = getBalance() - withdrawalAmount;
+        int tryingToWithdrawAmount = getBalance() - withdrawalAmount;
 
         if (tryingToWithdrawAmount < totalCredit) {
-            double available = getBalance() + creditLimit;
+            int available = getBalance() + creditLimit;
             System.out.println("You are trying to overcharge you're available credit, only " + available + " available.\nWithdrawal not processed.\n");
         } else {
             setBalance(getBalance() - withdrawalAmount);
@@ -42,4 +42,15 @@ package com;
                     ". \nAllowed credit is: -" + creditLimit + "\n");
         }
     }
-}*/
+
+    public int getCreditLimit() {
+        return creditLimit;
+    }
+
+    // TODO: Make a callable function instead
+    public void setCreditLimit(int creditLimit) {
+        this.creditLimit = creditLimit;
+    }
+}
+
+
