@@ -23,28 +23,39 @@ import java.util.Scanner;
  */
 
 class UserInput {
+    // Start the scanner
     private static Scanner scanner = new Scanner(System.in);
+
+    // Call public function to get user input string
     static String getString() {
         return userInput();
     }
+    // Private function
     private static String userInput() {
         return scanner.nextLine();
     }
+
+    // Call public function to get user input number
     static int getNumber() {
         return readNumber();
     }
-
+    // Private function
     private static int readNumber() {
-        // Read the number
+        // Read input as a string
         String input = userInput();
+
         // return -1 if not an integer
         int number = -1;
+
+        // Call isInteger to check if input is a number, catch exeption
         if (isInteger(input)) {
+            // If true parseInt
             number = Integer.parseInt(input);
         }
         return number;
     }
 
+    // Check if input is an integer
     private static boolean isInteger(String passedString) {
         // Validate so that input is an int
         boolean isValidInteger = false;
