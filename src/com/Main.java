@@ -11,6 +11,7 @@ package com;
 */
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * java_inlamningsuppgift2_vg
@@ -22,30 +23,51 @@ import java.util.ArrayList;
  */
 public class Main {
 
-    private static int id = 0;
-    private static ArrayList<AccountVip> customers = new ArrayList<>();
+    private static List<Account> customers = new ArrayList<>();
+    private static List<AccountVip> vipCustomers = new ArrayList<>();
 
 
     public static void main(String[] args) {
 
+        // Start Program
         run();
 
-        System.out.println(customers.contains(id));
+        // Display content of customers
+        customers.forEach(customer ->{
+            System.out.println("Customer " + customer.getName() + ", have a balance of: " + customer.getBalance() +
+                    "SEK. VIP Customer = " + customer.getVipStatus());
+        });
+
+        // Display content of vipCustomers
+        vipCustomers.forEach(customer ->{
+            System.out.println("Customer " + customer.getName() +
+                    ", have a balance of: " + customer.getBalance() +
+                    "SEK. VIP Customer = " + customer.getVipStatus() +
+                    ", credit limit: " + customer.getCreditLimit());
+        });
+        UserInput.closeScanner();
     }
 
     private static void run() {
-        System.out.println("Enter customer initials: ");
-        String customerInitials = UserInput.getString();
+        // Add a customer to Arraylist
+        System.out.println("Regular");
         System.out.println("Enter customer name: ");
         String customerName = UserInput.getString();
         System.out.println("Enter initial balance: ");
         int initialBalance = UserInput.getNumber();
 
-        //customerInitials;
+        customers.add(new Account(customerName, initialBalance));
 
-        Account newAccount = new Account(id, customerName, initialBalance);
-        customers.add(newAccount);
-        id++;
+        // Add a VIP customer to Arraylist
+        System.out.println("VIP");
+        System.out.println("Enter customer name: ");
+        String vipCustomerName = UserInput.getString();
+        System.out.println("Enter initial balance: ");
+        int vipInitialBalance = UserInput.getNumber();
+        System.out.println("Enter credit limit: ");
+        int vipCreditLimit = UserInput.getNumber();
+
+        vipCustomers.add(new AccountVip(vipCustomerName, vipInitialBalance, vipCreditLimit));
     }
 }
 
