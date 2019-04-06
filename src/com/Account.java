@@ -9,7 +9,6 @@ package com;
  \/__,_ /\/___/  \/__/   \/____/
 
 */
-
 /**
  * java_inlamningsuppgift2_vg
  *
@@ -18,32 +17,47 @@ package com;
  * @since 2019-04-03.
  * https://github.com/deskavaenkelt/
  */
+import java.util.ArrayList;
+import java.util.List;
+
+
 public class Account {
-    private int id;
     private String name;
-    private double balance;
+    private int balance;    // Borde använda double men använder int av bekvämlighetsskäl
     private boolean vip;
 
-    public Account(int id, String name, double balance) {
-        this.id = id;
+
+    /** Constructors
+     *
+     * @param name
+     * @param balance
+     */
+    public Account(String name, int balance) {
         this.name = name;
         this.balance = balance;
         this.vip = false;
     }
-    private Account(int id, String name, double balance, boolean vip) {
-        this.id = id;
+    public Account(String name, int balance, boolean vip) {
         this.name = name;
         this.balance = balance;
         this.vip = vip;
     }
 
 
-    public void deposit(double depositAmount) {
+    /** Deposit
+     *
+     * @param depositAmount
+     */
+    public void deposit(int depositAmount) {
         this.balance += depositAmount;
         System.out.println("Deposit of " + depositAmount + " made.  New balance is " + this.balance);
     }
 
-    public void withdrawal(double withdrawalAmount) {
+    /** Withdraws
+     *
+     * @param withdrawalAmount
+     */
+    public void withdrawal(int withdrawalAmount) {
         if (this.balance - withdrawalAmount < 0) {
             System.out.println("Only " + this.balance + " available. Withdrawal not processed");
         } else {
@@ -52,11 +66,33 @@ public class Account {
         }
     }
 
-    public double getBalance() {
-        return balance;
+
+    /** Getters and Setters
+     *
+     * @return
+     */
+
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
     }
 
-    private void setBalance(double balance) {
+    public int getBalance() {
+        return balance;
+    }
+    protected void setBalance(int balance) {
         this.balance = balance;
     }
+
+    public boolean getVipStatus() {
+        return vip;
+    }
+    public void setVipStatus(boolean vip) {
+        this.vip = vip;
+    }
 }
+
+
+// TODO: JavaDoc check
