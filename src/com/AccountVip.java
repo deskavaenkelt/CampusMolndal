@@ -1,4 +1,3 @@
-package com;
 /*
   __
  /\ \
@@ -9,7 +8,7 @@ package com;
  \/__,_ /\/___/  \/__/   \/____/
 
 */
-
+package com;
 /**
  * java_inlamningsuppgift2_vg
  *
@@ -21,8 +20,8 @@ package com;
 public class AccountVip extends Account {
     private int creditLimit;
 
-    public AccountVip(String name, int balance, int creditLimit) {
-        super(name, balance, true);
+    public AccountVip(String name, int creditLimit) {
+        super(name, true);
         this.creditLimit = creditLimit;
     }
 

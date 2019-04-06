@@ -1,4 +1,3 @@
-package com;
 /*
   __
  /\ \
@@ -9,6 +8,7 @@ package com;
  \/__,_ /\/___/  \/__/   \/____/
 
 */
+package com;
 /**
  * java_inlamningsuppgift2_vg
  *
@@ -17,9 +17,6 @@ package com;
  * @since 2019-04-03.
  * https://github.com/deskavaenkelt/
  */
-import java.util.ArrayList;
-import java.util.List;
-
 
 public class Account {
     private String name;
@@ -32,14 +29,14 @@ public class Account {
      * @param name
      * @param balance
      */
-    public Account(String name, int balance) {
+    public Account(String name) {
         this.name = name;
-        this.balance = balance;
+        this.balance = 0;
         this.vip = false;
     }
-    public Account(String name, int balance, boolean vip) {
+    public Account(String name, boolean vip) {
         this.name = name;
-        this.balance = balance;
+        this.balance = 0;
         this.vip = vip;
     }
 
