@@ -26,15 +26,14 @@ public class Account {
 
     /** Constructors
      *
-     * @param name
-     * @param balance
+     *
      */
-    public Account(String name) {
+    Account(String name) {
         this.name = name;
         this.balance = 0;
         this.vip = false;
     }
-    public Account(String name, boolean vip) {
+    Account(String name, boolean vip) {
         this.name = name;
         this.balance = 0;
         this.vip = vip;
@@ -43,16 +42,16 @@ public class Account {
 
     /** Deposit
      *
-     * @param depositAmount
+     *
      */
-    public void deposit(int depositAmount) {
+    void deposit(int depositAmount) {
         this.balance += depositAmount;
         System.out.println("Deposit of " + depositAmount + " made.  New balance is " + this.balance);
     }
 
     /** Withdraws
      *
-     * @param withdrawalAmount
+     *
      */
     public void withdrawal(int withdrawalAmount) {
         if (this.balance - withdrawalAmount < 0) {
@@ -66,28 +65,21 @@ public class Account {
 
     /** Getters and Setters
      *
-     * @return
+     *
      */
 
-    public String getName() {
+    String getName() {
         return name;
     }
-    public void setName(String name) {
-        this.name = name;
-    }
 
-    public int getBalance() {
+    int getBalance() {
         return balance;
     }
-    protected void setBalance(int balance) {
-        this.balance = balance;
-    }
-
-    public boolean getVipStatus() {
+    boolean getVipStatus() {
         return vip;
     }
-    public void setVipStatus(boolean vip) {
-        this.vip = vip;
+    void setBalance(int balance) {
+        this.balance = balance;
     }
 }
 

@@ -38,7 +38,18 @@ class Menu{
     }
     private static void runProgram() {
         while (!quitStart) {
-            printMenu();
+            System.out.print(
+                    "+-------------------------+\n" +
+                    "|----- dsve Banking ------|\n" +
+                    "+-------------------------+\n" +
+                    "|  1.  Customers          |\n" +
+                    "|  2.  New Transaction    |\n" +
+                    "|  3.  Show Transaction   |\n" +
+                    "+-------------------------+\n" +
+                    "|  7.  Quit               |\n" +
+                    "+-------------------------+\n\n" +
+                    "Choice: "
+            );
             int action = UserInput.getNumber();
 
             if (action == 1 || action == 2 || action == 3 || action == 7) {
@@ -50,7 +61,7 @@ class Menu{
                         newTransaction();
                         break;
                     case 3:
-                        history();
+                        showTransactions();
                         break;
                     case 7:
                         quit();
@@ -59,68 +70,104 @@ class Menu{
             }
         }
     }
-    private static void printMenu() {
-        // TODO: Snygga till printMenu
-        System.out.print(
-                "+-------------------------+\n" +
-                "|      dsve Banking       |\n" +
-                "+-------------------------+\n" +
-                "|  1   Customers          |\n" +
-                "|  2   New Transaction    |\n" +
-                "|  3   History            |\n" +
-                "+-------------------------+\n" +
-                "|  7   Quit               |\n" +
-                "+-------------------------+\n\n" +
-                "Choice: "
-        );
-    }
     private static void customers() {
-        System.out.println("\nOpen Custumers...");
-        System.out.print(
-                "+-------------------------+\n" +
-                "|      dsve Banking       |\n" +
-                "+-------------------------+\n" +
-                "|  1   Show All Customers |\n" +
-                "|  2   New Customer       |\n" +
-                "|  3   Update Customer    |\n" +
-                "|  4   Delete Customer    |\n" +
-                "+-------------------------+\n" +
-                "|  7   Quit               |\n" +
-                "+-------------------------+\n\n" +
-                "Choice: "
-        );
-        int action = UserInput.getNumber();
 
-        if (action == 1 || action == 2 || action == 3 || action == 4 || action == 7) {
-            switch (action) {
-                case 1:
-                    Storage.printCustomers();
-                    Storage.printVipCustomers();
-                    break;
-                case 2:
-                    System.out.println("");
-                    break;
-                case 3:
-                    history();
-                    break;
-                case 4:
-                    history();
-                    break;
-                case 7:
-                    quit();
-                    break;
+        boolean quit = false;
+        while (!quit) {
+            System.out.println("\nOpen Custumers...");
+            System.out.print(
+                    "+-------------------------+\n" +
+                    "|----- dsve Banking ------|\n" +
+                    "+-------------------------+\n" +
+                    "|       Customers         |\n" +
+                    "+-------------------------+\n" +
+                    "|  1.  Show All           |\n" +
+                    "|  2.  New                |\n" +
+                    "|  3.  Delete             |\n" +
+                    "+-------------------------+\n" +
+                    "|  0.  Back               |\n" +
+                    "+-------------------------+\n\n" +
+                    "Choice: "
+            );
+            int action = UserInput.getNumber();
+
+            if (action == 1 || action == 2 || action == 3 || action == 4 || action == 0) {
+                switch (action) {
+                    case 1:
+                        Storage.printCustomers();
+                        Storage.printVipCustomers();
+                        break;
+                    case 2:
+                        Storage.insertCustomer();
+                        break;
+                    case 3:
+                        Storage.deleteCustomer();
+                        break;
+                    case 0:
+                        quit = true;
+                        break;
+                }
             }
         }
+
     }
 
     private static void newTransaction() {
-        System.out.println("\nOpen New Transactions");
-        //NyaKunder.start();
+        boolean quit = false;
+        while (!quit) {
+            System.out.println("\nOpen New Transactions");
+            System.out.print(
+                    "+-------------------------+\n" +
+                    "|----- dsve Banking ------|\n" +
+                    "+-------------------------+\n" +
+                    "|      Transactions       |\n" +
+                    "+-------------------------+\n" +
+                    "|  1.  Show All Customers |\n" +
+                    "|  2.  Deposit            |\n" +
+                    "|  3.  Withdraw           |\n" +
+                    "|  4.  Import Trans.List  |\n" +
+                    "+-------------------------+\n" +
+                    "|  0.  Back               |\n" +
+                    "+-------------------------+\n\n" +
+                    "Choice: "
+            );
+            int action = UserInput.getNumber();
+
+            if (action == 1 || action == 2 || action == 3 || action == 4 || action == 0) {
+                switch (action) {
+                    case 1:
+                        Storage.printCustomers();
+                        Storage.printVipCustomers();
+                        break;
+                    case 2:
+                        Storage.deposit();
+                        break;
+                    case 3:
+                        Storage.withdraw();
+                        break;
+                    case 4:
+                        Storage.importTransactionsList();
+                        break;
+                    case 0:
+                        quit = true;
+                        break;
+                }
+            }
+        }
+
     }
 
-    private static void history() {
+    private static void showTransactions() {
+        // Just print and return to menu
         System.out.println("\nOpen History...");
-        // Administration.start();
+        System.out.print(
+                "+-------------------------+\n" +
+                "|----- dsve Banking ------|\n" +
+                "+-------------------------+\n" +
+                "|   Show Transactions     |\n" +
+                "+-------------------------+\n\n"
+        );
+        Storage.printTransactionsAcceding();
     }
 
     private static void quit() {

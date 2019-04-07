@@ -20,7 +20,7 @@ package com;
 public class AccountVip extends Account {
     private int creditLimit;
 
-    public AccountVip(String name, int creditLimit) {
+    AccountVip(String name, int creditLimit) {
         super(name, true);
         this.creditLimit = creditLimit;
     }
@@ -38,17 +38,12 @@ public class AccountVip extends Account {
             setBalance(getBalance() - withdrawalAmount);
             System.out.println("Withdrawal of " + withdrawalAmount + " processed. " +
                     "\nRemaining balance is " + getBalance() +
-                    ". \nAllowed credit is: -" + creditLimit + "\n");
+                    ". \nAllowed credit is: -" + creditLimit + " SEK\n");
         }
     }
 
-    public int getCreditLimit() {
+    int getCreditLimit() {
         return creditLimit;
-    }
-
-    // TODO: Make a callable function instead
-    public void setCreditLimit(int creditLimit) {
-        this.creditLimit = creditLimit;
     }
 }
 

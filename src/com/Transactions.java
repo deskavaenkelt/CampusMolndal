@@ -18,20 +18,20 @@ package com;
  * https://github.com/deskavaenkelt/
  */
 
-public class Transactions {
+class Transactions {
     private String customerName;
     private int amount;
 
-    public Transactions(String customerName, int amount) {
+    Transactions(String customerName, int amount) {
         this.customerName = customerName;
         this.amount = amount;
     }
 
-    public String getCustomerName() {
+    String getCustomerName() {
         return customerName;
     }
 
-    public int getAmount() {
+    int getAmount() {
         return amount;
     }
 }
