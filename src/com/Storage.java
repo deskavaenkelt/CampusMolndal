@@ -9,6 +9,9 @@
 
 */
 package com;
+
+import java.util.ArrayList;
+import java.util.List;
 /**
  * java_inlamningsuppgift2_vg
  *
@@ -17,17 +20,21 @@ package com;
  * @since 2019-04-06.
  * https://github.com/deskavaenkelt/
  */
-import java.util.ArrayList;
-import java.util.List;
 class Storage {
 
+    /**
+     * Store info in respectively ArrayList
+     */
     private static List<Account> customers = new ArrayList<>();
     private static List<AccountVip> customersVip = new ArrayList<>();
     private static List<Transactions> customerTransactions = new ArrayList<>();
 
     // 1. Show All Customers
+
+    /**
+     * Display content of customers
+     */
     static void printCustomers() {
-        // Display content of customers
         for (int i = 0; i < customers.size(); i++) {
             System.out.println("Nr: " + i +
                     " Customer: " + customers.get(i).getName() +
@@ -35,8 +42,11 @@ class Storage {
                     " SEK. VIP Customer = " + customers.get(i).getVipStatus());
         }
     }
+
+    /**
+     * Display content of customersVip
+     */
     static void printVipCustomers() {
-        // Display content of customersVip
         for (int i = 0; i < customers.size(); i++) {
             System.out.println("Nr: " + i +
                     " Customer: " + customersVip.get(i).getName() +
@@ -50,6 +60,9 @@ class Storage {
 
 
     // 2. New Customer
+    /**
+     * Menu for new customer tab and related functions
+     */
     static void insertCustomer() {
 
         boolean quit = false;
@@ -123,6 +136,9 @@ class Storage {
 
 
     // 3.  Delete Customer
+    /**
+     * Menu for delete customer tab and related functions
+     */
     static void deleteCustomer() {
         boolean quit = false;
         while (!quit) {
@@ -175,6 +191,11 @@ class Storage {
 
 
     // Transactions
+    /**
+     * Function for deposit funds
+     * Print id range according to how many customers there is in related ArrayLists
+     * Use the right loop according to regular or VIP customer
+     */
     static void deposit() {
         boolean vipStatus = isVip();
 
@@ -203,6 +224,11 @@ class Storage {
             System.out.println("Invalid Customer id!");
         }
     }
+    /**
+     * Function for withdraw funds
+     * Print id range according to how many customers there is in related ArrayLists
+     * Use the right loop according to regular or VIP customer
+     */
     static void withdraw() {
         boolean vipStatus = isVip();
 
@@ -233,6 +259,11 @@ class Storage {
             System.out.println("Invalid Customer id!");
         }
     }
+
+    /**
+     * Simple Import function
+     * Makes som transactions for some customers and same transactions
+     */
     static void importTransactionsList() {
         // Transactions for regular
         customerTransactions.add(new Transactions(customers.get(0).getName(), 1000));
@@ -262,6 +293,11 @@ class Storage {
         customerTransactions.add(new Transactions(customersVip.get(2).getName(), 4000));
         customersVip.get(2).deposit(4000);
     }
+
+    /**
+     * Check if a customer is VIP or not
+     * @return true if VIP
+     */
     private static boolean isVip() {
         // Do yo want to work on a vip customer or regular? return false for regular, true for vip
         boolean vipIs = false;
@@ -273,6 +309,9 @@ class Storage {
         return vipIs;
     }
 
+    /**
+     * Print all transactions made to console
+     */
     static void printTransactionsAcceding() {
 
         for (int i = 0; i < customerTransactions.size(); i++) {

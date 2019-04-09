@@ -19,20 +19,30 @@ package com;
  */
 
 public class Account {
+    /**
+     * Variables for to save customer info in
+     */
     private String name;
     private int balance;    // Borde använda double men använder int av bekvämlighetsskäl
     private boolean vip;
 
 
-    /** Constructors
-     *
-     *
+    /**
+     * Regular Customer constructor
+     * @param name is customer name
+     * vip is set to false by default
      */
     Account(String name) {
         this.name = name;
         this.balance = 0;
         this.vip = false;
     }
+
+    /**
+     * VIP Customer constructor
+     * @param name is vip customer name
+     * @param vip is set to true
+     */
     Account(String name, boolean vip) {
         this.name = name;
         this.balance = 0;
@@ -40,18 +50,18 @@ public class Account {
     }
 
 
-    /** Deposit
-     *
-     *
+    /**
+     * Deposit for all customers
+     * @param depositAmount to bank account
      */
     void deposit(int depositAmount) {
         this.balance += depositAmount;
         System.out.println("Deposit of " + depositAmount + " made.  New balance is " + this.balance);
     }
 
-    /** Withdraws
-     *
-     *
+    /**
+     * Withdraws for regular customers, VIP customers override this function
+     * @param withdrawalAmount from customer account
      */
     public void withdrawal(int withdrawalAmount) {
         if (this.balance - withdrawalAmount < 0) {
@@ -63,25 +73,36 @@ public class Account {
     }
 
 
-    /** Getters and Setters
-     *
-     *
-     */
+    // Getters and Setters
 
+    /**
+     * Get name
+     * @return name
+     */
     String getName() {
         return name;
     }
-
+    /**
+     * Get balance
+     * @return balance
+     */
     int getBalance() {
         return balance;
     }
+
+    /**
+     * get Vip Status
+     * @return vip status
+     */
     boolean getVipStatus() {
         return vip;
     }
+
+    /**
+     * set account balance
+     * @param balance to set
+     */
     void setBalance(int balance) {
         this.balance = balance;
     }
 }
-
-
-// TODO: JavaDoc check

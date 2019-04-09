@@ -18,13 +18,25 @@ package com;
  * https://github.com/deskavaenkelt/
  */
 public class AccountVip extends Account {
+    /**
+     * Only VIP customers have the ability to have credit account
+     */
     private int creditLimit;
 
+    /**
+     * Constructor
+     * @param name on vip customer
+     * @param creditLimit for the vip customer
+     */
     AccountVip(String name, int creditLimit) {
         super(name, true);
         this.creditLimit = creditLimit;
     }
 
+    /**
+     * This function override the regular one
+     * @param withdrawalAmount from vip customer account and check so the amount is within credit limit
+     */
     @Override
     public void withdrawal(int withdrawalAmount) {
         int totalCredit = 0 - this.creditLimit;
@@ -42,6 +54,10 @@ public class AccountVip extends Account {
         }
     }
 
+    /**
+     * Get credit limit for vip customer
+     * @return actual limit
+     */
     int getCreditLimit() {
         return creditLimit;
     }
