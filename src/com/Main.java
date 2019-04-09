@@ -10,7 +10,10 @@
 */
 package com;
 /**
- * java_inlamningsuppgift2_vg
+ * This is a simple banking application where ju can:
+ * - Add/remove customers
+ * - Make transactions (Deposit/Withdraw)
+ * - Show all transactions and show the banks assets
  *
  * @author Lars Strömberg
  * @version 1.0
@@ -23,12 +26,13 @@ public class Main {
 
         // Start Program
         Menu.start();
-
-        // Close scanner
-        UserInput.closeScanner();
     }
 }
 
+/**
+ * Menu sytem
+ * This is the initial menu, sub-menu's in Storage
+ */
 class Menu{
 
     private static boolean quitStart = false;
@@ -36,6 +40,10 @@ class Menu{
     static void start() {
         runProgram();
     }
+
+    /**
+     * Main menu
+     */
     private static void runProgram() {
         while (!quitStart) {
             System.out.print(
@@ -70,6 +78,10 @@ class Menu{
             }
         }
     }
+
+    /**
+     * Menu for customers
+     */
     private static void customers() {
 
         boolean quit = false;
@@ -112,6 +124,9 @@ class Menu{
 
     }
 
+    /**
+     * Menu for making transactions
+     */
     private static void newTransaction() {
         boolean quit = false;
         while (!quit) {
@@ -157,6 +172,9 @@ class Menu{
 
     }
 
+    /**
+     * This option will only show all transactions that are made
+     */
     private static void showTransactions() {
         // Just print and return to menu
         System.out.println("\nOpen History...");
@@ -170,8 +188,13 @@ class Menu{
         Storage.printTransactionsAcceding();
     }
 
+    /**
+     * Set variabel to quit menu, and close Scanner
+     */
     private static void quit() {
         System.out.println("\nQuit program");
         quitStart = true;
+        // Close scanner
+        UserInput.closeScanner();
     }
 }

@@ -19,14 +19,24 @@ package com;
  */
 
 class Transactions {
+    /**
+     * This is my own functionality.
+     * I want the name on the person that made the transaction and the positive or negative amount to store.
+     */
     private String customerName;
     private int amount;
 
+    /**
+     * Constructor
+     * @param customerName that med the transaction
+     * @param amount they deposited or withdraw
+     */
     Transactions(String customerName, int amount) {
         this.customerName = customerName;
         this.amount = amount;
     }
 
+    // Only getters
     String getCustomerName() {
         return customerName;
     }
