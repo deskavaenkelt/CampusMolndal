@@ -199,4 +199,8 @@ class Menu{
     }
 }
 
-// TODO: show funkar ej vid Delete
+// TODO: Man skulle kuna använda enbart konstruktorn i vip
+// TODO: Separat controller
+// TODO: Uppdatera en kund med tex vipstatus, byta namn
+// TODO: Använda till JavaFX?
+
