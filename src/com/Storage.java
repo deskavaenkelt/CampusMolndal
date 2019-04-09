@@ -47,7 +47,7 @@ class Storage {
      * Display content of customersVip
      */
     static void printVipCustomers() {
-        for (int i = 0; i < customers.size(); i++) {
+        for (int i = 0; i < customersVip.size(); i++) {
             System.out.println("Nr: " + i +
                     " Customer: " + customersVip.get(i).getName() +
                     ", have a balance of: " + customersVip.get(i).getBalance() +
@@ -152,7 +152,7 @@ class Storage {
                     "|  2.  Regular            |\n" +
                     "|  3.  VIP                |\n" +
                     "+-------------------------+\n" +
-                    "|  0.  Back              |\n" +
+                    "|  0.  Back               |\n" +
                     "+-------------------------+\n\n" +
                     "Choice: "
             );
@@ -179,12 +179,12 @@ class Storage {
         }
     }
     private static void deleteRegular() {
-        System.out.print("Enter Regular ID to delete:");
+        System.out.print("Enter Regular ID: 0-" + (customers.size()-1) + " to delete:");
         int id = UserInput.getNumber();
         customers.remove(id);
     }
     private static void deleteVip() {
-        System.out.print("Enter VIP ID to delete:");
+        System.out.print("Enter VIP ID: 0-" + (customersVip.size()-1) + " to delete:");
         int id = UserInput.getNumber();
         customersVip.remove(id);
     }
@@ -213,17 +213,22 @@ class Storage {
             int amount = UserInput.getNumber();
 
             customers.get(id).deposit(amount);
-            customerTransactions.add(new Transactions(customers.get(id).getName(), amount));
         } else if (vipStatus && id <= customersVip.size()) {
             System.out.print("Amount to deposit: ");
             int amount = UserInput.getNumber();
 
             customersVip.get(id).deposit(amount);
-            customerTransactions.add(new Transactions(customersVip.get(id).getName(), amount));
         } else {
             System.out.println("Invalid Customer id!");
         }
     }
+    static void addRegularTransaction(int id, int amount) {
+        customerTransactions.add(new Transactions(customers.get(id).getName(), amount));
+    }
+    static void addVipTransaction(int id, int amount) {
+        customerTransactions.add(new Transactions(customersVip.get(id).getName(), amount));
+    }
+
     /**
      * Function for withdraw funds
      * Print id range according to how many customers there is in related ArrayLists
@@ -246,15 +251,15 @@ class Storage {
             int amount = UserInput.getNumber();
             int negativeAmount = -amount;
 
-            customers.get(id).withdrawal(amount);
-            customerTransactions.add(new Transactions(customers.get(id).getName(), negativeAmount));
+            customers.get(id).withdrawal(amount, id);
+            //customerTransactions.add(new Transactions(customers.get(id).getName(), negativeAmount));
         } else if (vipStatus && id <= customersVip.size()) {
             System.out.print("Amount to withdraw: ");
             int amount = UserInput.getNumber();
             int negativeAmount = -amount;
 
-            customersVip.get(id).withdrawal(amount);
-            customerTransactions.add(new Transactions(customersVip.get(id).getName(), negativeAmount));
+            customersVip.get(id).withdrawal(amount, id);
+            //customerTransactions.add(new Transactions(customersVip.get(id).getName(), negativeAmount));
         } else {
             System.out.println("Invalid Customer id!");
         }

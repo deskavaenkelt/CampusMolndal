@@ -38,7 +38,7 @@ public class AccountVip extends Account {
      * @param withdrawalAmount from vip customer account and check so the amount is within credit limit
      */
     @Override
-    public void withdrawal(int withdrawalAmount) {
+    public void withdrawal(int withdrawalAmount, int id) {
         int totalCredit = 0 - this.creditLimit;
 
         int tryingToWithdrawAmount = getBalance() - withdrawalAmount;
@@ -51,6 +51,8 @@ public class AccountVip extends Account {
             System.out.println("Withdrawal of " + withdrawalAmount + " processed. " +
                     "\nRemaining balance is " + getBalance() +
                     ". \nAllowed credit is: -" + creditLimit + " SEK\n");
+            // TODO: Rättat fel med att den la till ej genomförda transaktioner
+            Storage.addVipTransaction(id, withdrawalAmount);
         }
     }
 

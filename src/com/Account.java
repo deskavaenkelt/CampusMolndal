@@ -63,12 +63,14 @@ public class Account {
      * Withdraws for regular customers, VIP customers override this function
      * @param withdrawalAmount from customer account
      */
-    public void withdrawal(int withdrawalAmount) {
+    public void withdrawal(int withdrawalAmount, int id) {
         if (this.balance - withdrawalAmount < 0) {
             System.out.println("Only " + this.balance + " available. Withdrawal not processed");
         } else {
             this.balance -= withdrawalAmount;
             System.out.println("Withdrawal of " + withdrawalAmount + " processed.  Remaining balance = " + this.balance);
+            // TODO: Rättat fel med att den la till ej genomförda transaktioner
+            Storage.addRegularTransaction(id, withdrawalAmount);
         }
     }
 

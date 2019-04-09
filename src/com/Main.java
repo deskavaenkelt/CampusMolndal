@@ -198,3 +198,5 @@ class Menu{
         UserInput.closeScanner();
     }
 }
+
+// TODO: show funkar ej vid Delete
