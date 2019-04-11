@@ -26,7 +26,7 @@
 	<h3>Krav för VG</h3>
 	<p>Utöver grunduppgiften</p>
 	<ul>
-		<li>Du ska kunnagöra en sökning i databasen.</li>
+		<li>Du ska kunna göra en sökning i databasen.</li>
 		<li>Du ska göra en egen funktionalitet i koden/databasen t ex göra till Favorit.</li>
 	</ul>
 </article>
