@@ -1,0 +1,16 @@
+{
+  "start": [
+    {
+      "rubrik": "Välkommen till MammasMat",
+      "brodtext": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus beatae commodi deleniti dolorem, doloremque eveniet expedita impedit incidunt inventore officiis pariatur provident, quam quisquam repudiandae sapiente sed, sequi voluptas voluptates!"
+    },
+    {
+      "rubrik": "Nyaste receptet",
+      "brodtext": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus beatae commodi deleniti dolorem, doloremque eveniet expedita impedit incidunt inventore officiis pariatur provident, quam quisquam repudiandae sapiente sed, sequi voluptas voluptates!"
+    },
+    {
+      "rubrik": "Veckans recept",
+      "brodtext": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus beatae commodi deleniti dolorem, doloremque eveniet expedita impedit incidunt inventore officiis pariatur provident, quam quisquam repudiandae sapiente sed, sequi voluptas voluptates!"
+    }
+  ]
+}
