@@ -1,0 +1,22 @@
+{
+  "name": "databasutvecklinginlamning2",
+  "version": "1.0.0",
+  "description": "Handlingslista",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deskavaenkelt/databasutvecklingInlamning2.git"
+  },
+  "author": "Lars Strömberg",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/deskavaenkelt/databasutvecklingInlamning2/issues"
+  },
+  "homepage": "https://github.com/deskavaenkelt/databasutvecklingInlamning2#readme",
+  "dependencies": {
+    "mongodb": "^3.2.3"
+  }
+}
