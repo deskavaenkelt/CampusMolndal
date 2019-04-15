@@ -1,0 +1,31 @@
+Output
+
+true
+0)
+[s, t, r, i, n, g]
+[s, i, n, g]
+
+a)
+[s, t, t, i, n, g]
+[s, i, n, g]
+
+b)
+[s, T, T, i, n, g]
+[s, i, n, g]
+
+c)
+[s, i, n, g]
+[s, i, n, g]
+Array 1 and 2 are identical
+
+d)
+[s, i, n, g]
+[s, i, n, g]
+
+e)
+[a, a, ]
+joinedChars[a , aa]
+
+f)
+aa a
+joinedChars[a , aa]
