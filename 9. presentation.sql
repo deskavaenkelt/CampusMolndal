@@ -24,7 +24,7 @@ DESCRIBE seats;
 SELECT * FROM bookings;
 SELECT * FROM customers;
 SELECT * FROM films;
-SELECT * FROM reservedseats;
+SELECT * FROM reservedSeats;
 SELECT * FROM rooms;
 SELECT * FROM screenings;
 SELECT * FROM seats;

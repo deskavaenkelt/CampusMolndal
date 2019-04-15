@@ -25,7 +25,7 @@ SHOW TABLES;
 SELECT * FROM bookings;
 SELECT * FROM customers;
 SELECT * FROM films;
-SELECT * FROM reservedseats;
+SELECT * FROM reservedSeats;
 SELECT * FROM rooms;
 SELECT * FROM screenings;
 SELECT * FROM seats;
@@ -111,27 +111,27 @@ GROUP BY f.filmName;
 /*-- --*/
 -- VIEW antal säten sorterat  GROUP BY per rum
 -- räkna ut hur många ggr ett visst filmId har spelats upp i ett rumsID
-SELECT * FROM reservedseats;
+SELECT * FROM reservedSeats;
 SELECT * FROM screenings;
 
 SELECT COUNT(*)
 FROM bookings
 JOIN screenings s on bookings.bookingScreeningId = s.screeningId
-JOIN reservedseats r on bookings.bookingId = r.reservedSeatBookingId
+JOIN reservedSeats r on bookings.bookingId = r.reservedSeatBookingId
 WHERE screeningId = 20;
 
-SELECT * FROM reservedseats WHERE
+/*SELECT * FROM reservedSeats WHERE*/
 
 -- From screnningsId=1 get reservedSeats
 
-CREATE VIEW reservedSeats AS;
+/*CREATE VIEW reservedSeats AS seatsReserved
 SELECT f.filmName, r.roomName, COUNT(r2.reservedSeatSeatId)
 FROM screenings s
        JOIN films f ON s.screeningFilmId = f.filmsId
        JOIN rooms r ON s.screeningRoomId = r.roomId
        JOIN seats s2 ON r.roomId = s2.seatRoomId
-       JOIN reservedseats r2 ON s2.seatsId = r2.reservedSeatSeatId
-GROUP BY roomName;
+       JOIN reservedSeats r2 ON s2.seatsId = r2.reservedSeatSeatId
+GROUP BY roomName;*/
 /*-- --*/
 
 

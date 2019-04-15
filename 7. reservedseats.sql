@@ -13,12 +13,12 @@ USE dsve_cinema_booking_system;
 
 SHOW TABLES;
 
-DESCRIBE reservedseats;
+DESCRIBE reservedSeats;
 
-SELECT * FROM reservedseats;
+SELECT * FROM reservedSeats;
 
 
-INSERT INTO reservedseats (reservedSeatBookingId, reservedSeatSeatId)
+INSERT INTO reservedSeats (reservedSeatBookingId, reservedSeatSeatId)
 VALUES (1, 74),
        (1, 75),
        (1, 76),
@@ -764,8 +764,8 @@ VALUES (1, 74),
        (410, 119);
 
 SELECT *
-FROM reservedseats;
+FROM reservedSeats;
 
 SELECT *
-FROM reservedseats
+FROM reservedSeats
 ORDER BY reservedSeatSeatId;
