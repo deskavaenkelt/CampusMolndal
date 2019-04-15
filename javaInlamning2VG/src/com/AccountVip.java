@@ -17,7 +17,7 @@ package com;
  * @since 2019-04-03.
  * https://github.com/deskavaenkelt/
  */
-class AccountVip extends Account {
+public class AccountVip extends Account {
     /**
      * Only VIP customers have the ability to have credit account
      */
@@ -28,24 +28,17 @@ class AccountVip extends Account {
      * @param name on vip customer
      * @param creditLimit for the vip customer
      */
-    AccountVip(String name, boolean vip, int creditLimit) {
-        super(name, vip);
+    AccountVip(String name, int creditLimit) {
+        super(name, true);
         this.creditLimit = creditLimit;
     }
 
-    void withdrawal(int id, int withdrawalAmount) {
-        if (getBalance() - withdrawalAmount < 0) {
-            System.out.println("Only " + getBalance() + " available. Withdrawal not processed");
-        } else {
-            setBalance(getBalance() - withdrawalAmount);
-            System.out.println("Withdrawal of " + withdrawalAmount + " processed.  Remaining balance = " + getBalance());
-            // TODO: Skapa addTransaction
-            int negativeAmount = -withdrawalAmount;   // Use to transaction list
-            Storage.withdrawTransaction(id, negativeAmount);
-        }
-    }
-
-    void withdrawalVip(int id, int withdrawalAmount) {
+    /**
+     * This function override the regular one
+     * @param withdrawalAmount from vip customer account and check so the amount is within credit limit
+     */
+    @Override
+    public void withdrawal(int withdrawalAmount, int id) {
         int totalCredit = 0 - this.creditLimit;
 
         int tryingToWithdrawAmount = getBalance() - withdrawalAmount;
@@ -58,8 +51,8 @@ class AccountVip extends Account {
             System.out.println("Withdrawal of " + withdrawalAmount + " processed. " +
                     "\nRemaining balance is " + getBalance() +
                     ". \nAllowed credit is: -" + creditLimit + " SEK\n");
-            int negativeAmount = -withdrawalAmount;   // Use to transaction list
-            Storage.withdrawTransaction(id, negativeAmount);
+            // TODO: Rättat fel med att den la till ej genomförda transaktioner
+            Storage.addVipTransaction(id, withdrawalAmount);
         }
     }
 
