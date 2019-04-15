@@ -18,25 +18,13 @@ package com;
  * https://github.com/deskavaenkelt/
  */
 
-public class Account {
+class Account {
     /**
      * Variables for to save customer info in
      */
     private String name;
     private int balance;    // Borde använda double men använder int av bekvämlighetsskäl
     private boolean vip;
-
-
-    /**
-     * Regular Customer constructor
-     * @param name is customer name
-     * vip is set to false by default
-     */
-    Account(String name) {
-        this.name = name;
-        this.balance = 0;
-        this.vip = false;
-    }
 
     /**
      * VIP Customer constructor
@@ -54,26 +42,11 @@ public class Account {
      * Deposit for all customers
      * @param depositAmount to bank account
      */
-    void deposit(int depositAmount) {
+    void deposit(int id, int depositAmount) {
         this.balance += depositAmount;
-        System.out.println("Deposit of " + depositAmount + " made.  New balance is " + this.balance);
+        System.out.println("Deposit of " + depositAmount + " made. New balance is " + this.balance);
+        Storage.depositTransaction(id, depositAmount);
     }
-
-    /**
-     * Withdraws for regular customers, VIP customers override this function
-     * @param withdrawalAmount from customer account
-     */
-    public void withdrawal(int withdrawalAmount, int id) {
-        if (this.balance - withdrawalAmount < 0) {
-            System.out.println("Only " + this.balance + " available. Withdrawal not processed");
-        } else {
-            this.balance -= withdrawalAmount;
-            System.out.println("Withdrawal of " + withdrawalAmount + " processed.  Remaining balance = " + this.balance);
-            // TODO: Rättat fel med att den la till ej genomförda transaktioner
-            Storage.addRegularTransaction(id, withdrawalAmount);
-        }
-    }
-
 
     // Getters and Setters
 
