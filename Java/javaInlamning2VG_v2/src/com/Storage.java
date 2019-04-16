@@ -25,7 +25,6 @@ class Storage {
     /**
      * Store info in respectively ArrayList
      */
-    //private static List<Account> customers = new ArrayList<>();
     private static List<AccountVip> customersVip = new ArrayList<>();
     private static List<Transactions> customerTransactions = new ArrayList<>();
 

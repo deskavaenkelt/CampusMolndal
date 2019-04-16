@@ -24,7 +24,6 @@ class Menu {
     static void start() {
         runProgram();
     }
-
     /**
      * Main menu
      */
