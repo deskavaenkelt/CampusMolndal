@@ -31,8 +31,18 @@ class Controller {
         //(new AccountVip(vipCustomerName, vipCreditLimit));
     }
 
+
+ /*   static void updateCustomerName() {
+        System.out.print("Enter ID: 0-" + (Storage.getCustomersVip().size()-1) + " to update:");
+        int id = UserInput.getNumber();
+        Storage.deleteVip(id);
+    }
+    static void updateCustomerStatus() {
+
+    }*/
+
     static void deleteVip() {
-        System.out.print("Enter VIP ID: 0-" + (Storage.getCustomersVip().size()-1) + " to delete:");
+        System.out.print("Enter ID: 0-" + (Storage.getCustomersVip().size()-1) + " to delete:");
         int id = UserInput.getNumber();
         Storage.deleteVip(id);
     }

@@ -57,6 +57,11 @@ class Account {
     String getName() {
         return name;
     }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
     /**
      * Get balance
      * @return balance
@@ -71,6 +76,10 @@ class Account {
      */
     boolean getVipStatus() {
         return vip;
+    }
+
+    public void setVip(boolean vip) {
+        this.vip = vip;
     }
 
     /**

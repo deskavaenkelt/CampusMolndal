@@ -44,6 +44,10 @@ class Storage {
         customersVip.remove(id);
     }
 
+    /*static void updateCustomerName(int id, String name) {
+        customersVip.set(id, g);
+    }*/
+
 
     // Transactions
     /**
