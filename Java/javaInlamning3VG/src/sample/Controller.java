@@ -17,7 +17,10 @@ import javafx.scene.control.RadioButton;
 
 public class Controller {
 
-    // Movie Id
+    /**
+     * Movie Id
+     * These are used to determine what move the tickets are valid for
+     */
     @FXML
     private RadioButton movieId0;
     @FXML
@@ -28,7 +31,10 @@ public class Controller {
     private RadioButton movieId3;
 
 
-    // Number of Tickets ordered
+    /**
+     * Number of Tickets ordered
+     * These are used to determine how many tickets that are ordered
+     */
     @FXML
     private RadioButton ticketsOrdered1;
     @FXML
@@ -47,12 +53,17 @@ public class Controller {
     private RadioButton ticketsOrdered8;
 
 
-    // Send the sum to this Label
+    /**
+     * Send the sum to this Label
+     */
     @FXML
     private Label totalPrice;
 
 
-    // Make the calculation when the button is pressed
+    /**
+     * Make the calculation when the button is pressed
+     * Display result in both console and in main Scene
+     */
     @FXML
     public void onButtonClicked() {
         int sum = moviePrice() * numberOfTicketsOrdered();
@@ -62,6 +73,10 @@ public class Controller {
     }
 
 
+    /**
+     * Get the price for the movie
+     * @return movie price in SEK
+     */
     private int moviePrice() {
         int price = -1;
         if (movieId0.isSelected()) {
@@ -76,6 +91,11 @@ public class Controller {
 
         return price;
     }
+
+    /**
+     * How many tickets are ordered
+     * @return number of tickets 1-8
+     */
     private int numberOfTicketsOrdered() {
         int numberOfTickets = -1;
         if (ticketsOrdered1.isSelected()) {
