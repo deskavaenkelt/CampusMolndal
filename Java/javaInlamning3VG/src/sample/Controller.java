@@ -47,10 +47,12 @@ public class Controller {
     private RadioButton ticketsOrdered8;
 
 
+    // Send the sum to this Label
     @FXML
     private Label totalPrice;
 
 
+    // Make the calculation when the button is pressed
     @FXML
     public void onButtonClicked() {
         int sum = moviePrice() * numberOfTicketsOrdered();

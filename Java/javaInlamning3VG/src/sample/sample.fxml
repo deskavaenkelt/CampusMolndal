@@ -69,9 +69,10 @@
     <Button GridPane.rowIndex="4" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.halignment="CENTER"
             text="Calculate price" onAction="#onButtonClicked"/>
 
-    <Label GridPane.rowIndex="5" GridPane.columnIndex="0" GridPane.columnSpan="1"
+    <Label GridPane.rowIndex="5" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.halignment="CENTER"
            text="Price in total:"/>
-    <Label GridPane.rowIndex="5" GridPane.columnIndex="1" GridPane.columnSpan="1"
+
+    <Label GridPane.rowIndex="6" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.halignment="CENTER"
            fx:id="totalPrice"/>
 
     <Label GridPane.rowIndex="3" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.halignment="CENTER"

@@ -23,6 +23,7 @@ public class Main extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
         primaryStage.setTitle("Cinema System");
         primaryStage.setScene(new Scene(root, 600, 600));
+        // Added css file
         root.getStylesheets().add("sample/styles.css");
         primaryStage.show();
     }
