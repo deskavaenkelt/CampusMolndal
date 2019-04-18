@@ -1,29 +1,30 @@
 <h1>INLÄMNINGSUPPGIFT3, JAVAFX</h1>
+
 <article>
-<h2>Mål</h2>
-<p>I Inlämningsuppgift 3gör du ett programmed ett grafiskt gränssnitt i JavaFX.</p>
+    <h2>Mål</h2>
+    <p>I Inlämningsuppgift 3 gör du ett programmed ett grafiskt gränssnitt i JavaFX.</p>
 </article>
 
 <article>
-<h2>Beskrivning</h2>
-<p>Du ska göra ett programsom utgörs av ett grafiskt gränssnitt. Programmetska göras i JavaFX. Du väljer själv vilken typ av funktionalitet ditt programska ha.</p>
-<h3>Exempel</h3>
-<p>Bokning av biljetter till t.ex:</p>
-<ul>
-    <li>Bio</li>
-    <li>Idrott</li>
-    <li>Konserter</li>
-    <li>Resor</li>
-</ul>
-<p>Inlämningsuppgiften ska göras individuellt.</p>
+    <h2>Beskrivning</h2>
+    <p>Du ska göra ett program som utgörs av ett grafiskt gränssnitt. Programmet ska göras i JavaFX. Du väljer själv vilken typ av funktionalitet ditt programska ha.</p>
+    <h3>Exempel</h3>
+    <p>Bokning av biljetter till t.ex:</p>
+    <ul>
+        <li>Bio</li>
+        <li>Idrott</li>
+        <li>Konserter</li>
+        <li>Resor</li>
+    </ul>
+    <p>Inlämningsuppgiften ska göras individuellt.</p>
 </article>
 
 <article>
 <h2>Betygskriterier</h2>
 <h3>Krav för G</h3>
 <ul>
-    <li>Programmet görsi JavaFx.</li>
-    <li>Du strukturerar upp din kod med metoder (och ev. klasser)därdet underlättarför strukturen av programmet.</li>
+    <li>Programmet görs i JavaFx.</li>
+    <li>Du strukturerar upp din kod med metoder (och ev. klasser) där det underlättar för strukturen av programmet.</li>
     <li>Du ska använda Javadoc i din kod för dokumentation.</li>
 </ul>
 
