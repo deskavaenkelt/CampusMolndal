@@ -51,6 +51,7 @@
 </article>
 
 <article>
+    <h2>Resultat</h2>
     <img src="dsveCinema.png">
 </article>
 
