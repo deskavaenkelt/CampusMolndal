@@ -1,3 +1,13 @@
+/*
+  __
+ /\ \
+ \_\ \    ____  __  __     __
+ /'_` \  /',__\/\ \/\ \  /'__`\
+/\ \L\ \/\__, `\ \ \_/ |/\  __/
+\ \___,_\/\____/\ \___/ \ \____\
+ \/__,_ /\/___/  \/__/   \/____/
+
+*/
 package sample;
 
 import javafx.application.Application;
@@ -12,7 +22,8 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
         primaryStage.setTitle("Cinema System");
-        primaryStage.setScene(new Scene(root, 400, 300));
+        primaryStage.setScene(new Scene(root, 600, 600));
+        root.getStylesheets().add("sample/styles.css");
         primaryStage.show();
     }
 

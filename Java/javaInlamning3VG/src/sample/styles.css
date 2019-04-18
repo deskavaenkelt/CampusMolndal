@@ -1,0 +1,35 @@
+/*
+  __
+ /\ \
+ \_\ \    ____  __  __     __
+ /'_` \  /',__\/\ \/\ \  /'__`\
+/\ \L\ \/\__, `\ \ \_/ |/\  __/
+\ \___,_\/\____/\ \___/ \ \____\
+ \/__,_ /\/___/  \/__/   \/____/
+
+*/
+
+.button {
+    -fx-scale-x: 1.5;
+    -fx-scale-y: 1.5;
+}
+.label {
+    -fx-text-fill: #e39945;
+    -fx-font-size: 3em;
+}
+.root {
+    -fx-background-color: #3c3f41;
+}
+.radio-button {
+    -fx-text-fill: #17c38c;
+    -fx-font-size: 1.5em;
+}
+#totalPrice {
+    -fx-border-width: 2px;
+    -fx-text-fill: #cb4050;
+}
+#dsve {
+    -fx-font-size: 4em;
+    -fx-text-fill: #313335;
+    -fx-opacity: 25%;
+}
