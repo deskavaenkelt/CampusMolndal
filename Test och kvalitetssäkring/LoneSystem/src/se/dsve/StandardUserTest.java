@@ -53,7 +53,7 @@ class StandardUserTest {
     // Requests
     @Test
     void getRequestedRole() {
-        assertEquals("", standardUser.getRequestedRole());
+        assertEquals(userRole, standardUser.getRequestedRole());
     }
 
     @Test
@@ -65,7 +65,7 @@ class StandardUserTest {
 
     @Test
     void getRequestedSalary() {
-        assertEquals(0, standardUser.getRequestedSalary());
+        assertEquals(userSalary, standardUser.getRequestedSalary());
     }
 
     @Test
@@ -73,6 +73,19 @@ class StandardUserTest {
         double newUserRequestedSalary = 9999.99d;
         standardUser.setRequestedSalary(newUserRequestedSalary);
         assertEquals(newUserRequestedSalary, standardUser.getRequestedSalary());
+    }
+
+    // Saldo
+    @Test
+    void getSaldo() {
+        assertEquals(0, standardUser.getSaldo());
+    }
+
+    @Test
+    void updateSaldo() {
+        double updateSaldo = 200.00;
+        standardUser.updateSaldo(updateSaldo);
+        assertEquals(updateSaldo, standardUser.getSaldo());
     }
 
     // Admin User
@@ -91,7 +104,20 @@ class StandardUserTest {
         assertTrue(adminUser.isAdmin());
     }
 
+    @Test
+    void newAdminRole() {
+        assertEquals("Administrator", adminUser.getRole());
+    }
 
+    @Test
+    void newAdminSalary() {
+        assertEquals(100_000d, adminUser.getSalary());
+    }
+
+    @Test
+    void newAdminSaldo() {
+        assertEquals(0, adminUser.getSaldo());
+    }
 
     // Integration tests
     @Test

@@ -2,6 +2,7 @@ package se.dsve;
 
 
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.RepeatedTest;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -20,7 +21,7 @@ class UserManagementTest {
 
     @BeforeAll
     static void setUp() {
-        UserManagement.newUser(userName, userPassword, userRole,userSalary);
+        UserManagement.newUser(userName, userPassword, userRole, userSalary);
         UserManagement.newAdmin(adminName, adminPassword);
     }
 
@@ -96,7 +97,7 @@ class UserManagementTest {
         newUser_IsNotAdmin();
     }
 
-    @Test
+    @RepeatedTest(10_000)
     void deleteUser() {
         String deleteName = "David04";
         String deletePassword = "04David";
@@ -106,7 +107,7 @@ class UserManagementTest {
         UserManagement.deleteUser(deleteName, deletePassword);
         for (int i = 0; i < UserManagement.getUsers().size(); i++) {
             if (deleteName.equals(UserManagement.getUsers().get(i).getName())) {
-                fail();
+                fail("User not deleted!");
             }
         }
     }

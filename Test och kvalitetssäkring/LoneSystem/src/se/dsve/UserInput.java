@@ -33,7 +33,7 @@ public class UserInput {
     }
 
     // Check if input is an integer
-    public static boolean isIntegerTest(String passedString) {
+    public static boolean isIntegerTest(String passedString) {   // Needed for tests
         return isInteger(passedString);
     }
     private static boolean isInteger(String passedString) {
@@ -48,6 +48,41 @@ public class UserInput {
             System.out.println(ex);
         }
         return isValidInteger;
+    }
+
+    // Check if input is an double
+    // Call public function to get user input number
+    static double readDouble() {
+        // Read input as a string
+        String input = scanner.nextLine();
+
+        // return -1 if not an double
+        double number = -1;
+
+        // Call isInteger to check if input is a number, catch exeption
+        if (isDouble(input)) {
+            // If true parseInt
+            number = Double.parseDouble(input);
+        }
+
+        return number;
+    }
+
+    public static boolean isDoubleTest(String passedString) {   // Needed for tests
+        return isDouble(passedString);
+    }
+    private static boolean isDouble(String passedString) {
+        // Validate so that input is an int
+        boolean isValidDouble = false;
+        try {
+            Double.parseDouble(passedString);       // passedString is a valid double
+            isValidDouble = true;
+        }
+        catch (NumberFormatException ex) {
+            // passedString is not an integer
+            System.out.println(ex);
+        }
+        return isValidDouble;
     }
 
     // Close scanner

@@ -35,6 +35,11 @@ public class UserManagement {
                     System.out.println("Erase user with id = " + id);
                     System.out.println("User " + users.get(id).getName() + " has been deleted!");
                     users.remove(id);
+
+                    // Admin will not be logged out but user who self erase will
+                    if (!Main.loggedInAsAdmin) {
+                        Main.isLoggedIn = false;
+                    }
                     break;
                 }
             }
