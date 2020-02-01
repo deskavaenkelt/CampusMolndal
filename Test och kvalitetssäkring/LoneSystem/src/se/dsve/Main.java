@@ -28,5 +28,3 @@ public class Main {
 //        System.out.println(result.wasSuccessful());
     }
 }
-
-// TODO: Hantera requests i admin menyn

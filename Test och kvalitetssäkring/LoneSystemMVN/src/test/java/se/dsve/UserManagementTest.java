@@ -1,9 +1,9 @@
 package se.dsve;
 
 
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.RepeatedTest;
-import org.junit.jupiter.api.Test;
+
+import org.junit.Rule;
+import org.junit.jupiter.api.AfterAll;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -19,45 +19,45 @@ class UserManagementTest {
     private static String adminName = "admin2";
     private static String adminPassword = "admin12345";
 
-    @BeforeAll
+    @org.junit.jupiter.api.BeforeAll
     static void setUp() {
         UserManagement.newUser(userName, userPassword, userRole, userSalary);
         UserManagement.newAdmin(adminName, adminPassword);
     }
 
     // New User
-    @Test
+    @org.junit.jupiter.api.Test
     void newUser_AddedToArrayList() {
         assertEquals(2, UserManagement.getUsers().size());
     }
 
-    @Test
+    @org.junit.jupiter.api.Test
     void newUser_AddedUser() {
         assertEquals(userName, UserManagement.getUsers().get(0).getName());
     }
 
-    @Test
+    @org.junit.jupiter.api.Test
     void newUser_AddedPassword() {
         assertEquals(userPassword, UserManagement.getUsers().get(0).getPassword());
     }
 
-    @Test
+    @org.junit.jupiter.api.Test
     void newUser_AddedRole() {
         assertEquals(userRole, UserManagement.getUsers().get(0).getRole());
     }
 
-    @Test
+    @org.junit.jupiter.api.Test
     void newUser_AddedSalary() {
         assertEquals(userSalary, UserManagement.getUsers().get(0).getSalary());
     }
 
-    @Test
+    @org.junit.jupiter.api.Test
     void newUser_IsNotAdmin() {
         assertFalse(UserManagement.getUsers().get(0).isAdmin());
     }
 
     // Integration test
-    @Test
+    @org.junit.jupiter.api.Test
     void newUser_Added() {
         newUser_AddedToArrayList();
         newUser_AddedUser();
@@ -68,28 +68,28 @@ class UserManagementTest {
     }
 
     // New Admin
-    @Test
+    @org.junit.jupiter.api.Test
     void newAdmin_AddedToArrayList() {
         assertEquals(2, UserManagement.getUsers().size());
     }
 
-    @Test
+    @org.junit.jupiter.api.Test
     void newAdmin_AddedUser() {
         assertEquals(adminName, UserManagement.getUsers().get(1).getName());
     }
 
-    @Test
+    @org.junit.jupiter.api.Test
     void newAdmin_AddedPassword() {
         assertEquals(adminPassword, UserManagement.getUsers().get(1).getPassword());
     }
 
-    @Test
+    @org.junit.jupiter.api.Test
     void newAdmin_IsAdmin() {
         assertTrue(UserManagement.getUsers().get(1).isAdmin());
     }
 
     // Integration test
-    @Test
+    @org.junit.jupiter.api.Test
     void newAdmin_Added() {
         newUser_AddedToArrayList();
         newUser_AddedUser();
@@ -98,7 +98,7 @@ class UserManagementTest {
     }
 
 //    @RepeatedTest(10_000)
-    @Test
+    @org.junit.jupiter.api.Test
     void deleteUser() {
         String deleteName = "David04";
         String deletePassword = "04David";
@@ -114,7 +114,7 @@ class UserManagementTest {
     }
 
     // New roles
-    @Test
+    @org.junit.jupiter.api.Test
     void requestNewUserRole() {
         Main.loggedInUserId = 0;
         String newUserRole = "User";
@@ -122,10 +122,15 @@ class UserManagementTest {
         assertEquals(newUserRole, UserManagement.getUsers().get(0).getRequestedRole());
     }
 
-    @Test
+    @org.junit.jupiter.api.Test
     void requestNewUserSalary() {
         double newUserSalary = 1234.56d;
         UserManagement.requestNewUserSalary(Main.loggedInUserId, newUserSalary);
         assertEquals(newUserSalary, UserManagement.getUsers().get(0).getRequestedSalary());
+    }
+
+    @AfterAll
+    static void tearDown() {
+        UserManagement.eraseAllUsers();
     }
 }

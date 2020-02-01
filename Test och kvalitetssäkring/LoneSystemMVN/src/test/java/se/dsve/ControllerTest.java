@@ -1,10 +1,11 @@
 package se.dsve;
 
-import static org.junit.jupiter.api.Assertions.*;
-
+import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 class ControllerTest {
 
@@ -365,4 +366,18 @@ class ControllerTest {
 
         assertEquals(oldSalaryAdmin, UserManagement.getUsers().get(0).getRequestedSalary());
     }
+
+//    @Disabled   // Breaks all test if not running last
+//    @Test
+//    void deleteAllUsers() {
+//        Controller.createSomeUsers();
+//        UserManagement.eraseAllUsers();
+//        assertEquals(0, UserManagement.getUsers().size());
+//    }
+
+    @AfterAll
+    static void tearDown() {
+        UserManagement.eraseAllUsers();
+    }
+
 }
