@@ -122,7 +122,7 @@ public class Controller {
         System.out.println(" ID | Username | Password");
 
         for (int i = 0; i < UserManagement.getUsers().size(); i++) {
-            System.out.println(" " + i + "    " + UserManagement.getUsers().get(i).getName() + "     " + UserManagement.getUsers().get(i).getPassword());
+            System.out.println(" " + i + "  | " + UserManagement.getUsers().get(i).getName() + "   |  " + UserManagement.getUsers().get(i).getPassword());
         }
 
     }
@@ -425,9 +425,9 @@ public class Controller {
             UserManagement.newUser(users[i], passwords[i], roles[i], salary[i]);
         }
 
-        UserManagement.newAdmin("a", "a");
-        UserManagement.newUser("b", "b", "Junior Developer", 1500d);
-        UserManagement.newUser("c", "c", "Junior Developer", 1500d);
-        UserManagement.newUser("d", "d", "Junior Developer", 1500d);
+//        UserManagement.newAdmin("a", "a");
+//        UserManagement.newUser("b", "b", "Junior Developer", 1500d);
+//        UserManagement.newUser("c", "c", "Junior Developer", 1500d);
+//        UserManagement.newUser("d", "d", "Junior Developer", 1500d);
     }
 }
