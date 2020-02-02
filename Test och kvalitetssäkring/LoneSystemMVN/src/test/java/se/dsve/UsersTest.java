@@ -1,5 +1,7 @@
 package se.dsve;
 
+import org.junit.jupiter.api.AfterAll;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class UsersTest {
@@ -33,5 +35,12 @@ class UsersTest {
         assertEquals(0, testUser.getId());
         assertEquals(userName, testUser.getName());
         assertEquals(userPassword, testUser.getPassword());
+    }
+
+    @AfterAll
+    static void tearDown() {
+        UserManagement.eraseAllUsers();
+        assertEquals(0, UserManagement.getUsers().size());
+        Controller.logout();
     }
 }

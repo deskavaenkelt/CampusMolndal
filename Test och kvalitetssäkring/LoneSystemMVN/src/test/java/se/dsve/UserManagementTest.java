@@ -132,5 +132,7 @@ class UserManagementTest {
     @AfterAll
     static void tearDown() {
         UserManagement.eraseAllUsers();
+        assertEquals(0, UserManagement.getUsers().size());
+        Controller.logout();
     }
 }

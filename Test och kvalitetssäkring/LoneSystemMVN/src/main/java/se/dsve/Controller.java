@@ -414,16 +414,20 @@ public class Controller {
     //  Create some users  //
     /////////////////////////
     static void createSomeUsers() {
-        UserManagement.newAdmin("admin1", "admin1234");
-        UserManagement.newUser("Adam01", "01Adam", "User", 1000);
-        UserManagement.newUser("Bert02", "02Bert", "Developer", 1850);
-        UserManagement.newUser("Carl03", "03Carl", "Accounting", 1750);
-        UserManagement.newUser("Eric04", "04Eric", "Senior Developer", 2000);
-        UserManagement.newUser("Fido05", "05Fido", "Junior Developer", 1500);
+        String[] users = {"admin1", "Adam01", "Bert02", "Carl03", "Eric04", "Fido05"};
+        String[] passwords = {"admin1234", "01Adam", "02Bert", "03Carl", "04Eric", "05Fido"};
+        String[] roles = {"Administrator", "User", "Developer","Accounting" , "Senior Developer", "Junior Developer"};
+        Double[] salary = {100_000d, 1000d, 1850d, 1750d, 2000d, 1500d};
+
+        UserManagement.newAdmin(users[0], passwords[0]);
+
+        for (int i = 1; i < users.length; i++) {
+            UserManagement.newUser(users[i], passwords[i], roles[i], salary[i]);
+        }
 
         UserManagement.newAdmin("a", "a");
-        UserManagement.newUser("b", "b", "Junior Developer", 1500);
-        UserManagement.newUser("c", "c", "Junior Developer", 1500);
-        UserManagement.newUser("d", "d", "Junior Developer", 1500);
+        UserManagement.newUser("b", "b", "Junior Developer", 1500d);
+        UserManagement.newUser("c", "c", "Junior Developer", 1500d);
+        UserManagement.newUser("d", "d", "Junior Developer", 1500d);
     }
 }

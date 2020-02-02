@@ -378,6 +378,8 @@ class ControllerTest {
     @AfterAll
     static void tearDown() {
         UserManagement.eraseAllUsers();
+        assertEquals(0, UserManagement.getUsers().size());
+        Controller.logout();
     }
 
 }

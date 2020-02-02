@@ -8,8 +8,9 @@ import org.junit.runner.RunWith;
 
 @RunWith(JUnitPlatform.class)
 @SuiteDisplayName("JUnit Platform Suite Demo")
-@SelectClasses( { UsersTest.class, AdminsTest.class, StandardUserTest.class, ControllerTest.class, SmokeTest.class,
-        UserInputTest.class, UserManagementTest.class } )
+@SelectClasses( { UsersTest.class, AdminsTest.class, StandardUserTest.class, ControllerTest.class,
+        SmokeTest.class,
+        UserInputTest.class, UserManagementTest.class} )
 public class JUnit5TestSuite {
 }
 
